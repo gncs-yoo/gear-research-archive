@@ -215,5 +215,70 @@
       "data": "합성 데이터 및 실차 주행 데이터셋 모두에서 음원 분리 유효성 실증. 복잡한 다중 음원 환경에서도 모터/감속기 구동계 유래 고조파 시그니처를 높은 신호 보존율로 분리 추출.",
       "implications": "실차 NVH 평가 단계에서 기어 화음 및 인버터 스위칭 음의 기여도를 신속 분리함으로써 마이크로지오메트리(치형수정) 및 감속기 하우징 강성 설계 변경의 피드백 루프를 대폭 단축. 향후 실시간 구동계 이상 진단 모델로의 확장 가능성 보유."
     }
+  },
+  {
+    "id": 11,
+    "date": "2026-10-28",
+    "batch": "2026-10-28 (아침 브리핑)",
+    "categories": [
+      "NVH·소음진동",
+      "AI·설계자동화·진단"
+    ],
+    "title_en": "Geometry-Anchored Paired Component-to-System Order Analysis with Falsification-Controlled Interpretation for End-of-Line Noise, Vibration, and Harshness of Electric-Vehicle Drivetrains",
+    "title_ko": "EV 구동계 EOL NVH 예측을 위한 기하학 앵커 기반 부품-시스템 차수(Order) 정합 분석 및 위상검증(검증통제) 해석",
+    "journal": "World Electric Vehicle Journal (MDPI, 2026, 17(11), 551, 2026-10-22)",
+    "authors": "Krisztián Horváth (Széchenyi István Univ., Audi Hungaria Faculty of Engineering, Győr)",
+    "link": "https://doi.org/10.3390/wevj17110551",
+    "doi": "10.3390/wevj17110551",
+    "summary": "107대의 EV 구동계에 대해 조립 전 부품 회전시험 스펙트럼과 조립 후 EOL NVH 4채널을 계보(genealogy) 기반으로 정확히 대응시켜, 부품 단계 차수(order) 토폴로지가 이후 EOL 부적합을 예측할 수 있음을 통계적으로 입증. 3,157건의 치아 단위 좌표측정 기록으로 피치오차 고조파-사이드밴드 연쇄까지 역추적.",
+    "details": {
+      "background": "EV 드라이브유닛은 엔진 마스킹이 사라져 치수 피치오차·런아웃·표면주파 등 제조 편차가 전달오차(TE) 사이드밴드와 메시 고조파 재분배로 직결됨. 그러나 조립 전 부품 시험 결과가 최종 조립체 EOL NVH로 어떻게 전달되는지가 불명확하여, 부품 시험을 조기 품질 게이트로 쓸 수 있는지가 업계 난제였음. 생산 데이터는 공구 교체·배치별 이동으로 IID 가정이 성립하지 않아 무작위 학습/검증 분할이 일반화 성능을 과대평가하는 문제도 있음.",
+      "method": "동일 부품의 조립 전 2개 시험 상태(A, B)와 EOL 4채널을 정확 계보로 107유닛 대응. 유닛 내 스펙트럼 변화 Δ(B−A) 정의, 1,024개 후보 차수에 FDR 다중검정 통제, 인접 차수 빈의 상관을 고려한 클러스터 순열검정(permutation), 생산일/시험일 효과를 분리하는 교차 혼합효과 모델, 그리고 매력적이지만 기구학적으로 지지되지 않는 캐리어 귀속을 기각하는 위상감사(falsification audit)까지 9개 방법론 요소 적용.",
+      "data": "4피처 토폴로지 모델의 EOL 부적합 판별 ROC-AUC 0.742–0.753(무작위/공정그룹화 검증), Δ스펙트럼 전체 PCA(10) 0.785–0.788에 근접. 사전선언된 30일 1:1 서브셋에서 28치 부품군의 6차 원주방향 피치오차 고조파와 State-B 대칭 사이드밴드군 간 Spearman ρ=−0.908, FDR 보정 q=8.8×10⁻⁵(n=14)로 강한 기하-부품 연쇄 확인. 단, 기하→EOL H4 직접 연관은 다중성 보정 후 생존하지 않아 단계별(기하→부품→EOL) 해석만 지지.",
+      "implications": "e-Axle 양산 라인에서 '기하측정 → 부품 롤링시험 → EOL NVH'의 단계별 가상 EOL(virtual-EOL) 예측 체계 구축 시 통계적 근거 프레임을 그대로 참조 가능. 특히 EOL NVH 부적합 32건이 부품 단계 스펙트럼에서 조기 식별 가능했던 사례는, 모비스 감속기 부품 검사 기준에 차수 도메인 판별 지표(메시 고조파 사이드밴드 군, Δ(B−A) 상태차) 도입을 검토할 실무 근거 제공. 다중검정·공정그룹화 검증 없이 상관 차수 빈을 인과로 해석하는 관행에 대한 경종으로도 가치 높음."
+    }
+  },
+  {
+    "id": 12,
+    "date": "2026-10-28",
+    "batch": "2026-10-28 (아침 브리핑)",
+    "categories": [
+      "치형수정·마이크로지오메트리",
+      "NVH·소음진동"
+    ],
+    "title_en": "Dynamic Characteristics of a Transmission System Based on Tooth Surface Modification of Double-Pressure-Angle Helical Face Gears",
+    "title_ko": "이중 프레스각(Double-Pressure-Angle) 헬리컬 페이스 기어의 치면수정(마이크로지오메트리)이 전달계 동특성에 미치는 영향: LTCA-TVMS-집중질량 동역학 연계 해석",
+    "journal": "Machines (MDPI, 2026, 14(10), 1210, 2026-10-18)",
+    "authors": "Xuezhong Fu(교신), Yutong Fu, Shanyu Yan (Guangxi Univ. of Science and Technology), Yanzhong Wang, Jusong Liang (Beihang Univ.), Liuhua Nong (Guilin Guibei Machine)",
+    "link": "https://doi.org/10.3390/machines14101210",
+    "doi": "10.3390/machines14101210",
+    "summary": "디스크 연쇄휠 생성원리 기반 이중 프레스각 헬리컬 페이스 기어 치면수정 디지털 치면을 구축하고, LTCA 기반 시변 맞물림 강성(TVMS)을 집중질량 동역학 모델에 연계. 구동면 프레스각 증대로 작용선 방향 진동 피크 31% 저감, 구동면 양방향 치면수정으로 주 가속도 피크 45.8% 저감 실현.",
+    "details": {
+      "background": "페이스 기어는 축 직교 전동과 다치 계통 하중분배에 유리하나, 단일 프레스각 설계에서는 구동면 접촉이 국부 집중되어 치면 편마모와 전달오차(TE) 변동, 그리고 고부하 조건의 진동 응답 증대가 문제됨. 페이스 기어의 치면수정(마이크로지오메트리)이 시변 강성과 시스템 동특성에 미치는 영향을 동역학 수준에서 정량화한 연구는 드물었음.",
+      "method": "디스크 연쇄휠 생성원리로 치면수정을 포함한 디지털 치면 모델 구축. LTCA로 시변 맞물림 강성(TVMS)을 산출하여 집중질량법(lumped-mass) 동역학 모델에 인가하고, 입력 회전속도·구동면 프레스각·치면수정 유무에 따른 계통 응답을 위상궤도(포앙카레 단면) 및 작용선 방향 가속도 스펙트럼으로 비교 분석.",
+      "data": "구동면 프레스각 24°→32° 증대 시 작용선 방향 최대 변위 진동 31% 저감. 시스템 진동 응답은 회전수 상승에 따라 증가 후 감소하며 9,600 rpm에서 최대(공진 영역 확인). 헬리컬 페이스 기어 구동면(drive flank) 양방향 치면수정 적용 시 접촉 패턴이 국부 집중에서 균일 분포로 개선되고 포앙카레 단면 산점이 응집화되며 작용선 방향 주 가속도 피크 45.8% 저감.",
+      "implications": "직교축 전동이 필요한 액추에이터·디퍼렌셜·이중구동 분지 감속기에서 프레스각 분리 설계와 치면수정 조합이 NVH 설계 변수로 직접 활용 가능. LTCA-TVMS-동역학 연계 해석 플로우는 모비스 감속기 해석 체계에도 그대로 이식 가능한 절차. 다만 9,600 rpm 부근 응답 첨두는 e-Axle 고회전 운전점 회피 설계(모터 최고 효율 영역과의 간섭 확인) 필요 시사."
+    }
+  },
+  {
+    "id": 13,
+    "date": "2026-10-28",
+    "batch": "2026-10-28 (아침 브리핑)",
+    "categories": [
+      "제조·표면강화·피로수명"
+    ],
+    "title_en": "Numerical Modeling of Crack Initiation From Interface Between Second-Phase Particles and Carburized Gear Steel During Contact Fatigue",
+    "title_ko": "삼입(침탄) 기어강 내 2차상 입자-모재 계면에서의 접촉피로 균열 개시 수치 모델링: 계면 강성이 피로수명을 지배",
+    "journal": "Fatigue & Fracture of Engineering Materials & Structures (Wiley, 2026-10-25)",
+    "authors": "Jinxin Yao, Cong-Qian Cheng, Jia-Wan Chen, Zi-Xian Zhang, Tieshan Cao, Jie Zhao (Dalian University of Technology)",
+    "link": "https://doi.org/10.1111/ffe.70504",
+    "doi": "10.1111/ffe.70504",
+    "summary": "침탄 기어강의 접촉피로에서 균열이 2차상 입자 주변 계면에서 개시되는 메커니즘을 FE+점착영역 모델(CZM)+연속체 손상역학(CDM)으로 수치 구현. 계면 강성(interfacial stiffness)이 응력 분포와 균열 개시 수명의 지배 인자임을 CatBoost-SHAP으로 정량 순위화.",
+    "details": {
+      "background": "양산 기어 강재의 접촉피로(피팅) 균열은 실제로 탄화물·비금속개재물 같은 2차상 입자와 모재의 계면에서 개시되는 것으로 알려져 있으나, 입자 속성(크기·탄성률·형상)과 계면 특성(강성·강도) 중 어느 것이 개시 수명을 지배하는지 분리 정량화가 부족해 재료 규격·청정도 관리 기준이 정성적이었음.",
+      "method": "유한요소 접촉 시뮬레이션에 점착영역 모델(cohesive zone modeling)과 연속체 손상역학(continuum damage mechanics)을 결합한 균열 개시 수치 프레임워크 구축. 입자 속성·계면 특성 파라미터 변화에 따른 국부 응장 및 개시 수명을 산출하고, 머신러닝 CatBoost와 SHAP 값 분석으로 인자별 기여도를 순위화.",
+      "data": "계면 강성이 응력 분포와 균열 개시 수명의 지배 인자로 확인됨(SHAP 기여도 1위). 계면 불연속(interfacial discontinuity)은 국부 응력 집중을 증폭시켜 개시 수명을 단축. 입자 자체 속성보다 입자-모재 계면 특성 제어가 피로수명 관리의 핵심임을 정량적으로 제시.",
+      "implications": "고토크 EV 감속기 기어 강재 입찰 및 침탄 공정 사양에 '탄소화물 계면 강성·청정도' 관점의 수명 예측 인자 추가 근거 제공. 공급사 강재 선정 시 개재물 관리(총 산소·개재물 등급)에 더해 계면 특성을 반영한 피팅 수명 시험-수치 연계 검증 체계 구축 가능. 강재-열처리-분석 협업 시 FE+CZM 기반 개시수명 시뮬레이션을 시험 인력 절감 도구로 활용 권장."
+    }
   }
 ]
