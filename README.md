@@ -1,6 +1,6 @@
 # ⚙️ 기어·구동계 최신 연구 논문 아카이브 (Gear Research Archive)
 
-**현대모비스 구동계 연구 리더 유호길(Ho-Gil Yoo) 책임 전용 데일리 학술 데이터베이스**
+**Powered by GNCS @ Hyundai Mobis**
 
 ## 🔗 라이브 웹사이트
 
