@@ -346,5 +346,73 @@
       "data": "마이크로지오메트리(치형수정) 최적화 후, 1단 감속 기어쌍의 1차 고조파 음압 레벨이 4개 부하 조건에서 각각 약 30%, 20%, 23%, 21% 저감됨. 2단 감속 기어쌍의 1차 고조파 음압 레벨은 각각 약 58%, 36%, 23%, 20% 대폭 감소. 반면 전기 모터 자체의 방사 음압 레벨은 기어 치형수정에 영향받지 않음을 확인하여 기어 메싱 가진의 순수 기여도를 분리 규명.",
       "implications": "개발 후반부 설계 변경 및 일정 지연을 방지하기 위해 초기 개념 설계 단계에서 모터 특성과 연계된 전 부하 조건 마이크로지오메트리(치형수정) 최적화 프로세스의 실효성을 입증. 모비스 e-Axle 감속기의 부하 맵 전 영역 대상 기어 와인 노이즈 저감 사양 도출 시 직접적인 벤치마크 및 방법론으로 활용 가치 높음."
     }
+  },
+  {
+    "id": 17,
+    "date": "2026-10-30",
+    "batch": "2026-10-30 (아침 브리핑)",
+    "categories": [
+      "하중분배·구동계기구학",
+      "치형수정·마이크로지오메트리",
+      "NVH·소음진동"
+    ],
+    "title_en": "Influence of Planet Phasing on Quasi-Static Transmission Error in Planetary Spur Gears with Profile Modifications",
+    "title_ko": "치형수정(Profile Relief)이 적용된 스퍼 유성기어의 위상 배열(Planet Phasing)이 준정적 전달오차(QSTE) 및 동적 하중 분배에 미치는 영향 분석",
+    "journal": "Machines (MDPI, 2026, 14(6), 651, 2026-06-04)",
+    "authors": "José Ignacio Pedrero, Miguel Pleguezuelos, Andrés F. Hidalgo, Miryam B. Sánchez (National Distance Education University - UNED)",
+    "link": "https://doi.org/10.3390/machines14060651",
+    "doi": "10.3390/machines14060651",
+    "summary": "유성기어의 잇수 조합에 따른 동기(Synchronous) 및 비동기 순차 위상(Sequentially phased) 배열 조건에서, 팁 릴리프(치선수정) 깊이 및 길이가 태양-유성 및 유성-링 맞물림의 준정적 전달오차(QSTE) 변동과 동적 하중 분배에 미치는 영향을 최소 탄성 포텐셜 에너지 모델로 해석.",
+    "details": {
+      "background": "유성기어 감속기는 높은 토크 밀도와 동축 패키징의 이점을 가지나, 선-유성-링 기어의 잇수 구성에 따라 맞물림 위상(Phasing)이 동기 또는 비동기로 결정됨. 비동기(순차 위상) 배열은 유성 피니언 간 토크 분배의 불균일성을 유발할 수 있으나, 치형수정(팁 릴리프)과 결합될 때 시스템 전체의 전달오차 변동 진폭을 대폭 상쇄할 수 있는 잠재력을 지님. 그러나 위상 배열과 치형수정의 상호작용에 관한 정량적 해석 기법이 미흡했음.",
+      "method": "최소 탄성 포텐셜 에너지 원리(Minimum Elastic Potential Energy)에 기반한 유성기어 준정적 하중 분배 및 치면 접촉 모델을 구축. 치선 수정(Tip relief)의 수정 깊이(Depth)와 수정 길이(Length)를 변수로 설정하고, 동기 vs 비동기(순차 위상) 구성 및 유성기어 잇수의 기우(홀수/짝수)에 따른 전달오차 진폭 특성을 체계적으로 비교 분석함.",
+      "data": "비동기(순차 위상) 배열이 동기 배열 대비 준정적 전달오차(QSTE)의 변동 진폭을 현저히 낮출 수 있음을 입증. 적정 깊이(adjusted depth)와 중간 길이(medium length)의 팁 릴리프 조합 시 전달오차 변동이 최소화됨. 또한 유성기어의 잇수가 홀수일 때 짝수 대비 전체 맞물림 강성이 증가하여 피크-투-피크 전달오차(PPTE)가 추가로 저감됨을 정량 실증.",
+      "implications": "현대모비스 감속기 및 휠 인 휠(In-Wheel) 전동 구동계의 유성기어단 설계 시, 초기 제원(잇수 선정) 단계에서 위상(Phasing) 구성과 팁 릴리프 마이크로지오메트리(치형수정)를 연계 최적화할 수 있는 이론적 가이드라인 제공. 비동기 배열의 전달오차 억제 효과를 극대화함으로써 고속 e-Axle 유성기어 맞물림 와인 소음을 원천 저감 가능."
+    }
+  },
+  {
+    "id": 18,
+    "date": "2026-10-30",
+    "batch": "2026-10-30 (아침 브리핑)",
+    "categories": [
+      "치형수정·마이크로지오메트리",
+      "NVH·소음진동",
+      "하중분배·구동계기구학"
+    ],
+    "title_en": "The overall transmission error and profile modification optimization of planetary gear trains considering phase difference between the gear pairs",
+    "title_ko": "내·외치 기어쌍 간 위상차를 고려한 유성기어열 종합 전달오차(Overall TE) 산출 모델 및 치형수정(Profile Modification) 최적화: 선기어 진동 가속도 저감",
+    "journal": "Proc. IMechE Part C: J. Mechanical Engineering Science (SAGE, 2026-02-12)",
+    "authors": "Xijin Zhang, Zongde Fang, Xunmin Yin, Guiyuan Feng, Xuezhong Fu (Northwestern Polytechnical University)",
+    "link": "https://doi.org/10.1177/09544062261416598",
+    "doi": "10.1177/09544062261416598",
+    "summary": "유성기어열(PGT)에서 선-유성(외치) 및 유성-링(내치) 기어쌍 간의 맞물림 위상차(Phase difference)를 정량 유도하고, TCA/LTCA 기반의 신규 시변 맞물림 강성(TVMS) 모델을 통해 종합 전달오차(Overall TE) 변동을 최소화하는 치형수정 최적화 및 선기어 진동 저감 실증.",
+    "details": {
+      "background": "유성기어 전동계의 진동 저감 설계에서 내치(유성-링)와 외치(선-유성) 맞물림 쌍 간의 상대적 위상차는 핵심적인 역할을 수행함. 그러나 기존 연구들은 내·외치 기어쌍의 전달오차를 독립적으로 취급하거나 단일 치형수정에 국한되어, 위상차에 따른 전달오차 중첩 및 상쇄 효과를 동역학적으로 충분히 활용하지 못했음.",
+      "method": "전위 스퍼 유성기어계를 대상으로 내·외치 맞물림 쌍 간 위상차의 수학적 산출 공식을 유도함. 치면 접촉 해석(TCA) 및 부하 접촉 해석(LTCA)을 통합하여 위상차가 반영된 시변 맞물림 강성(TVMS)과 종합 전달오차(Overall TE) 계산 프레임워크를 정립. 종합 전달오차 변동 진폭을 최소화하는 치형수정(Profile modification) 최적화 기법을 개발하고, 다자유도 유성기어 비선형 동역학 모델에 연계하여 선기어 진동 가속도 저감 검증.",
+      "data": "내·외치 맞물림 위상차를 고려한 치형수정 최적화 적용 시 종합 전달오차(Overall TE)의 변동 진폭이 대폭 억제됨. 동역학 시뮬레이션 결과, 시스템 핵심 가진원인 선기어(Sun gear)의 방사 진동 가속도 피크가 현저히 감소하여, 단일 기어쌍 기준 수정 대비 월등한 시스템 단위 진동 감쇄 성능을 입증.",
+      "implications": "현대모비스 e-Axle 복합 유성기어 감속기 개발 시, 외치와 내치를 분리하여 각각 치형수정하던 관행에서 벗어나 시스템 레벨에서 내·외치 위상차를 활용하는 종합 전달오차 최적화 프로세스 구축 가능. 선기어 및 유성 캐리어의 고주파 진동 전달력을 차단하여 구동계 NVH 신뢰성 대폭 향상 기대."
+    }
+  },
+  {
+    "id": 19,
+    "date": "2026-10-30",
+    "batch": "2026-10-30 (아침 브리핑)",
+    "categories": [
+      "치형수정·마이크로지오메트리",
+      "NVH·소음진동"
+    ],
+    "title_en": "Study of suppression of vibration and noise of reducer for electric vehicles",
+    "title_ko": "전기차용 2단 평행축 감속기의 27차수 기어 와인(Whine) 소음 억제를 위한 리드·치형 마이크로지오메트리(치형수정) 최적화 및 실차 검증",
+    "journal": "Proc. IMechE Part D: J. Automobile Engineering (SAGE, 2026-05-20)",
+    "authors": "Yang Jiayou, Yu Fuyong, Zheng Wei, Liu Jun, Cui Dongwei, Su Jintao (Deepal Automobile Technology Co. Ltd / Hubei Key Laboratory of Power System Design and Test for Electrical Vehicle)",
+    "link": "https://doi.org/10.1177/09544070261444794",
+    "doi": "10.1177/09544070261444794",
+    "summary": "EV용 2단 평행축 감속기에서 발생하는 27차수 기어 와인(Whine) 소음의 원인을 분석하고, Romax 파라메트릭 모델과 강체-유연체 결합 전동 구동계 동역학 모델 및 개선된 유전알고리즘(IGA)을 통해 리드(치선) 및 프로파일(치형) 마이크로지오메트리(치형수정)를 최적화하여 실차 레벨 소음 저감 검증.",
+    "details": {
+      "background": "전기차용 2단 평행축 감속기 실차 평가 중 고부하 영역에서 27차수 기어 와인(Whine) 소음이 심각하게 부각됨. 기어 치형 측정 및 치면 접촉 패턴(Contact pattern) 정밀 시험 결과, 초기 마이크로지오메트리 수정 파라미터가 부적절하여 고부하 시 전달오차(TE)가 급증하고 치단 편하중(Edge contact)이 발생하는 것이 주원인으로 판명됨.",
+      "method": "Romax 상용 기어 해석 프로그램을 기반으로 파라메트릭 기어 세트를 구축하고, 모터 하우징 및 감속기 케이스 탄성 변형을 반영한 전동 구동계의 강체-유연체(Rigid-flexible) 결합 동역학 모델을 수립. 시험 모달 데이터로 모델을 검증한 후, 개선된 유전알고리즘(IGA)을 적용하여 전달오차 최소화 및 접촉 패턴 균일화를 목표로 리드 크라운/슬로프 및 치형 팁 릴리프 마이크로지오메트리(치형수정) 파라미터 동시 최적화 수행.",
+      "data": "최적 마이크로지오메트리(치형수정) 적용 후 전달오차(PPTE)가 대폭 저감되고 치면 전 폭에 걸쳐 균일한 접촉 타원(Contact pattern)이 형성됨. 실차 가속 주행 시험 결과, 27차수 기어 와인 소음이 실내 음향 스펙트럼 상에서 뚜렷하게 저감되어 운전자 귀 위치 정숙성 기준을 완벽하게 만족함을 실증.",
+      "implications": "현대모비스 EV 감속기 양산 개발 시 특정 고조파 차수 기어 와인 노이즈가 부각될 때 적용 가능한 표준화된 문제 해결(Troubleshooting) 워크플로우 제시. 강체-유연체 결합 해석과 IGA 기반의 다변수 치형수정 최적화 기법이 실차 레벨 NVH 개선에 확실한 효과를 제공함을 증명."
+    }
   }
 ]
