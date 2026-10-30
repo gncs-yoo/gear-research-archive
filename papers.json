@@ -414,5 +414,71 @@
       "data": "최적 마이크로지오메트리(치형수정) 적용 후 전달오차(PPTE)가 대폭 저감되고 치면 전 폭에 걸쳐 균일한 접촉 타원(Contact pattern)이 형성됨. 실차 가속 주행 시험 결과, 27차수 기어 와인 소음이 실내 음향 스펙트럼 상에서 뚜렷하게 저감되어 운전자 귀 위치 정숙성 기준을 완벽하게 만족함을 실증.",
       "implications": "현대모비스 EV 감속기 양산 개발 시 특정 고조파 차수 기어 와인 노이즈가 부각될 때 적용 가능한 표준화된 문제 해결(Troubleshooting) 워크플로우 제시. 강체-유연체 결합 해석과 IGA 기반의 다변수 치형수정 최적화 기법이 실차 레벨 NVH 개선에 확실한 효과를 제공함을 증명."
     }
+  },
+  {
+    "id": 20,
+    "date": "2026-10-31",
+    "batch": "2026-10-31 (아침 브리핑)",
+    "categories": [
+      "치형수정·마이크로지오메트리",
+      "NVH·소음진동"
+    ],
+    "title_en": "Multi-objective micro-geometry optimization of high-speed e-drive gears for NVH and strength",
+    "title_ko": "고속 전기차 감속기 기어의 NVH 및 피로강도 동시 개선을 위한 다목적 마이크로지오메트리(치형수정) 최적화",
+    "journal": "Results in Engineering 30 (Elsevier, 2026-03-11)",
+    "authors": "Aoyu Xie, Xianghuan Liu, Jingang Liu, Guangjie Zhang (State Key Laboratory of Mechanical Transmission, Chongqing University)",
+    "link": "https://doi.org/10.1016/j.rineng.2026.109647",
+    "doi": "10.1016/j.rineng.2026.109647",
+    "summary": "14,000 rpm 고회전 영역의 심층 통합형 e-드라이브 감속기를 대상으로 전달오차(TE) 첨두와 엣지 접촉을 해소하기 위해 유전알고리즘(GA) 기반 마이크로지오메트리(치형수정)를 최적화하여 PPTE 최대 81.1% 저감 및 30만 km 피로수명 확보.",
+    "details": {
+      "background": "전기차 모터의 고속화(14,000 rpm 이상) 추세에 따라 e-드라이브 감속기 기어의 NVH 문제가 심화됨. 고충실도 전달계 모델 해석 결과, 14,000 rpm 운전 시 전달오차(TE) 피크 발생과 축/베어링 탄성 변형에 의한 치단부 엣지 접촉(Edge contact)이 기어 와인(Whine) 소음과 치면 피로 손상의 주원인으로 규명됨.",
+      "method": "고충실도 전동 구동계 모델을 수립하고 유전알고리즘(GA)을 도입하여 치선수정(Tip relief), 치폭방향 크라우닝(Lead crowning), 단부 릴리프(End relief) 등 마이크로지오메트리(치형수정) 파라미터를 다목적으로 최적화함. 구동면(Drive flank)과 제동면(Coast flank)의 피크-투-피크 전달오차(PPTE) 최소화 및 치면 하중 고른 분배를 목적함수로 설정하고, 접촉 패턴(Contact pattern) 벤치 시험을 통해 해석 모델을 검증함.",
+      "data": "14,000 rpm 와인 위험 회전수에서 1단(입력단) 기어의 PPTE 81.1% 저감, 2단(출력단) 기어의 PPTE 54.2% 대폭 저감 달성. 치단 엣지 접촉 완전 제거 및 설계 기준인 300,000 km 접촉 피로수명 요건 충족. 리그 벤치 치면 접촉 패턴 시험 결과 중앙 집중형 접촉 타원이 시뮬레이션과 완벽히 일치함을 확인.",
+      "implications": "현대모비스의 고속 고집적 e-Axle 감속기 개발 시, 고회전(14,000 rpm 이상) 공진 와인 노이즈 저감과 30만 km 내구성 요건을 동시에 만족시키는 마이크로지오메트리(치형수정) 설계 표준 튜닝 프로세스로 즉시 활용 가능."
+    }
+  },
+  {
+    "id": 21,
+    "date": "2026-10-31",
+    "batch": "2026-10-31 (아침 브리핑)",
+    "categories": [
+      "치형수정·마이크로지오메트리",
+      "NVH·소음진동"
+    ],
+    "title_en": "Hierarchical optimization of gear macro- and microgeometry for vibration and radiated noise reduction in a heavy-duty electric drive axle",
+    "title_ko": "대형 상용 e-Axle의 진동 및 방사소음 저감을 위한 기어 매크로 및 마이크로지오메트리(치형수정) 계층적 최적화",
+    "journal": "Results in Engineering 31 (Elsevier, 2026-09-17)",
+    "authors": "Niancheng Guo, QiMin Mu, Hai Yang, HaoNan Sun, Yang Gao, Lu Wang (School of Mechanical and Aerospace Engineering, Jilin University)",
+    "link": "https://doi.org/10.1016/j.rineng.2026.113075",
+    "doi": "10.1016/j.rineng.2026.113075",
+    "summary": "대형 상용 전기구동 액슬(e-Axle)을 대상으로 모터-기어-샤프트-하우징 강체-유연체 모델과 BEM을 결합하여, 듀티사이클 가중치 기반 매크로(L9 직교배열) 및 마이크로지오메트리(NSGA-II) 계층적 최적화로 방사소음 최대 2.26 dB(A) 저감 및 효율 향상.",
+    "details": {
+      "background": "대형 상용 e-Axle의 다단 감속 기어 맞물림 기진력은 하우징 표면 방사소음 및 특정 차수(17.3차수, 11.5차수) 진동의 핵심 원인임. 협소한 패키징 공간과 축간거리 고정 제약 조건 하에서 부하 전달오차(LTE)와 음향 방사 출력(SPL)을 동시에 억제하는 종합 설계 최적화가 요구됨.",
+      "method": "듀티사이클 가중치를 반영한 계층적 최적화 프레임워크 수립: 모터-기어-축-베어링-하우징 강체-유연체 연계 모델에 음향 경계요소법(BEM)을 결합하여 4대 모터 토크(120, 240, 360, 480 N·m) 조건별 부하 전달오차와 A-가중 음압레벨(SPL)을 도출. L9 직교설계로 매크로 변수(헬릭스각, 치폭, 표준압력각)를 1차 선별한 후, NSGA-II를 통해 전달오차 1차 고조파 및 PPTE를 최소화하는 치면 마이크로지오메트리(치형수정) 2단계 순차 최적화 수행.",
+      "data": "17.3차수 진동 5.7~23.9%, 11.5차수 진동 2.8~13.2% 저감. 240 N·m 정격 운전 조건에서 평균 및 피크 SPL이 각각 2.26 dB(A), 1.94 dB(A) 저감되고, 중심거리 변경 없이 전동 효율 최대 0.2%p 향상 유지. 480 N·m 최대 부하 조건에서도 치근 굽힘응력 안전마진(4.7%)을 유지하며 평균 SPL 1.43 dB(A) 저감.",
+      "implications": "현대모비스 고하중 상용 및 프리미엄 승용 e-Axle 감속기 개발 시, 패키징 및 하우징 구조 변경 없이 기어 제원과 치면 마이크로지오메트리(치형수정)의 계층적 연계 설계만으로 방사소음과 주요 차수 진동을 효과적으로 억제하는 시스템 단위 최적화 방법론 제시."
+    }
+  },
+  {
+    "id": 22,
+    "date": "2026-10-31",
+    "batch": "2026-10-31 (아침 브리핑)",
+    "categories": [
+      "윤활·효율·마찰",
+      "치형수정·마이크로지오메트리"
+    ],
+    "title_en": "Novel tooth surface modification approach for high lubrication performance of spiral bevel gears",
+    "title_ko": "고윤활 성능 및 접촉 피로 억제를 위한 스파이럴 베벨 기어의 신규 치면 수정(Tooth Surface Modification) 설계 기법",
+    "journal": "Tribology International (Elsevier, 2026-08-28)",
+    "authors": "Chao Jia, Jiexin Ding, Ligang Yao (Fuzhou University), Zongde Fang (Northwestern Polytechnical University)",
+    "link": "https://doi.org/10.1016/j.triboint.2026.112647",
+    "doi": "10.1016/j.triboint.2026.112647",
+    "summary": "스파이럴 베벨 기어의 치면 미끄럼 발열 및 윤활 유막 파단을 극복하기 위해, 비정상 탄성유체윤활(Transient EHL)과 Ease-off 토폴로지를 결합한 신규 치면 수정 기법을 통해 최소 유막 두께 34.6% 증가 및 접촉 마찰·발열 15.4% 저감.",
+    "details": {
+      "background": "구동축 직교 변환 및 차동기어장치(Differential)에 널리 사용되는 스파이럴 베벨 기어는 치면 미끄럼 속도가 크고 접촉 하중이 집중되어 탄성유체윤활(EHL) 유막 파단 및 치면 스커핑(Scuffing), 피팅 마모 발생 위험이 높음. 종래의 치형수정은 기하 접촉이나 전달오차에 편중되어 실제 오일막 두께 형성을 최적화하는 데 한계가 있었음.",
+      "method": "치면 접촉 해석(TCA)과 비정상 탄성유체윤활(Transient EHL) 수치 모델을 결합한 Ease-off 토폴로지 기반 신규 치면 형상수정 프레임워크 개발. 커터 날 형상 보정과 치폭/치형 방향 고차 수정을 결합하여 접촉 타원의 맞물림 진입부 쐐기 효과(Hydrodynamic wedge effect)를 강화하고, 구동면(Drive flank)과 제동면(Coast flank) 맞물림 전 구간에 걸친 최소 유막 두께와 유막 압력 분포를 최적 제어함.",
+      "data": "신규 치면 수정 적용 시 맞물림 전 구간에서 최소 무차원 유막 두께 34.6% 증가, 최대 유막 압력 피크 18.2% 완화 달성. 치면 마찰 손실 및 발열량 15.4% 저감 실증. 스커핑 안전율(Scuffing safety factor) 대폭 증대 확인.",
+      "implications": "현대모비스 e-Axle 내 디퍼렌셜 베벨 기어 및 직교 감속 메커니즘의 윤활 한계 속도 극복에 기여. 최근 구동계 효율 극대화를 위한 초저점도 감속기 오일 채용 시 우려되는 치면 윤활막 붕괴 및 조기 마모 문제를 치면 형상수정(Microgeometry) 최적화로 극복할 수 있는 실증적 근거 제공."
+    }
   }
 ]
