@@ -480,5 +480,73 @@
       "data": "신규 치면 수정 적용 시 맞물림 전 구간에서 최소 무차원 유막 두께 34.6% 증가, 최대 유막 압력 피크 18.2% 완화 달성. 치면 마찰 손실 및 발열량 15.4% 저감 실증. 스커핑 안전율(Scuffing safety factor) 대폭 증대 확인.",
       "implications": "현대모비스 e-Axle 내 디퍼렌셜 베벨 기어 및 직교 감속 메커니즘의 윤활 한계 속도 극복에 기여. 최근 구동계 효율 극대화를 위한 초저점도 감속기 오일 채용 시 우려되는 치면 윤활막 붕괴 및 조기 마모 문제를 치면 형상수정(Microgeometry) 최적화로 극복할 수 있는 실증적 근거 제공."
     }
+  },
+  {
+    "id": 23,
+    "date": "2026-11-01",
+    "batch": "2026-11-01 (아침 브리핑)",
+    "categories": [
+      "NVH·소음진동",
+      "치형수정·마이크로지오메트리"
+    ],
+    "title_en": "Optimization of Lightweight Gear Blanks to Improve NVH for an Electric Drive Unit",
+    "title_ko": "전기차 구동 유닛(eDU)의 NVH 개선 및 경량화를 위한 경량 기어 블랭크 최적화",
+    "journal": "SAE Technical Papers (SAE International, 2026)",
+    "authors": "Song Bai He, Isaac Du, Bo Li, Cheonjae Bahk, Zachary Grguras, Dhanasekar Baladhandapani 외",
+    "link": "https://doi.org/10.4271/2026-01-0001",
+    "doi": "10.4271/2026-01-0001",
+    "summary": "엔진 마스킹 소음이 부재한 EV 감속기(eDU)에서 고피치속도 기어 와인을 억제하기 위해, 8-슬롯 경량 기어 블랭크 구조와 마이크로지오메트리(치형수정)를 연계 최적화하고 실차 청음 평가(Auralization)로 검증.",
+    "details": {
+      "background": "내연기관 마스킹 소음이 없는 순수 전기차 구동 유닛(eDU)은 피치선 속도가 매우 높아 1단 트랜스퍼 기어 맞물림 시 고주파 와인(Whine) 소음이 실내로 쉽게 전달됨. 동시에 주행거리 확장을 위한 감속계 회전 부품의 질량 저감(경량화) 요구가 커지며, 기어 블랭크의 강성 저하가 전달오차(TE) 및 NVH에 미치는 부정적 영향을 상쇄할 정밀 설계 기법이 시급함.",
+      "method": "비대칭 기어 블랭크 형상, 축 탄성, 베어링 강성, 하우징 유연성을 통합한 MBD(다물체 동역학) 해석 모델을 구축함. 실험계획법(DOE) 기반으로 강도, 경량화, NVH 간 균형을 갖춘 8-슬롯(8-slot) 기어 블랭크 형상을 도출한 뒤, 슬롯 블랭크의 동적 하중 전달을 최소화하는 마이크로지오메트리(치형수정)를 연계 최적화함. 솔리드 블랭크 및 8-슬롯 시제품 기어를 제작하여 다이나모 벤치에서 구동(Drive) 및 회생제동(Regen) 양방향 토크 조건 시험을 수행하고 시간영역 TPA 기반 청음 평가(Auralization)를 실시함.",
+      "data": "솔리드 블랭크 대비 기어 림/웹 질량을 대폭 감량하면서도 구동 및 회생제동 전 토크 영역에서 베어링 및 하우징 전달 동적 하중 대폭 저감. 시뮬레이션 기반 예측 음향 파워(Sound power)와 리그 실측 데이터 간 높은 상관성(R² > 0.92) 확인. 배심원 청음 평가(Jury evaluation) 결과, 최적화된 8-슬롯 기어가 솔리드 기준 기어 대비 와인 소음 청감 불쾌도 지수를 현저히 낮춤을 실증함.",
+      "implications": "현대모비스 e-Axle 및 통합 구동모듈(eDU)의 1단 고속 감속단 설계 시, 단순 솔리드 림 구조 탈피 및 슬롯형 경량 블랭크 적용에 따른 구조 유연성 변화를 마이크로지오메트리(치형수정)로 완벽히 보상하는 경량화-저NVH 동시 달성 설계 워크플로우에 직접적 벤치마크 가치 제공."
+    }
+  },
+  {
+    "id": 24,
+    "date": "2026-11-01",
+    "batch": "2026-11-01 (아침 브리핑)",
+    "categories": [
+      "NVH·소음진동",
+      "치형수정·마이크로지오메트리",
+      "하중분배·구동계기구학"
+    ],
+    "title_en": "Vibration characteristics and micro-geometry modification design of high-speed NW planetary transmission under time-varying conditions",
+    "title_ko": "시변 운전 조건 하의 고속 NW형 유성기어 감속계 진동 특성 해석 및 마이크로지오메트리(치형수정) 최적화 설계",
+    "journal": "Journal of Aerospace Power / DOAJ (2026)",
+    "authors": "Bang Pei, Jinghao Han, Shuaizong Huang, Liupeng Xu, Nan Guo, Yanghua Qu, Lubing Shi (Beihang Univ. 외)",
+    "link": "https://doi.org/10.13224/j.cnki.jasp.20240365",
+    "doi": "10.13224/j.cnki.jasp.20240365",
+    "summary": "고속·가변 부하 조건의 NW형 유성기어 감속계에서 유연 하우징-베어링 결합 비선형 MBD와 TCA 기반 GA 최적화를 통해 180차수 맞물림 동적전달오차 51.1% 및 하우징 진동 가속도 60.3% 저감 실증.",
+    "details": {
+      "background": "NW형 유성기어 감속계는 고감속비와 콤팩트한 구조적 장점에도 불구하고, 고속 구동 시 시변 운전 부하와 구조 유연성에 기인한 축 정렬 불량 및 치단부(Corner/Edge) 접촉 집중으로 인해 심각한 고주파 진동과 소음(NVH) 문제가 발생함.",
+      "method": "유한요소 부분구조화 기법을 적용하여 유연 하우징, 베어링 강성, 비선형 기어 맞물림 특성을 결합한 연성 시스템 동역학 모델을 정립함. 실측 운전 부하 프로파일을 기반으로 치면 접촉 해석(TCA)을 수행해 기준 미스얼라인먼트를 정량화하고, 선기어 및 유성기어의 헬릭스 크라운(Helix crown), 헬릭스 슬로프(Helix slope), 치형 프로파일 수정 변수를 유전알고리즘(GA) 기반 선형 가중 종합 적합도 함수로 최적화함. 가변속 오더 해석 시험 플랫폼에서 섀시 진동 가속도를 실측 검증함.",
+      "data": "지배적 맞물림 주파수인 180차수 맞물림 주파수에서 1단 기어쌍의 동적전달오차(DTE) 51.1% 저감, 최대 치면 접촉응력 12.8% 완화. 하우징 피크 진동 가속도 347.26 m/s²에서 137.98 m/s²로 60.26% 급감. 벤치 오더 트래킹 실측 결과 최대 진동 가속도가 997.4 m/s²에서 581.4 m/s²로 대폭 저감되어 치단부 모서리 접촉이 완전 소멸됨을 확인.",
+      "implications": "고속 회전 영역에서 동작하는 현대모비스 다단 유성기어 감속기의 고차수(180th order 등) 고주파 진동 절감 시, 하우징 유연 변형을 반영한 리드 방향(크라운·슬로프) 및 인볼류트 방향 치형수정 파라미터의 동시 최적화 표준 프로세스로 활용 가능."
+    }
+  },
+  {
+    "id": 25,
+    "date": "2026-11-01",
+    "batch": "2026-11-01 (아침 브리핑)",
+    "categories": [
+      "AI·설계자동화·진단",
+      "치형수정·마이크로지오메트리",
+      "하중분배·구동계기구학"
+    ],
+    "title_en": "Optimization of modification parameters of face gear pair based on TCA-NRBPNN-HYPE hybrid drive model",
+    "title_ko": "TCA-NRBPNN-HYPE 하이브리드 구동 모델 기반 페이스 기어 페어의 치형수정 파라미터 최적화",
+    "journal": "Engineering Science and Technology, an International Journal (JESTECH, Elsevier, 2026)",
+    "authors": "Kun He, Ronghao Li, Yongquan Chen, Yachao Jia, Guolong Li",
+    "link": "https://doi.org/10.1016/j.jestch.2025.102274",
+    "doi": "10.1016/j.jestch.2025.102274",
+    "summary": "페이스 기어 페어의 치면 편마모 및 전달오차 개선을 위해 이중 가중치 치면수정 곡선과 TCA-신경망(NRBPNN)-초매개변수 최적화(HYPE) 연계 하이브리드 모델을 수립하여 전달오차 89.5% 및 접촉응력 48.4% 동시 저감.",
+    "details": {
+      "background": "페이스 기어(Face gear)는 직교축 구동계에서 높은 접촉비와 경량화의 이점을 가지나, 맞물림 과정에서 조립 오차 및 탄성 변형에 의해 접촉 타원이 치단부로 치우쳐 국부 응력 집중과 전달오차 급증을 유발하기 쉬움. 전통적 단일 곡선 치형수정만으로는 광범위한 운전 조건에서 최적 접촉 패턴 유지가 어려움.",
+      "method": "치면의 유효 접촉 영역을 정밀 제어할 수 있는 이중 가중치 수정 곡선(Dual weight modification curve)을 페이스 기어 치면에 도입함. 치면 접촉 해석(TCA)을 통해 접촉 위치, 전달오차, 접촉응력을 정밀 산출하고, 뉴턴-랩슨 역전파 신경망(NRBPNN)을 구축하여 치형수정 파라미터와 맞물림 특성 간 비선형 매핑 모델을 학습함. 이후 초매개변수 최적화(HYPE) 모델을 결합해 전역 최적 파라미터 조합을 탐색하는 하이브리드 구동 최적화 프레임워크를 수립함.",
+      "data": "최적 설계 결과, 접촉 위치 파라미터가 4.15에서 1.50으로 감소하여 접촉 중심이 치면 중앙부로 이상적 재배치됨. 전달오차(TE)는 2.98″에서 0.314″로 89.46% 급감하였으며, 최대 치면 접촉응력은 566.30 MPa에서 292.33 MPa로 48.38% 대폭 완화되어 페이스 기어의 전동 정밀도와 구조적 신뢰성이 비약적으로 향상됨.",
+      "implications": "직교축 감속 기구 또는 특수 차동 기구에 페이스 기어를 적용할 때, 연산 비용이 큰 반복적 비선형 접촉 해석(TCA)을 신경망 대리 모델과 결합하여 전역 최적 치형수정 변수를 초고속으로 도출하는 AI/ML 기반 실무 설계 방법론으로 응용 가능."
+    }
   }
 ]
