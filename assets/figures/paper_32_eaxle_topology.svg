@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="motorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="pgtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="clutchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="wheelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="320" rx="14" fill="url(#bgGrad)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header / Caption -->
+  <text x="24" y="32" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold" letter-spacing="0.5">
+    FIG 1. RECONFIGURABLE DUAL-MOTOR COMPOUND-PLANETARY E-AXLE TOPOLOGY
+  </text>
+  <text x="24" y="50" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">
+    MDPI Actuators 2026 (Shenzhen Tech Univ) · Fixed-Carrier Compound Planetary &amp; Cross-Axle Clutches
+  </text>
+
+  <!-- Left Drive Branch -->
+  <!-- Left Wheel -->
+  <g filter="url(#glow)">
+    <rect x="36" y="95" width="48" height="90" rx="8" fill="url(#wheelGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="60" y="145" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Left</text>
+    <text x="60" y="160" fill="#a7f3d0" font-family="-apple-system, sans-serif" font-size="9" text-anchor="middle">Wheel</text>
+  </g>
+
+  <!-- Shaft Left Wheel to PGT1 -->
+  <line x1="84" y1="140" x2="136" y2="140" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Compound PGT 1 (Left) -->
+  <g filter="url(#glow)">
+    <rect x="136" y="80" width="104" height="120" rx="10" fill="url(#pgtGrad)" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="188" y="112" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Compound</text>
+    <text x="188" y="128" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PGT 1</text>
+    <text x="188" y="152" fill="#e9d5ff" font-family="-apple-system, sans-serif" font-size="9.5" text-anchor="middle">Fixed Carrier</text>
+    <text x="188" y="168" fill="#e9d5ff" font-family="-apple-system, sans-serif" font-size="9.5" text-anchor="middle">Power-Split</text>
+  </g>
+
+  <!-- Motor 1 (Left) -->
+  <g filter="url(#glow)">
+    <rect x="148" y="224" width="80" height="50" rx="8" fill="url(#motorGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="188" y="246" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">EM 1</text>
+    <text x="188" y="260" fill="#bae6fd" font-family="-apple-system, sans-serif" font-size="9" text-anchor="middle">Drive Motor</text>
+  </g>
+  <line x1="188" y1="224" x2="188" y2="200" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Center Cross-Axle Clutches Area -->
+  <rect x="264" y="72" width="232" height="136" rx="12" fill="#0f172a" stroke="#475569" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="380" y="92" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">
+    Cross-Axle Power Transfer Channel
+  </text>
+
+  <!-- Clutch 1 -->
+  <g filter="url(#glow)">
+    <rect x="286" y="106" width="84" height="42" rx="6" fill="url(#clutchGrad)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="328" y="125" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">Clutch 1</text>
+    <text x="328" y="139" fill="#fde68a" font-family="-apple-system, sans-serif" font-size="8.5" text-anchor="middle">(CL 1)</text>
+  </g>
+
+  <!-- Clutch 2 -->
+  <g filter="url(#glow)">
+    <rect x="390" y="148" width="84" height="42" rx="6" fill="url(#clutchGrad)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="432" y="167" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">Clutch 2</text>
+    <text x="432" y="181" fill="#fde68a" font-family="-apple-system, sans-serif" font-size="8.5" text-anchor="middle">(CL 2)</text>
+  </g>
+
+  <!-- Interconnecting Lines -->
+  <!-- From PGT1 to CL1 and CL2 -->
+  <path d="M 240 127 L 286 127" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M 240 155 L 268 155 L 268 169 L 390 169" stroke="#cbd5e1" stroke-width="3" fill="none"/>
+
+  <!-- From PGT2 to CL1 and CL2 -->
+  <path d="M 474 169 L 520 169" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M 370 127 L 492 127 L 492 145 L 520 145" stroke="#cbd5e1" stroke-width="3" fill="none"/>
+
+  <!-- Compound PGT 2 (Right) -->
+  <g filter="url(#glow)">
+    <rect x="520" y="80" width="104" height="120" rx="10" fill="url(#pgtGrad)" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="572" y="112" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Compound</text>
+    <text x="572" y="128" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PGT 2</text>
+    <text x="572" y="152" fill="#e9d5ff" font-family="-apple-system, sans-serif" font-size="9.5" text-anchor="middle">Fixed Carrier</text>
+    <text x="572" y="168" fill="#e9d5ff" font-family="-apple-system, sans-serif" font-size="9.5" text-anchor="middle">Power-Split</text>
+  </g>
+
+  <!-- Motor 2 (Right) -->
+  <g filter="url(#glow)">
+    <rect x="532" y="224" width="80" height="50" rx="8" fill="url(#motorGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="572" y="246" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">EM 2</text>
+    <text x="572" y="260" fill="#bae6fd" font-family="-apple-system, sans-serif" font-size="9" text-anchor="middle">Drive Motor</text>
+  </g>
+  <line x1="572" y1="224" x2="572" y2="200" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Shaft PGT2 to Right Wheel -->
+  <line x1="624" y1="140" x2="676" y2="140" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Right Wheel -->
+  <g filter="url(#glow)">
+    <rect x="676" y="95" width="48" height="90" rx="8" fill="url(#wheelGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="700" y="145" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Right</text>
+    <text x="700" y="160" fill="#a7f3d0" font-family="-apple-system, sans-serif" font-size="9" text-anchor="middle">Wheel</text>
+  </g>
+
+  <!-- Bottom Mode Strip -->
+  <rect x="24" y="286" width="712" height="24" rx="6" fill="#1e293b"/>
+  <text x="36" y="302" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="10">
+    <tspan font-weight="bold" fill="#38bdf8">Mode 1:</tspan> Independent Drive (CL Off)  |  
+    <tspan font-weight="bold" fill="#38bdf8">Mode 2A:</tspan> Slip Coupling (Yaw-Rate TV ↑)  |  
+    <tspan font-weight="bold" fill="#38bdf8">Mode 2B:</tspan> Lock Coupling (Split-μ Escape 2.88x)  |  
+    <tspan font-weight="bold" fill="#38bdf8">Mode 3:</tspan> Dual Lock (Park/Fail-Safe)
+  </text>
+</svg>
