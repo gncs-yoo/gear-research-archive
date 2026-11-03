@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🤖 휴머노이드 액추에이터·그리퍼 구동계 & NVH 최신 연구 아카이브 | 유호길 책임</title>
+  <title>🤖 휴머노이드 액추에이터·그리퍼 구동계 & NVH 아카이브 | 유호길 책임</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -44,18 +44,23 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(8px);
-      padding: 20px;
+      backdrop-filter: blur(12px);
+      padding: 16px 0;
     }
 
-    .header-container {
-      max-width: 1200px;
+    .container {
+      max-width: 1140px;
       margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header-content {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
+    /* Archive Navigation */
     .archive-nav {
       display: flex;
       gap: 10px;
@@ -94,7 +99,7 @@
       font-weight: 700;
     }
 
-    .header-top {
+    .title-row {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -102,61 +107,119 @@
       gap: 12px;
     }
 
-    .title-area h1 {
-      font-size: 1.45rem;
+    .main-title {
+      font-size: 1.55rem;
       font-weight: 700;
-      color: var(--text-main);
+      letter-spacing: -0.02em;
+      color: #ffffff;
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .title-area p {
-      font-size: 0.88rem;
-      color: var(--accent);
-      margin-top: 4px;
-      font-weight: 500;
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 3px;
     }
 
-    .stat-badge {
+    .meta-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .meta-pill {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--accent-dim);
-      border: 1px solid var(--accent);
+    }
+
+    .meta-pill strong {
       color: var(--accent);
-      padding: 6px 14px;
-      border-radius: 9999px;
-      font-size: 0.85rem;
-      font-weight: 600;
     }
 
-    .controls {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .search-box {
-      position: relative;
-      width: 100%;
-    }
-
-    .search-box input {
-      width: 100%;
-      padding: 12px 16px 12px 42px;
+    .pill-btn {
       background: var(--surface);
       border: 1px solid var(--surface-border);
-      border-radius: 10px;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
       color: var(--text-main);
-      font-size: 0.95rem;
-      outline: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-weight: 500;
       transition: all 0.2s;
     }
 
-    .search-box input:focus {
+    .pill-btn:hover {
+      background: var(--surface-hover);
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px var(--accent-dim);
+      color: var(--accent);
+    }
+
+    .pill-btn-primary {
+      background: var(--accent-dim);
+      border-color: rgba(56, 189, 248, 0.4);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .pill-btn-primary:hover {
+      background: var(--accent);
+      color: #0f172a;
+      border-color: var(--accent);
+    }
+
+    /* Controls */
+    .controls-panel {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin: 24px 0 32px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .search-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid var(--surface-border);
+      color: #fff;
+      padding: 10px 16px 10px 40px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
     }
 
     .search-icon {
@@ -165,52 +228,72 @@
       top: 50%;
       transform: translateY(-50%);
       color: var(--text-dim);
+      font-size: 1rem;
     }
 
-    .category-filter {
+    .action-buttons {
       display: flex;
       gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 4px;
-      scrollbar-width: none;
     }
 
-    .category-filter::-webkit-scrollbar {
-      display: none;
-    }
-
-    .filter-btn {
-      padding: 6px 14px;
-      background: var(--surface);
+    .btn {
+      background: #0f172a;
       border: 1px solid var(--surface-border);
-      border-radius: 8px;
-      color: var(--text-muted);
-      font-size: 0.82rem;
+      color: var(--text-main);
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 0.85rem;
       font-weight: 500;
       cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
     }
 
-    .filter-btn:hover {
+    .btn:hover {
       background: var(--surface-hover);
+      border-color: var(--text-muted);
+    }
+
+    .category-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .category-label {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      margin-right: 4px;
+    }
+
+    .chip {
+      background: #0f172a;
+      border: 1px solid var(--surface-border);
+      color: var(--text-muted);
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .chip:hover {
+      border-color: var(--accent);
       color: var(--text-main);
     }
 
-    .filter-btn.active {
-      background: var(--accent);
-      color: #0f172a;
+    .chip.active {
+      background: var(--accent-dim);
       border-color: var(--accent);
-      font-weight: 700;
+      color: var(--accent);
+      font-weight: 600;
     }
 
-    main {
-      max-width: 1200px;
-      margin: 28px auto 0;
-      padding: 0 20px;
-    }
-
-    .paper-grid {
+    /* Papers Grid */
+    .papers-list {
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -219,335 +302,1262 @@
     .paper-card {
       background: var(--surface);
       border: 1px solid var(--surface-border);
-      border-radius: 12px;
-      padding: 22px;
+      border-radius: 16px;
+      padding: 24px;
       box-shadow: var(--card-shadow);
-      transition: transform 0.15s, border-color 0.15s;
+      transition: transform 0.2s, border-color 0.2s;
     }
 
     .paper-card:hover {
-      border-color: #475569;
+      border-color: rgba(56, 189, 248, 0.4);
     }
 
-    .card-header {
+    .card-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 12px;
       margin-bottom: 12px;
-    }
-
-    .meta-tags {
-      display: flex;
       flex-wrap: wrap;
-      gap: 6px;
     }
 
-    .tag {
-      font-size: 0.72rem;
+    .tags-group {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .paper-id-badge {
+      background: var(--accent);
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 3px 9px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .date-badge {
+      background: #0f172a;
+      color: var(--text-muted);
+      border: 1px solid var(--surface-border);
+      font-size: 0.78rem;
       padding: 3px 8px;
       border-radius: 6px;
-      background: var(--badge-bg);
-      color: var(--text-muted);
-      font-weight: 500;
     }
 
-    .tag.batch {
+    .category-badge {
       background: rgba(192, 132, 252, 0.15);
-      border: 1px solid var(--purple);
-      color: var(--purple);
+      border: 1px solid rgba(192, 132, 252, 0.3);
+      color: #d8b4fe;
+      font-size: 0.78rem;
+      padding: 3px 8px;
+      border-radius: 6px;
     }
 
-    .tag.category {
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: var(--accent);
+    .journal-badge {
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      color: #6ee7b7;
+      font-size: 0.78rem;
+      padding: 3px 8px;
+      border-radius: 6px;
+      max-width: 380px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .paper-id {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: var(--text-dim);
-      font-weight: 600;
-    }
-
-    .card-title-ko {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 4px;
-      line-height: 1.45;
-    }
-
-    .card-title-en {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      font-weight: 400;
-    }
-
-    .card-biblio {
-      font-size: 0.82rem;
-      color: var(--text-dim);
-      margin-bottom: 14px;
+    .card-top-actions {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      align-items: center;
+      gap: 8px;
     }
 
-    .card-biblio span {
+    .card-feedback-btn {
+      background: transparent;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 4px;
+      transition: all 0.2s;
     }
 
-    .card-summary {
+    .card-feedback-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-dim);
+    }
+
+    .paper-link-btn {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .paper-link-btn:hover {
+      background: var(--accent-dim);
+      text-decoration: underline;
+    }
+
+    .title-ko {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.45;
+      margin-bottom: 4px;
+    }
+
+    .title-en {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .authors-line {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .highlight-box {
       background: rgba(15, 23, 42, 0.6);
       border-left: 3px solid var(--accent);
       padding: 10px 14px;
       border-radius: 0 8px 8px 0;
+      margin-bottom: 14px;
       font-size: 0.88rem;
       color: #e2e8f0;
-      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .highlight-title {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .details-toggle {
-      background: none;
+      width: 100%;
+      background: #0f172a;
       border: 1px solid var(--surface-border);
       color: var(--text-muted);
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 0.8rem;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
       cursor: pointer;
-      display: inline-flex;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 6px;
-      transition: all 0.15s;
+      transition: all 0.2s;
     }
 
     .details-toggle:hover {
-      color: var(--text-main);
-      border-color: var(--accent);
-      background: var(--accent-dim);
+      background: var(--surface-hover);
+      color: #fff;
     }
 
     .details-content {
+      display: none;
       margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px dashed var(--surface-border);
-      display: flex;
+      padding: 18px 20px;
+      background: #0b1120;
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
 
-    .detail-section h4 {
-      font-size: 0.82rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
+    .details-content.open {
+      display: flex;
+    }
+
+    .section-block {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .section-header {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #93c5fd;
       display: flex;
       align-items: center;
       gap: 6px;
     }
 
-    .detail-section p {
-      font-size: 0.86rem;
+    .section-body {
+      font-size: 0.9rem;
       color: #cbd5e1;
-      line-height: 1.55;
+      line-height: 1.6;
+      padding-left: 4px;
+    }
+
+    .mobis-implication {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .mobis-implication .section-header {
+      color: var(--accent);
     }
 
     .card-footer {
-      margin-top: 16px;
       display: flex;
       justify-content: flex-end;
-      gap: 10px;
-    }
-
-    .doi-btn {
-      font-size: 0.78rem;
-      color: var(--accent);
-      text-decoration: none;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      padding: 4px 10px;
-      border-radius: 6px;
-      transition: all 0.15s;
-    }
-
-    .doi-btn:hover {
-      background: var(--accent);
-      color: #0f172a;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(51, 65, 85, 0.4);
     }
 
     .empty-state {
       text-align: center;
       padding: 60px 20px;
       color: var(--text-dim);
+      font-size: 1rem;
+    }
+
+    /* Modals */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeIn 0.15s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-box {
+      background: #1e293b;
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 640px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      animation: slideUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.5);
+    }
+
+    .modal-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0 4px;
+      transition: color 0.15s;
+    }
+
+    .modal-close-btn:hover {
+      color: #fff;
+    }
+
+    .modal-body {
+      padding: 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--surface-border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      background: rgba(15, 23, 42, 0.3);
+    }
+
+    .btn-primary {
+      background: var(--accent) !important;
+      color: #0f172a !important;
+      border: 1px solid var(--accent) !important;
+      font-weight: 700 !important;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover) !important;
+      border-color: var(--accent-hover) !important;
+      color: #0f172a !important;
+    }
+
+    /* Patch Notes specific */
+    .patch-item {
+      padding: 16px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .patch-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .patch-version {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--accent);
+    }
+
+    .patch-date {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    .patch-badge {
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+
+    .patch-badge.current {
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: var(--success);
+    }
+
+    .patch-list {
+      margin-left: 20px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      line-height: 1.5;
+    }
+
+    .patch-list strong {
+      color: #fff;
+    }
+
+    /* Feedback Form specific */
+    .feedback-target-box {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      line-height: 1.5;
+    }
+
+    .feedback-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feedback-field label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .feedback-textarea {
+      width: 100%;
+      min-height: 120px;
+      background: #0f172a;
+      border: 1px solid var(--surface-border);
+      color: #fff;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      line-height: 1.5;
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .feedback-textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+
+    .feedback-note {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      line-height: 1.4;
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #10b981;
+      color: #0f172a;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      z-index: 2000;
+      font-size: 0.88rem;
+      animation: toastAnim 2.5s forwards;
+    }
+
+    @keyframes toastAnim {
+      0% { opacity: 0; transform: translate(-50%, 15px); }
+      15% { opacity: 1; transform: translate(-50%, 0); }
+      85% { opacity: 1; transform: translate(-50%, 0); }
+      100% { opacity: 0; transform: translate(-50%, -10px); }
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      header, .controls-panel, .details-toggle, .card-footer, .modal-overlay {
+        display: none !important;
+      }
+      .details-content {
+        display: block !important;
+        background: transparent !important;
+        border: 1px solid #ccc !important;
+        color: #000 !important;
+      }
+      .paper-card {
+        page-break-inside: avoid;
+        border: 1px solid #ddd !important;
+        background: #fff !important;
+        color: #000 !important;
+      }
+      .title-ko, .title-en {
+        color: #000 !important;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="header-container">
+<header>
+  <div class="container">
+    <div class="header-content">
       <nav class="archive-nav">
         <a href="./" class="nav-btn inactive">⚙️ 기어·구동계 아카이브 (34편)</a>
-        <a href="robotics.html" class="nav-btn active">🤖 휴머노이드 로보틱스 아카이브</a>
+        <a href="robotics.html" class="nav-btn active">🤖 휴머노이드 로보틱스 (6편)</a>
       </nav>
-
-      <div class="header-top">
-        <div class="title-area">
-          <h1>🤖 휴머노이드 액추에이터·그리퍼 구동계 & NVH 아카이브</h1>
-          <p>Precision Reducers, Gripper Transmissions, Dynamic TE & NVH Research · Powered by GNCS @ Hyundai Mobis</p>
+      <div class="title-row">
+        <div>
+          <h1 class="main-title">🤖 휴머노이드 액추에이터·그리퍼 구동계 & NVH 아카이브</h1>
+          <p class="subtitle">Actuators, Grippers, Dynamic TE & NVH Research · Powered by GNCS @ Hyundai Mobis</p>
         </div>
-        <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-          <div class="stat-badge">
-            <span>누적 논문:</span>
-            <strong id="totalCount">6</strong>편
-          </div>
-          <a href="https://forms.cloud.microsoft/r/nT3YbMgzwH" target="_blank" rel="noopener noreferrer" class="stat-badge" style="text-decoration: none; background: rgba(56, 189, 248, 0.15); transition: all 0.2s;" title="사내 MS Forms 건의함 열기">
-            <span>📬 건의함 (MS Forms) ↗</span>
+        <div class="meta-pills">
+          <div class="meta-pill">총 누적 논문: <strong id="total-count">6편</strong></div>
+          <div class="meta-pill">최근 갱신: <strong id="last-updated">2026-11-04 08:34 KST</strong></div>
+          <div class="meta-pill">자동 수집: <strong>매일 08:00 KST</strong></div>
+          <button id="btn-patch-notes" class="pill-btn" title="아카이브 개편 및 업데이트 이력 보기">📋 패치 노트</button>
+          <button id="btn-open-feedback" class="pill-btn pill-btn-primary" title="연구 관심 주제나 아카이브 개선 의견을 남깁니다">📬 아카이브 건의함 (MS Forms)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Controls Panel -->
+  <section class="controls-panel">
+    <div class="search-row">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="논문명, 저자, 저널, 해석 기법, 실무 키워드 검색 (예: 하모닉, 감속기, 그리퍼, 텐던, NVH, 와인, 로스트모션)...">
+      </div>
+      <div class="action-buttons">
+        <button id="btn-toggle-all" class="btn" title="모든 카드의 5단계 상세 분석을 펼치거나 접습니다">📂 전체 상세 펼치기</button>
+        <button id="btn-sort" class="btn" title="최신 등록순 또는 과거순으로 정렬합니다">⏱️ 최신순 정렬</button>
+      </div>
+    </div>
+
+    <div class="category-chips">
+      <span class="category-label">분야 필터:</span>
+      <button class="chip active" data-cat="all">전체 (6)</button>
+      <button class="chip" data-cat="정밀감속기·관절기구학">정밀감속기·관절기구학 (4)</button>
+      <button class="chip" data-cat="NVH·전달오차·소음진동">NVH·전달오차·소음진동 (4)</button>
+      <button class="chip" data-cat="임바디먼트·동적계측">임바디먼트·동적계측 (2)</button>
+      <button class="chip" data-cat="그리퍼·핸드구동계">그리퍼·핸드구동계 (2)</button>
+    </div>
+  </section>
+
+  <!-- Papers List -->
+  <section class="papers-list" id="papers-list">
+    
+    <article class="paper-card" data-id="6">
+      <div class="card-top">
+        <div class="tags-group">
+          <span class="paper-id-badge">#6</span>
+          <span class="date-badge">2026-11-04</span>
+          <span class="journal-badge">Machines (MDPI), Vol. 14, Issue 8, Article 910 (2026-08-09)</span>
+          <span class="category-badge">NVH·전달오차·소음진동</span><span class="category-badge">정밀감속기·관절기구학</span>
+        </div>
+        <div class="card-top-actions">
+          <button class="card-feedback-btn" data-id="6" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
+          <a href="https://doi.org/10.3390/machines14080910" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
+            🔗 원문/DOI 링크 ↗
           </a>
         </div>
       </div>
 
-      <div class="controls">
-        <div class="search-box">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="searchInput" placeholder="논문명, 저자, 키워드(하모닉, 그리퍼, 백래시, NVH, 와인 등) 검색..." oninput="filterPapers()">
+      <h2 class="title-ko">Romax 강성-유연 연성 다물체 모델 기반 고속중부하 감속기 치형수정 최적화와 와인 소음 저감</h2>
+      <h3 class="title-en">Research on Gear Modification Optimization of High-Speed Heavy-Load Reducer Based on Romax</h3>
+      <div class="authors-line">저자 및 기관: Xiao Yang, Xiaoping Xie, Nanquan Jiang (후난대학교), Pengchuan Wang, Xuan Zhao (Shaanxi Fast Gear)</div>
+
+      <div class="highlight-box">
+        <div class="highlight-title">💡 핵심 요약 (Key Takeaway)</div>
+        <div>고속중부하 2단 감속기의 기어 와인(whine)을 잡기 위해 Romax 강성-유연 연성 MBD 모델과 유전알고리즘으로 리드·인볼루트 크라우닝/슬로프 복합 치형수정을 최적화하여 2단 전달오차 p-p 64.0% 저감, 방사소음 평균 약 10 dB 저감을 실증.</div>
+      </div>
+
+      <button class="details-toggle" onclick="toggleDetails(6)">
+        <span>5단계 엔지니어링 분석 리포트</span>
+        <span class="arrow" id="arrow-6">▼ 5단계 심층 분석 펼치기</span>
+      </button>
+
+      <div class="details-content" id="details-6">
+        <div class="section-block">
+          <div class="section-header">① 연구 배경 및 기술 한계점</div>
+          <div class="section-body">고속중부하 감속기의 와인 소음은 치맞물림 고조파 기인이며, 준정적 TE만으로는 하우징 방사소음을 재현하기 어렵다. 오더 분석 기여도(1단 23차, 2단 12.38차)를 규명해 주요 소음원인 2단 기어쌍을 타깃으로 선정했다.</div>
         </div>
 
-        <div class="category-filter" id="categoryFilter">
-          <!-- Filter buttons rendered via JS -->
+        <div class="section-block">
+          <div class="section-header">② 제안 메커니즘 및 해석·실험 방법론</div>
+          <div class="section-body">Romax로 강성-유연 연성 다물체 동역학 모델을 구축하고, 반무향실 NVH 시험(5개 읍향 센서 + 6개 3축 가속도 센서, LMS SCADAS/Test.Lab, 2,000~7,500 rpm 오더 분석)과 상관. 리드 크라우닝·리드 슬로프·인볼루트 크라우닝·인볼루트 슬로프 4요소 복합 치형수정을 TE, 단위부하, 치근 응력, 접촉 응력을 목적으로 하는 유전알고리즘으로 최적화.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">③ 핵심 정량 데이터 및 실험 결과</div>
+          <div class="section-body">1단 TE p-p 0.27→0.19 μm(−29.6%), 2단 2.67→0.96 μm(−64.0%). 최대 접촉 응력 507→488 MPa(1단, −3.75%), 627→618 MPa(2단, −1.44%). 기어박스 방사소음 평균 약 −10 dB.</div>
+        </div>
+
+        <div class="section-block mobis-implication">
+          <div class="section-header">④ 휴머노이드 구동계 실무 시사점 (Mobis Action Items)</div>
+          <div class="section-body">시험-해석 상관(오더 기여도 분석)으로 주요 소음원 차수를 가려낸 뒤 치형수정 최적화로 와인을 저감하는 표준 워크플로를 제공. 모비스 e-Axle에서 검증된 마이크로지오메트리 노하우를 로봇 관절 감속기 저소음 설계로 이식할 때 그대로 참조할 수 있는 절차이며, 1호의 휴머노이드 와인 기전 분석(1단 헬리컬화·PWM 고주파화)과 상호 보완적이다.</div>
         </div>
       </div>
+
+      <div class="card-footer">
+        <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-04 (2호 브리핑)</span>
+      </div>
+    </article>
+
+
+    <article class="paper-card" data-id="5">
+      <div class="card-top">
+        <div class="tags-group">
+          <span class="paper-id-badge">#5</span>
+          <span class="date-badge">2026-11-04</span>
+          <span class="journal-badge">arXiv:2609.29112 / ISW, University of Stuttgart (2026)</span>
+          <span class="category-badge">NVH·전달오차·소음진동</span><span class="category-badge">정밀감속기·관절기구학</span>
+        </div>
+        <div class="card-top-actions">
+          <button class="card-feedback-btn" data-id="5" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
+          <a href="https://arxiv.org/abs/2609.29112" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
+            🔗 원문/DOI 링크 ↗
+          </a>
+        </div>
+      </div>
+
+      <h2 class="title-ko">사이클로이드 감속기의 부하·속도·온도 의존 전달오차 푸리에 급수 모델링 및 피드포워드 보정</h2>
+      <h3 class="title-en">Modeling Load-, Velocity-, and Temperature-Dependent Transmission Errors of Cycloidal Drives for Industrial Robots Using Fourier Series</h3>
+      <div class="authors-line">저자 및 기관: Christian J. E. Bauer, Valentin Kamm, Marcel Dzubba, Lukas Steinle, Armin Lechler, Alexander Verl</div>
+
+      <div class="highlight-box">
+        <div class="highlight-title">💡 핵심 요약 (Key Takeaway)</div>
+        <div>단일 로봇 관절 리그에서 사이클로이드 감속기(Nabtesco RH380-N, 정격 3,724 N·m)의 전달오차를 부하 토크·속도·윤활유 온도를 다항식 인자로 하는 진폭·위상의 푸리에 급수로 모델링해 검증 대비 평균 RMSE 0.026 mrad를 달성하고, 입력측 인코더만 사용하는 피드포워드 TE 보정을 제안.</div>
+      </div>
+
+      <button class="details-toggle" onclick="toggleDetails(5)">
+        <span>5단계 엔지니어링 분석 리포트</span>
+        <span class="arrow" id="arrow-5">▼ 5단계 심층 분석 펼치기</span>
+      </button>
+
+      <div class="details-content" id="details-5">
+        <div class="section-block">
+          <div class="section-header">① 연구 배경 및 기술 한계점</div>
+          <div class="section-body">산업로봇의 경로 정확도는 공작기계 대비 100~1,000배 낮은 수준이며 주원인은 관절 감속기의 컴플라이언스와 전달오차(TE)다. 하모닉 드라이브에 비해 사이클로이드 TE 연구는 빈약하고, 부하측 엔코더 기반 보정은 비용·시스템 복잡도를 높인다.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">② 제안 메커니즘 및 해석·실험 방법론</div>
+          <div class="section-body">Nabtesco RH380-N 사이클로이드를 탑재한 단일 관절 시험 리그(입력측 모터, 토크 센서, 윤활 온도 센서, 부하측 모터)에서 TE를 계측하고, 측정 스펙트럼의 조화 주파수를 감속기의 기계적 특성(기하학적 주파수 성분)과 대응시켜 파라미터를 동정. 진폭·위상을 부하 토크·속도·온도의 다항식으로 표현하는 푸리에 급수 모델을 수립하고, 엔드오브라인 계측 후 입력측 인코더만으로 운용하는 옵저버 기반 보정 로드맵을 제시.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">③ 핵심 정량 데이터 및 실험 결과</div>
+          <div class="section-body">검증 측정 대비 모델 평균 RMSE 0.026 mrad. 부하 1,000 N·m, 속도 −2.5°/s, 윤활유 온도 27°C 조건의 TE 신호에서 조화 성분 식별. 연구 데이터셋 공개(DARUS-4454). 선행 컴플라이언스 보상 연구와 결합 시 경로 오차 81% 저감 가능성(문헌 근거).</div>
+        </div>
+
+        <div class="section-block mobis-implication">
+          <div class="section-header">④ 휴머노이드 구동계 실무 시사점 (Mobis Action Items)</div>
+          <div class="section-body">휴머노이드 하체 중부하 관절(사이클로이드/RV)의 상태(부하·속도·온도) 의존 TE를 모델 기반 피드포워드로 보정하는 실무 절차를 제공. 1호의 양방향 동적 TE·로스트모션 계측 프레임워크와 결합하면 부하·온도별 TE 지도 기반 관절 품질 승인 기준과 소프트웨어 보정 사양을 수립할 수 있다.</div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-04 (2호 브리핑)</span>
+      </div>
+    </article>
+
+
+    <article class="paper-card" data-id="4">
+      <div class="card-top">
+        <div class="tags-group">
+          <span class="paper-id-badge">#4</span>
+          <span class="date-badge">2026-11-04</span>
+          <span class="journal-badge">arXiv:2609.36241 / IEEE 투고 심사 중 (2026)</span>
+          <span class="category-badge">그리퍼·핸드구동계</span>
+        </div>
+        <div class="card-top-actions">
+          <button class="card-feedback-btn" data-id="4" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
+          <a href="https://arxiv.org/abs/2609.36241" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
+            🔗 원문/DOI 링크 ↗
+          </a>
+        </div>
+      </div>
+
+      <h2 class="title-ko">양방향 대항(대항근) 텐던 구동 17-DOF 드렉스터러스 로봇 핸드 설계 및 검증</h2>
+      <h3 class="title-en">Design and Validation of an Antagonistic Tendon-Driven Dexterous Robotic Hand with Bidirectional Operation</h3>
+      <div class="authors-line">저자 및 기관: Chunghyeon Lee, Hyukjun Kwon, Sungeon Kim, Saehyun Moon, Seokhwan Jeong (Texas A&M University / 서강대학교)</div>
+
+      <div class="highlight-box">
+        <div class="highlight-title">💡 핵심 요약 (Key Takeaway)</div>
+        <div>인간 실측 크기(200 mm, 220 g) 17-자유도 3D프린팅 의수형 핸드에 수동 복원 스프링 없는 양방향 대항 텐던 라우팅(BATM)을 적용해 손바닥·손등 양면 파지를 실현하고, 모터-관절 전달오차 3.0%, 관절 전달 대역폭 13.2 Hz, 최대 악력 29 N, 반복정밀도 0.15 mm를 실증.</div>
+      </div>
+
+      <button class="details-toggle" onclick="toggleDetails(4)">
+        <span>5단계 엔지니어링 분석 리포트</span>
+        <span class="arrow" id="arrow-4">▼ 5단계 심층 분석 펼치기</span>
+      </button>
+
+      <div class="details-content" id="details-4">
+        <div class="section-block">
+          <div class="section-header">① 연구 배경 및 기술 한계점</div>
+          <div class="section-body">기존 의수형 핸드는 손바닥 한쪽으로만 굽는 인체의 비대칭을 그대로 계승해 반대편 파지 시 손목·팔 재배향이 필요하다. 관절마다 고감속 기어를 내장하면 말단 질량·반사 관성·마찰이 커져 충격 순응성이 떨어지고, 수동 스프링 복원 텐던 방식은 대역폭 한계, 완전 대항 구동은 모터 수 급증이라는 트레이드오프를 갖는다.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">② 제안 메커니즘 및 해석·실험 방법론</div>
+          <div class="section-body">관절 중립 위치에 대해 대칭인 가동 범위 설계와, 중립을 경계로 커플링이 사라지는 텐던 라우팅 경로(BATM)를 결합해 굴곡/신전·외전/내전을 모두 능동 구동. FE 관절에 미니어처 풀리-베어링 조립체를 넣어 관절-텐던 슬라이딩 마찰을 구름 마찰로 대체하고, 2중 홈 풀리로 굴곡/신전 텐던을 독립 라우팅. 엄지 대향(OP)과 수지 대칭 구조로 양면 파지 확장.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">③ 핵심 정량 데이터 및 실험 결과</div>
+          <div class="section-body">평균 모터-관절 전달오차 3.0%, 평균 관절 전달 대역폭 13.2 Hz, 최대 악력(팁 접촉력) 29 N, 위치 반복정밀도 0.15 mm. Kapandji 점수 8/8, GRASP Taxonomy 33종 전체 파지 수행, 손바닥·손등 양면 파지 과업 실증.</div>
+        </div>
+
+        <div class="section-block mobis-implication">
+          <div class="section-header">④ 휴머노이드 구동계 실무 시사점 (Mobis Action Items)</div>
+          <div class="section-body">고감속 감속기의 백래시·마찰 대신 대항 텐던 전달과 저마찰 라우팅(구름 접촉화)으로 말단 핸드의 역구동성과 대역폭을 확보하는 설계 기준을 제공. 1호의 차동 직접구동(DDD) 그리퍼와 함께 인체 크기 말단 구동계의 저마찰·양방향 아키텍처 비교 검토의 기준점이 될 수 있다.</div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-04 (2호 브리핑)</span>
+      </div>
+    </article>
+
+
+    <article class="paper-card" data-id="3">
+      <div class="card-top">
+        <div class="tags-group">
+          <span class="paper-id-badge">#3</span>
+          <span class="date-badge">2026-11-03</span>
+          <span class="journal-badge">Applied Sciences (MDPI, Vol. 16, 2026) & Humanoid.guide Research (2026)</span>
+          <span class="category-badge">NVH·전달오차·소음진동</span><span class="category-badge">정밀감속기·관절기구학</span>
+        </div>
+        <div class="card-top-actions">
+          <button class="card-feedback-btn" data-id="3" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
+          <a href="https://doi.org/10.3390/app16178826" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
+            🔗 원문/DOI 링크 ↗
+          </a>
+        </div>
+      </div>
+
+      <h2 class="title-ko">휴머노이드 관절 액추에이터의 치맞물림 톤 와인(Whine) 및 고주파 진동소음 기전 분석과 저감 기술</h2>
+      <h3 class="title-en">Analysis and Suppression of Tonal Whine and High-Frequency Dynamic Excitations in Humanoid Actuation Modules</h3>
+      <div class="authors-line">저자 및 기관: Hepeng Ni, Mengchen Du, Yuhui Hou 외 / Humanoid Engineering Analysis</div>
+
+      <div class="highlight-box">
+        <div class="highlight-title">💡 핵심 요약 (Key Takeaway)</div>
+        <div>다관절(20~40축) 휴머노이드 집적 시 발생하는 1 kHz 대역 감속기 치맞물림(Mesh) 톤 와인과 조립 편차에 따른 하모닉 고조파 전달오차 전파 모델링(잔차 65% 저감) 및 소음 저감 설계 레버 분석.</div>
+      </div>
+
+      <button class="details-toggle" onclick="toggleDetails(3)">
+        <span>5단계 엔지니어링 분석 리포트</span>
+        <span class="arrow" id="arrow-3">▼ 5단계 심층 분석 펼치기</span>
+      </button>
+
+      <div class="details-content" id="details-3">
+        <div class="section-block">
+          <div class="section-header">① 연구 배경 및 기술 한계점</div>
+          <div class="section-body">가정·서비스 환경 휴머노이드는 다수 관절이 동시 작동하므로 단일 관절 소음(50 dB(A))이 중첩되어 전체 소음이 63 dB(A) 이상으로 증폭됨. 특히 치맞물림 고주파 와인(1 kHz)과 PWM 스위칭 노이즈, 하모닉 유연륜 조립 편심에 의한 전달오차가 제품 수용성을 저해함.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">② 제안 메커니즘 및 해석·실험 방법론</div>
+          <div class="section-body">Top-hat형 하모닉 감속기의 조립 경사 및 편심에 따른 전달오차 전파 모델을 수립하고 주파수 영역 특성 매칭으로 파라미터 규명. 치맞물림 주파수(f_mesh), 모터 코깅 토크, PWM 스위칭(16~20 kHz 고주파화), 트랙션(무치차) 및 텐던 드라이브 기구학적 소음 레버 비교.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">③ 핵심 정량 데이터 및 실험 결과</div>
+          <div class="section-body">조립 경사를 반영한 전달오차 통합 모델 적용 시 최대 잔차 65%, MSE 95% 감소. 1단 헬리컬화 및 치형 프로파일 수정(Microgeometry) 적용 시 와인 음압 8~10 dB(A) 저감. 트랙션 기반 감속기는 37~50 dB(A) 이하, 텐던 복합 구동계는 로봇 전체 22 dB 수준 달성.</div>
+        </div>
+
+        <div class="section-block mobis-implication">
+          <div class="section-header">④ 휴머노이드 구동계 실무 시사점 (Mobis Action Items)</div>
+          <div class="section-body">현대모비스 e-Axle에서 검증된 치형수정(마이크로지오메트리) 기법과 공차 제어 노하우를 소형 로봇 관절 감속기에 적용하여, 1단 헬리컬 최적화 및 20 kHz 이상 PWM 스위칭 설계를 통해 인간 공존형 저소음 휴머노이드 관절 양산 규격을 수립하는 핵심 기준 제공.</div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-03 (1호 브리핑)</span>
+      </div>
+    </article>
+
+
+    <article class="paper-card" data-id="2">
+      <div class="card-top">
+        <div class="tags-group">
+          <span class="paper-id-badge">#2</span>
+          <span class="date-badge">2026-11-03</span>
+          <span class="journal-badge">arXiv:2608.09198 / IEEE (2026)</span>
+          <span class="category-badge">그리퍼·핸드구동계</span><span class="category-badge">임바디먼트·동적계측</span>
+        </div>
+        <div class="card-top-actions">
+          <button class="card-feedback-btn" data-id="2" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
+          <a href="https://arxiv.org/abs/2608.09198" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
+            🔗 원문/DOI 링크 ↗
+          </a>
+        </div>
+      </div>
+
+      <h2 class="title-ko">고대역폭 및 물리적 투명성 확보를 위한 차동 직접구동(DDD) 기반 초저임피던스 로봇 그리퍼</h2>
+      <h3 class="title-en">Ultra-Low-Impedance Robotic Gripper for High-Bandwidth and Transparent Physical Interaction</h3>
+      <div class="authors-line">저자 및 기관: Joon Lee, Ari Choi, Seokhwan Jeong</div>
+
+      <div class="highlight-box">
+        <div class="highlight-title">💡 핵심 요약 (Key Takeaway)</div>
+        <div>고감속 기어열의 마찰·백래시·반사관성을 제거하기 위해 3지 9-자유도 그리퍼에 베이스 모터 집중 배치와 1:2 차동 기어를 결합하여, 수동 임피던스 50.1 N/m 달성 및 외장 센서리스 고유수용성 고대역 힘 제어 실증.</div>
+      </div>
+
+      <button class="details-toggle" onclick="toggleDetails(2)">
+        <span>5단계 엔지니어링 분석 리포트</span>
+        <span class="arrow" id="arrow-2">▼ 5단계 심층 분석 펼치기</span>
+      </button>
+
+      <div class="details-content" id="details-2">
+        <div class="section-block">
+          <div class="section-header">① 연구 배경 및 기술 한계점</div>
+          <div class="section-body">기존 로봇 핸드는 파지력 확보를 위해 고감속비 기어를 채택했으나, 이로 인해 높은 마찰과 반사 관성(J_m*n^2)이 발생하여 미세 접촉력 감지 및 충격 순응 제어가 어렵고 외장 F/T 센서 의존도가 높아짐.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">② 제안 메커니즘 및 해석·실험 방법론</div>
+          <div class="section-body">핑거 베이스에 DD 모터를 집중 배치하여 가동 링크 관성을 극소화하고, MCP 관절 굴곡 시 2개 모터를 병렬 구동하여 토크를 2배 증폭하는 1:2 저감속비 차동 기어 전달계(Differential Direct-Drive) 설계. IP 관절은 4절 링크로 1:1 선형 매핑 구현.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">③ 핵심 정량 데이터 및 실험 결과</div>
+          <div class="section-body">공칭 악력 약 18 N, 팁 접촉력 4.7 N 달성. 모터의 시스템 반사 관성 기여도를 0.236%로 극소화하고 모터 비통전 시 수동 기계 임피던스를 최대 50.1 N/m로 억제. 외장 센서 없이 모터 전류만으로 고대역 접촉력 추정 및 순응성 실증.</div>
+        </div>
+
+        <div class="section-block mobis-implication">
+          <div class="section-header">④ 휴머노이드 구동계 실무 시사점 (Mobis Action Items)</div>
+          <div class="section-body">로봇 말단 덱스터러스 핸드에서 고감속 감속기의 백래시와 비선형 마찰 문제를 탈피하여, 1:2 저감속 차동 기어와 다이렉트 드라이브 결합을 통해 정밀 힘 제어와 충격 흡수 능력을 양립하는 실용적 구동 메커니즘을 제시.</div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-03 (1호 브리핑)</span>
+      </div>
+    </article>
+
+
+    <article class="paper-card" data-id="1">
+      <div class="card-top">
+        <div class="tags-group">
+          <span class="paper-id-badge">#1</span>
+          <span class="date-badge">2026-11-03</span>
+          <span class="journal-badge">International Journal of Precision Engineering and Manufacturing (IJPEM, Springer, 2026)</span>
+          <span class="category-badge">정밀감속기·관절기구학</span><span class="category-badge">임바디먼트·동적계측</span><span class="category-badge">NVH·전달오차·소음진동</span>
+        </div>
+        <div class="card-top-actions">
+          <button class="card-feedback-btn" data-id="1" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
+          <a href="https://doi.org/10.1007/s12541-026-01504-w" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
+            🔗 원문/DOI 링크 ↗
+          </a>
+        </div>
+      </div>
+
+      <h2 class="title-ko">피지컬 AI 휴머노이드 로봇을 위한 정밀 감속기 특성 및 동적 계측 프레임워크</h2>
+      <h3 class="title-en">Precision Reducers as Embodiment Enablers for Physical AI–Driven Humanoid Manufacturing Robots</h3>
+      <div class="authors-line">저자 및 기관: Hyeong-Joon Ahn</div>
+
+      <div class="highlight-box">
+        <div class="highlight-title">💡 핵심 요약 (Key Takeaway)</div>
+        <div>휴머노이드 로봇 관절의 하모닉·사이클로이드/RV·유성 감속기를 대상으로 정적 백래시 지표의 한계를 규명하고, 양방향 미소 반전 및 접촉 충격 하에서 동적 전달오차(Dynamic TE), 로스트 모션, 토크 리플을 평가하는 원샷(One-shot) 계측 프레임워크 수립.</div>
+      </div>
+
+      <button class="details-toggle" onclick="toggleDetails(1)">
+        <span>5단계 엔지니어링 분석 리포트</span>
+        <span class="arrow" id="arrow-1">▼ 5단계 심층 분석 펼치기</span>
+      </button>
+
+      <div class="details-content" id="details-1">
+        <div class="section-block">
+          <div class="section-header">① 연구 배경 및 기술 한계점</div>
+          <div class="section-body">기존 감속기 평가는 강성, 정적 백래시 등 단편 지표(ISO 9283)에 의존했으나, 접촉과 양방향 토크 역전이 빈번한 휴머노이드 환경에서는 제어/학습 불안정성의 원인이 감속기 비선형성(마찰, 히스테리시스, 전달오차)에서 비롯됨.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">② 제안 메커니즘 및 해석·실험 방법론</div>
+          <div class="section-body">토크 밀도, 역구동성, 순응성, 열/에너지 효율, 양방향 정밀도의 5대 임바디먼트 프레임워크를 수립하고, 부하 작동 중 입출력 토크·속도·온도를 동기 측정하여 로스트 모션, 동적 전달오차(TE), 주기 효율을 일체로 계측하는 'One-shot Metrology' 제안.</div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-header">③ 핵심 정량 데이터 및 실험 결과</div>
+          <div class="section-body">하모닉 드라이브의 정적 백래시(1 arcmin 미만)와 달리 부하 반전(-20↔+20 N·m) 시 동적 로스트 모션은 평균 7.74~8.10 arcmin으로 급증함을 실증(예측 모델 정확도 95.56%). 사이클로이드/RV의 편심 질량 기인 1차 회전 불평형 진동 및 하모닉 유연륜(Flexspline) 피로 특성 규명.</div>
+        </div>
+
+        <div class="section-block mobis-implication">
+          <div class="section-header">④ 휴머노이드 구동계 실무 시사점 (Mobis Action Items)</div>
+          <div class="section-body">하체 보행 관절(사이클로이드/RV/롤러 스크루)과 상체 정밀 조작 관절(하모닉/QDD)의 이종 감속기 전략(Heterogeneous reducer strategy) 필요성을 확립하고, 카탈로그 정적 백래시가 아닌 양방향 동적 전달오차 기반의 모비스 로봇 관절 품질 검증 표준 수립에 기여.</div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-03 (1호 브리핑)</span>
+      </div>
+    </article>
+
+  </section>
+
+  <div id="empty-state" class="empty-state" style="display: none;">
+    검색 조건에 맞는 논문이 없습니다. 검색어나 카테고리 필터를 변경해 보세요.
+  </div>
+</main>
+
+<!-- Patch Notes Modal -->
+<div id="patch-notes-modal" class="modal-overlay" style="display: none;">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title">📋 휴머노이드 로보틱스 연구 아카이브 패치 노트</div>
+      <button class="modal-close-btn" onclick="closePatchNotesModal()">&times;</button>
     </div>
-  </header>
+    <div class="modal-body patch-notes-body">
+      <div class="patch-item">
+        <div class="patch-header">
+          <span class="patch-version">v1.1</span>
+          <span class="patch-date">2026-11-04</span>
+          <span class="patch-badge current">Current</span>
+        </div>
+        <ul class="patch-list">
+          <li><strong>2호 브리핑 반영 (누적 6편):</strong> 대항 텐던 덱스터러스 핸드(Texas A&M), 사이클로이드 감속기 동적 TE 푸리에 모델링(ISW Stuttgart), 고속 감속기 Romax NVH 최적화(Machines) 반영.</li>
+          <li><strong>50% 쿼터제 정착:</strong> 관절/그리퍼 구동계 구조(약 50%)와 NVH·해석·시험 계측 연구(약 50%)의 엄격한 균형 선별 체계 가동.</li>
+          <li><strong>기어 아카이브와 UI 디자인 100% 통합:</strong> 컨테이너 폭(1140px), 헤더 네비게이션, 검색/정렬 컨트롤 패널, 5단계 분석 카드 레이아웃 완벽 일치.</li>
+          <li><strong>사내 MS Forms 건의함 & 논문별 피드백 연동:</strong> 호길 책임님 개설 사내 MS Forms 전용 링크 및 원클릭 사내 메일 피드백 창구 탑재.</li>
+        </ul>
+      </div>
 
-  <main>
-    <div class="paper-grid" id="paperGrid">
-      <!-- Cards rendered via JS -->
+      <div class="patch-item">
+        <div class="patch-header">
+          <span class="patch-version">v1.0</span>
+          <span class="patch-date">2026-11-03</span>
+        </div>
+        <ul class="patch-list">
+          <li><strong>휴머노이드 로보틱스 전용 아카이브 신설:</strong> 기어 브리핑과 별개로 휴머노이드 액추에이터, 그리퍼, 정밀 감속기 특화 아카이브 구축 (1호 브리핑, 누적 1~3편).</li>
+          <li><strong>기어 연구 아카이브 상호 이동 탭 연동:</strong> 단일 도메인 내 자유로운 탭 전환 지원.</li>
+        </ul>
+      </div>
     </div>
-    <div class="empty-state" id="emptyState" style="display: none;">
-      검색 결과가 없습니다. 다른 검색어나 필터를 선택해 보세요.
+    <div class="modal-footer">
+      <button class="btn" onclick="closePatchNotesModal()">닫기</button>
     </div>
-  </main>
+  </div>
+</div>
 
-  <script>
-    const papersData = [{"id": 6, "date": "2026-11-04", "batch": "2026-11-04 (2호 브리핑)", "categories": ["NVH·전달오차·소음진동", "정밀감속기·관절기구학"], "title_en": "Research on Gear Modification Optimization of High-Speed Heavy-Load Reducer Based on Romax", "title_ko": "Romax 강성-유연 연성 다물체 모델 기반 고속중부하 감속기 치형수정 최적화와 와인 소음 저감", "journal": "Machines (MDPI), Vol. 14, Issue 8, Article 910 (2026-08-09)", "authors": "Xiao Yang, Xiaoping Xie, Nanquan Jiang (후난대학교), Pengchuan Wang, Xuan Zhao (Shaanxi Fast Gear)", "link": "https://doi.org/10.3390/machines14080910", "doi": "10.3390/machines14080910", "summary": "고속중부하 2단 감속기의 기어 와인(whine)을 잡기 위해 Romax 강성-유연 연성 MBD 모델과 유전알고리즘으로 리드·인볼루트 크라우닝/슬로프 복합 치형수정을 최적화하여 2단 전달오차 p-p 64.0% 저감, 방사소음 평균 약 10 dB 저감을 실증.", "details": {"background": "고속중부하 감속기의 와인 소음은 치맞물림 고조파 기인이며, 준정적 TE만으로는 하우징 방사소음을 재현하기 어렵다. 오더 분석 기여도(1단 23차, 2단 12.38차)를 규명해 주요 소음원인 2단 기어쌍을 타깃으로 선정했다.", "method": "Romax로 강성-유연 연성 다물체 동역학 모델을 구축하고, 반무향실 NVH 시험(5개 읍향 센서 + 6개 3축 가속도 센서, LMS SCADAS/Test.Lab, 2,000~7,500 rpm 오더 분석)과 상관. 리드 크라우닝·리드 슬로프·인볼루트 크라우닝·인볼루트 슬로프 4요소 복합 치형수정을 TE, 단위부하, 치근 응력, 접촉 응력을 목적으로 하는 유전알고리즘으로 최적화.", "data": "1단 TE p-p 0.27→0.19 μm(−29.6%), 2단 2.67→0.96 μm(−64.0%). 최대 접촉 응력 507→488 MPa(1단, −3.75%), 627→618 MPa(2단, −1.44%). 기어박스 방사소음 평균 약 −10 dB.", "implications": "시험-해석 상관(오더 기여도 분석)으로 주요 소음원 차수를 가려낸 뒤 치형수정 최적화로 와인을 저감하는 표준 워크플로를 제공. 모비스 e-Axle에서 검증된 마이크로지오메트리 노하우를 로봇 관절 감속기 저소음 설계로 이식할 때 그대로 참조할 수 있는 절차이며, 1호의 휴머노이드 와인 기전 분석(1단 헬리컬화·PWM 고주파화)과 상호 보완적이다."}}, {"id": 5, "date": "2026-11-04", "batch": "2026-11-04 (2호 브리핑)", "categories": ["NVH·전달오차·소음진동", "정밀감속기·관절기구학"], "title_en": "Modeling Load-, Velocity-, and Temperature-Dependent Transmission Errors of Cycloidal Drives for Industrial Robots Using Fourier Series", "title_ko": "사이클로이드 감속기의 부하·속도·온도 의존 전달오차 푸리에 급수 모델링 및 피드포워드 보정", "journal": "arXiv:2609.29112 / ISW, University of Stuttgart (2026)", "authors": "Christian J. E. Bauer, Valentin Kamm, Marcel Dzubba, Lukas Steinle, Armin Lechler, Alexander Verl", "link": "https://arxiv.org/abs/2609.29112", "doi": "10.48550/arXiv.2609.29112", "summary": "단일 로봇 관절 리그에서 사이클로이드 감속기(Nabtesco RH380-N, 정격 3,724 N·m)의 전달오차를 부하 토크·속도·윤활유 온도를 다항식 인자로 하는 진폭·위상의 푸리에 급수로 모델링해 검증 대비 평균 RMSE 0.026 mrad를 달성하고, 입력측 인코더만 사용하는 피드포워드 TE 보정을 제안.", "details": {"background": "산업로봇의 경로 정확도는 공작기계 대비 100~1,000배 낮은 수준이며 주원인은 관절 감속기의 컴플라이언스와 전달오차(TE)다. 하모닉 드라이브에 비해 사이클로이드 TE 연구는 빈약하고, 부하측 엔코더 기반 보정은 비용·시스템 복잡도를 높인다.", "method": "Nabtesco RH380-N 사이클로이드를 탑재한 단일 관절 시험 리그(입력측 모터, 토크 센서, 윤활 온도 센서, 부하측 모터)에서 TE를 계측하고, 측정 스펙트럼의 조화 주파수를 감속기의 기계적 특성(기하학적 주파수 성분)과 대응시켜 파라미터를 동정. 진폭·위상을 부하 토크·속도·온도의 다항식으로 표현하는 푸리에 급수 모델을 수립하고, 엔드오브라인 계측 후 입력측 인코더만으로 운용하는 옵저버 기반 보정 로드맵을 제시.", "data": "검증 측정 대비 모델 평균 RMSE 0.026 mrad. 부하 1,000 N·m, 속도 −2.5°/s, 윤활유 온도 27°C 조건의 TE 신호에서 조화 성분 식별. 연구 데이터셋 공개(DARUS-4454). 선행 컴플라이언스 보상 연구와 결합 시 경로 오차 81% 저감 가능성(문헌 근거).", "implications": "휴머노이드 하체 중부하 관절(사이클로이드/RV)의 상태(부하·속도·온도) 의존 TE를 모델 기반 피드포워드로 보정하는 실무 절차를 제공. 1호의 양방향 동적 TE·로스트모션 계측 프레임워크와 결합하면 부하·온도별 TE 지도 기반 관절 품질 승인 기준과 소프트웨어 보정 사양을 수립할 수 있다."}}, {"id": 4, "date": "2026-11-04", "batch": "2026-11-04 (2호 브리핑)", "categories": ["그리퍼·핸드구동계"], "title_en": "Design and Validation of an Antagonistic Tendon-Driven Dexterous Robotic Hand with Bidirectional Operation", "title_ko": "양방향 대항(대항근) 텐던 구동 17-DOF 드렉스터러스 로봇 핸드 설계 및 검증", "journal": "arXiv:2609.36241 / IEEE 투고 심사 중 (2026)", "authors": "Chunghyeon Lee, Hyukjun Kwon, Sungeon Kim, Saehyun Moon, Seokhwan Jeong (Texas A&M University / 서강대학교)", "link": "https://arxiv.org/abs/2609.36241", "doi": "10.48550/arXiv.2609.36241", "summary": "인간 실측 크기(200 mm, 220 g) 17-자유도 3D프린팅 의수형 핸드에 수동 복원 스프링 없는 양방향 대항 텐던 라우팅(BATM)을 적용해 손바닥·손등 양면 파지를 실현하고, 모터-관절 전달오차 3.0%, 관절 전달 대역폭 13.2 Hz, 최대 악력 29 N, 반복정밀도 0.15 mm를 실증.", "details": {"background": "기존 의수형 핸드는 손바닥 한쪽으로만 굽는 인체의 비대칭을 그대로 계승해 반대편 파지 시 손목·팔 재배향이 필요하다. 관절마다 고감속 기어를 내장하면 말단 질량·반사 관성·마찰이 커져 충격 순응성이 떨어지고, 수동 스프링 복원 텐던 방식은 대역폭 한계, 완전 대항 구동은 모터 수 급증이라는 트레이드오프를 갖는다.", "method": "관절 중립 위치에 대해 대칭인 가동 범위 설계와, 중립을 경계로 커플링이 사라지는 텐던 라우팅 경로(BATM)를 결합해 굴곡/신전·외전/내전을 모두 능동 구동. FE 관절에 미니어처 풀리-베어링 조립체를 넣어 관절-텐던 슬라이딩 마찰을 구름 마찰로 대체하고, 2중 홈 풀리로 굴곡/신전 텐던을 독립 라우팅. 엄지 대향(OP)과 수지 대칭 구조로 양면 파지 확장.", "data": "평균 모터-관절 전달오차 3.0%, 평균 관절 전달 대역폭 13.2 Hz, 최대 악력(팁 접촉력) 29 N, 위치 반복정밀도 0.15 mm. Kapandji 점수 8/8, GRASP Taxonomy 33종 전체 파지 수행, 손바닥·손등 양면 파지 과업 실증.", "implications": "고감속 감속기의 백래시·마찰 대신 대항 텐던 전달과 저마찰 라우팅(구름 접촉화)으로 말단 핸드의 역구동성과 대역폭을 확보하는 설계 기준을 제공. 1호의 차동 직접구동(DDD) 그리퍼와 함께 인체 크기 말단 구동계의 저마찰·양방향 아키텍처 비교 검토의 기준점이 될 수 있다."}}, {"id": 3, "date": "2026-11-03", "batch": "2026-11-03 (1호 브리핑)", "categories": ["NVH·전달오차·소음진동", "정밀감속기·관절기구학"], "title_en": "Analysis and Suppression of Tonal Whine and High-Frequency Dynamic Excitations in Humanoid Actuation Modules", "title_ko": "휴머노이드 관절 액추에이터의 치맞물림 톤 와인(Whine) 및 고주파 진동소음 기전 분석과 저감 기술", "journal": "Applied Sciences (MDPI, Vol. 16, 2026) & Humanoid.guide Research (2026)", "authors": "Hepeng Ni, Mengchen Du, Yuhui Hou 외 / Humanoid Engineering Analysis", "link": "https://doi.org/10.3390/app16178826", "doi": "10.3390/app16178826", "summary": "다관절(20~40축) 휴머노이드 집적 시 발생하는 1 kHz 대역 감속기 치맞물림(Mesh) 톤 와인과 조립 편차에 따른 하모닉 고조파 전달오차 전파 모델링(잔차 65% 저감) 및 소음 저감 설계 레버 분석.", "details": {"background": "가정·서비스 환경 휴머노이드는 다수 관절이 동시 작동하므로 단일 관절 소음(50 dB(A))이 중첩되어 전체 소음이 63 dB(A) 이상으로 증폭됨. 특히 치맞물림 고주파 와인(1 kHz)과 PWM 스위칭 노이즈, 하모닉 유연륜 조립 편심에 의한 전달오차가 제품 수용성을 저해함.", "method": "Top-hat형 하모닉 감속기의 조립 경사 및 편심에 따른 전달오차 전파 모델을 수립하고 주파수 영역 특성 매칭으로 파라미터 규명. 치맞물림 주파수(f_mesh), 모터 코깅 토크, PWM 스위칭(16~20 kHz 고주파화), 트랙션(무치차) 및 텐던 드라이브 기구학적 소음 레버 비교.", "data": "조립 경사를 반영한 전달오차 통합 모델 적용 시 최대 잔차 65%, MSE 95% 감소. 1단 헬리컬화 및 치형 프로파일 수정(Microgeometry) 적용 시 와인 음압 8~10 dB(A) 저감. 트랙션 기반 감속기는 37~50 dB(A) 이하, 텐던 복합 구동계는 로봇 전체 22 dB 수준 달성.", "implications": "현대모비스 e-Axle에서 검증된 치형수정(마이크로지오메트리) 기법과 공차 제어 노하우를 소형 로봇 관절 감속기에 적용하여, 1단 헬리컬 최적화 및 20 kHz 이상 PWM 스위칭 설계를 통해 인간 공존형 저소음 휴머노이드 관절 양산 규격을 수립하는 핵심 기준 제공."}}, {"id": 2, "date": "2026-11-03", "batch": "2026-11-03 (1호 브리핑)", "categories": ["그리퍼·핸드구동계", "임바디먼트·동적계측"], "title_en": "Ultra-Low-Impedance Robotic Gripper for High-Bandwidth and Transparent Physical Interaction", "title_ko": "고대역폭 및 물리적 투명성 확보를 위한 차동 직접구동(DDD) 기반 초저임피던스 로봇 그리퍼", "journal": "arXiv:2608.09198 / IEEE (2026)", "authors": "Joon Lee, Ari Choi, Seokhwan Jeong", "link": "https://arxiv.org/abs/2608.09198", "doi": "10.48550/arXiv.2608.09198", "summary": "고감속 기어열의 마찰·백래시·반사관성을 제거하기 위해 3지 9-자유도 그리퍼에 베이스 모터 집중 배치와 1:2 차동 기어를 결합하여, 수동 임피던스 50.1 N/m 달성 및 외장 센서리스 고유수용성 고대역 힘 제어 실증.", "details": {"background": "기존 로봇 핸드는 파지력 확보를 위해 고감속비 기어를 채택했으나, 이로 인해 높은 마찰과 반사 관성(J_m*n^2)이 발생하여 미세 접촉력 감지 및 충격 순응 제어가 어렵고 외장 F/T 센서 의존도가 높아짐.", "method": "핑거 베이스에 DD 모터를 집중 배치하여 가동 링크 관성을 극소화하고, MCP 관절 굴곡 시 2개 모터를 병렬 구동하여 토크를 2배 증폭하는 1:2 저감속비 차동 기어 전달계(Differential Direct-Drive) 설계. IP 관절은 4절 링크로 1:1 선형 매핑 구현.", "data": "공칭 악력 약 18 N, 팁 접촉력 4.7 N 달성. 모터의 시스템 반사 관성 기여도를 0.236%로 극소화하고 모터 비통전 시 수동 기계 임피던스를 최대 50.1 N/m로 억제. 외장 센서 없이 모터 전류만으로 고대역 접촉력 추정 및 순응성 실증.", "implications": "로봇 말단 덱스터러스 핸드에서 고감속 감속기의 백래시와 비선형 마찰 문제를 탈피하여, 1:2 저감속 차동 기어와 다이렉트 드라이브 결합을 통해 정밀 힘 제어와 충격 흡수 능력을 양립하는 실용적 구동 메커니즘을 제시."}}, {"id": 1, "date": "2026-11-03", "batch": "2026-11-03 (1호 브리핑)", "categories": ["정밀감속기·관절기구학", "임바디먼트·동적계측", "NVH·전달오차·소음진동"], "title_en": "Precision Reducers as Embodiment Enablers for Physical AI–Driven Humanoid Manufacturing Robots", "title_ko": "피지컬 AI 휴머노이드 로봇을 위한 정밀 감속기 특성 및 동적 계측 프레임워크", "journal": "International Journal of Precision Engineering and Manufacturing (IJPEM, Springer, 2026)", "authors": "Hyeong-Joon Ahn", "link": "https://doi.org/10.1007/s12541-026-01504-w", "doi": "10.1007/s12541-026-01504-w", "summary": "휴머노이드 로봇 관절의 하모닉·사이클로이드/RV·유성 감속기를 대상으로 정적 백래시 지표의 한계를 규명하고, 양방향 미소 반전 및 접촉 충격 하에서 동적 전달오차(Dynamic TE), 로스트 모션, 토크 리플을 평가하는 원샷(One-shot) 계측 프레임워크 수립.", "details": {"background": "기존 감속기 평가는 강성, 정적 백래시 등 단편 지표(ISO 9283)에 의존했으나, 접촉과 양방향 토크 역전이 빈번한 휴머노이드 환경에서는 제어/학습 불안정성의 원인이 감속기 비선형성(마찰, 히스테리시스, 전달오차)에서 비롯됨.", "method": "토크 밀도, 역구동성, 순응성, 열/에너지 효율, 양방향 정밀도의 5대 임바디먼트 프레임워크를 수립하고, 부하 작동 중 입출력 토크·속도·온도를 동기 측정하여 로스트 모션, 동적 전달오차(TE), 주기 효율을 일체로 계측하는 'One-shot Metrology' 제안.", "data": "하모닉 드라이브의 정적 백래시(1 arcmin 미만)와 달리 부하 반전(-20↔+20 N·m) 시 동적 로스트 모션은 평균 7.74~8.10 arcmin으로 급증함을 실증(예측 모델 정확도 95.56%). 사이클로이드/RV의 편심 질량 기인 1차 회전 불평형 진동 및 하모닉 유연륜(Flexspline) 피로 특성 규명.", "implications": "하체 보행 관절(사이클로이드/RV/롤러 스크루)과 상체 정밀 조작 관절(하모닉/QDD)의 이종 감속기 전략(Heterogeneous reducer strategy) 필요성을 확립하고, 카탈로그 정적 백래시가 아닌 양방향 동적 전달오차 기반의 모비스 로봇 관절 품질 검증 표준 수립에 기여."}}];
-    const categories = ["전체", "정밀감속기·관절기구학", "그리퍼·핸드구동계", "NVH·전달오차·소음진동", "선형구동·롤러스크루", "임바디먼트·동적계측"];
-    let activeCategory = "전체";
+<!-- Feedback Modal -->
+<div id="feedback-modal" class="modal-overlay" style="display: none;">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title" id="feedback-modal-title">📬 로보틱스 아카이브 건의함 & 연구 피드백</div>
+      <button class="modal-close-btn" onclick="closeFeedbackModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="forms-banner" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.12) 100%); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 0.95rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px;">
+          <span>📋</span> <span>사내 MS Forms 건의함 (익명/간편 설문)</span>
+        </div>
+        <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">
+          호길 책임님이 개설한 사내 MS Forms 전용 설문지입니다. 아카이브 운영 개선 및 희망 연구 주제를 자유롭게 남기실 수 있습니다.
+        </div>
+        <a href="https://forms.cloud.microsoft/r/nT3YbMgzwH" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; padding: 10px 16px; font-size: 0.88rem; margin-top: 4px;">
+          📝 MS Forms 설문지 작성하러 가기 ↗
+        </a>
+      </div>
 
-    function initFilters() {
-      const container = document.getElementById("categoryFilter");
-      container.innerHTML = categories.map(cat => `
-        <button class="filter-btn ${cat === activeCategory ? 'active' : ''}" onclick="setCategory('${cat}')">
-          ${cat}
-        </button>
-      `).join('');
+      <div style="display: flex; align-items: center; gap: 12px; margin: 4px 0;">
+        <div style="flex: 1; height: 1px; background: var(--surface-border);"></div>
+        <span style="font-size: 0.78rem; color: var(--text-dim); text-transform: uppercase;">또는 메일로 바로 의견 보내기</span>
+        <div style="flex: 1; height: 1px; background: var(--surface-border);"></div>
+      </div>
+
+      <div id="feedback-target-desc" class="feedback-target-box">
+        <strong>수신처:</strong> 유호길 책임 (yoohokil@mobis.com)<br>
+        <span id="feedback-target-text">전체 로보틱스 아카이브 운영 및 희망 연구 주제 건의</span>
+      </div>
+      <div class="feedback-field">
+        <label for="feedback-input">의견 / 피드백 / 건의사항</label>
+        <textarea id="feedback-input" class="feedback-textarea" placeholder="이 로보틱스 논문에 대한 코멘트, 실무 적용 관련 질문, 또는 향후 브리핑에서 다루어주었으면 하는 연구 주제/키워드를 자유롭게 적어주세요."></textarea>
+      </div>
+      <p class="feedback-note">💡 아래 '모비스 메일로 전송'을 누르면 사내 아웃룩(기본 메일)에 수신자, 제목, 작성 내용이 자동 채워져 즉시 발송할 수 있습니다.</p>
+    </div>
+    <div class="modal-footer">
+      <button id="btn-copy-feedback" class="btn">📋 내용 복사</button>
+      <button id="btn-send-feedback" class="btn btn-primary">✉️ 모비스 메일로 전송</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const papersData = [{"id": 1, "date": "2026-11-03", "batch": "2026-11-03 (1호 브리핑)", "categories": ["정밀감속기·관절기구학", "임바디먼트·동적계측", "NVH·전달오차·소음진동"], "title_en": "Precision Reducers as Embodiment Enablers for Physical AI–Driven Humanoid Manufacturing Robots", "title_ko": "피지컬 AI 휴머노이드 로봇을 위한 정밀 감속기 특성 및 동적 계측 프레임워크", "journal": "International Journal of Precision Engineering and Manufacturing (IJPEM, Springer, 2026)", "authors": "Hyeong-Joon Ahn", "link": "https://doi.org/10.1007/s12541-026-01504-w", "doi": "10.1007/s12541-026-01504-w", "summary": "휴머노이드 로봇 관절의 하모닉·사이클로이드/RV·유성 감속기를 대상으로 정적 백래시 지표의 한계를 규명하고, 양방향 미소 반전 및 접촉 충격 하에서 동적 전달오차(Dynamic TE), 로스트 모션, 토크 리플을 평가하는 원샷(One-shot) 계측 프레임워크 수립.", "details": {"background": "기존 감속기 평가는 강성, 정적 백래시 등 단편 지표(ISO 9283)에 의존했으나, 접촉과 양방향 토크 역전이 빈번한 휴머노이드 환경에서는 제어/학습 불안정성의 원인이 감속기 비선형성(마찰, 히스테리시스, 전달오차)에서 비롯됨.", "method": "토크 밀도, 역구동성, 순응성, 열/에너지 효율, 양방향 정밀도의 5대 임바디먼트 프레임워크를 수립하고, 부하 작동 중 입출력 토크·속도·온도를 동기 측정하여 로스트 모션, 동적 전달오차(TE), 주기 효율을 일체로 계측하는 'One-shot Metrology' 제안.", "data": "하모닉 드라이브의 정적 백래시(1 arcmin 미만)와 달리 부하 반전(-20↔+20 N·m) 시 동적 로스트 모션은 평균 7.74~8.10 arcmin으로 급증함을 실증(예측 모델 정확도 95.56%). 사이클로이드/RV의 편심 질량 기인 1차 회전 불평형 진동 및 하모닉 유연륜(Flexspline) 피로 특성 규명.", "implications": "하체 보행 관절(사이클로이드/RV/롤러 스크루)과 상체 정밀 조작 관절(하모닉/QDD)의 이종 감속기 전략(Heterogeneous reducer strategy) 필요성을 확립하고, 카탈로그 정적 백래시가 아닌 양방향 동적 전달오차 기반의 모비스 로봇 관절 품질 검증 표준 수립에 기여."}}, {"id": 2, "date": "2026-11-03", "batch": "2026-11-03 (1호 브리핑)", "categories": ["그리퍼·핸드구동계", "임바디먼트·동적계측"], "title_en": "Ultra-Low-Impedance Robotic Gripper for High-Bandwidth and Transparent Physical Interaction", "title_ko": "고대역폭 및 물리적 투명성 확보를 위한 차동 직접구동(DDD) 기반 초저임피던스 로봇 그리퍼", "journal": "arXiv:2608.09198 / IEEE (2026)", "authors": "Joon Lee, Ari Choi, Seokhwan Jeong", "link": "https://arxiv.org/abs/2608.09198", "doi": "10.48550/arXiv.2608.09198", "summary": "고감속 기어열의 마찰·백래시·반사관성을 제거하기 위해 3지 9-자유도 그리퍼에 베이스 모터 집중 배치와 1:2 차동 기어를 결합하여, 수동 임피던스 50.1 N/m 달성 및 외장 센서리스 고유수용성 고대역 힘 제어 실증.", "details": {"background": "기존 로봇 핸드는 파지력 확보를 위해 고감속비 기어를 채택했으나, 이로 인해 높은 마찰과 반사 관성(J_m*n^2)이 발생하여 미세 접촉력 감지 및 충격 순응 제어가 어렵고 외장 F/T 센서 의존도가 높아짐.", "method": "핑거 베이스에 DD 모터를 집중 배치하여 가동 링크 관성을 극소화하고, MCP 관절 굴곡 시 2개 모터를 병렬 구동하여 토크를 2배 증폭하는 1:2 저감속비 차동 기어 전달계(Differential Direct-Drive) 설계. IP 관절은 4절 링크로 1:1 선형 매핑 구현.", "data": "공칭 악력 약 18 N, 팁 접촉력 4.7 N 달성. 모터의 시스템 반사 관성 기여도를 0.236%로 극소화하고 모터 비통전 시 수동 기계 임피던스를 최대 50.1 N/m로 억제. 외장 센서 없이 모터 전류만으로 고대역 접촉력 추정 및 순응성 실증.", "implications": "로봇 말단 덱스터러스 핸드에서 고감속 감속기의 백래시와 비선형 마찰 문제를 탈피하여, 1:2 저감속 차동 기어와 다이렉트 드라이브 결합을 통해 정밀 힘 제어와 충격 흡수 능력을 양립하는 실용적 구동 메커니즘을 제시."}}, {"id": 3, "date": "2026-11-03", "batch": "2026-11-03 (1호 브리핑)", "categories": ["NVH·전달오차·소음진동", "정밀감속기·관절기구학"], "title_en": "Analysis and Suppression of Tonal Whine and High-Frequency Dynamic Excitations in Humanoid Actuation Modules", "title_ko": "휴머노이드 관절 액추에이터의 치맞물림 톤 와인(Whine) 및 고주파 진동소음 기전 분석과 저감 기술", "journal": "Applied Sciences (MDPI, Vol. 16, 2026) & Humanoid.guide Research (2026)", "authors": "Hepeng Ni, Mengchen Du, Yuhui Hou 외 / Humanoid Engineering Analysis", "link": "https://doi.org/10.3390/app16178826", "doi": "10.3390/app16178826", "summary": "다관절(20~40축) 휴머노이드 집적 시 발생하는 1 kHz 대역 감속기 치맞물림(Mesh) 톤 와인과 조립 편차에 따른 하모닉 고조파 전달오차 전파 모델링(잔차 65% 저감) 및 소음 저감 설계 레버 분석.", "details": {"background": "가정·서비스 환경 휴머노이드는 다수 관절이 동시 작동하므로 단일 관절 소음(50 dB(A))이 중첩되어 전체 소음이 63 dB(A) 이상으로 증폭됨. 특히 치맞물림 고주파 와인(1 kHz)과 PWM 스위칭 노이즈, 하모닉 유연륜 조립 편심에 의한 전달오차가 제품 수용성을 저해함.", "method": "Top-hat형 하모닉 감속기의 조립 경사 및 편심에 따른 전달오차 전파 모델을 수립하고 주파수 영역 특성 매칭으로 파라미터 규명. 치맞물림 주파수(f_mesh), 모터 코깅 토크, PWM 스위칭(16~20 kHz 고주파화), 트랙션(무치차) 및 텐던 드라이브 기구학적 소음 레버 비교.", "data": "조립 경사를 반영한 전달오차 통합 모델 적용 시 최대 잔차 65%, MSE 95% 감소. 1단 헬리컬화 및 치형 프로파일 수정(Microgeometry) 적용 시 와인 음압 8~10 dB(A) 저감. 트랙션 기반 감속기는 37~50 dB(A) 이하, 텐던 복합 구동계는 로봇 전체 22 dB 수준 달성.", "implications": "현대모비스 e-Axle에서 검증된 치형수정(마이크로지오메트리) 기법과 공차 제어 노하우를 소형 로봇 관절 감속기에 적용하여, 1단 헬리컬 최적화 및 20 kHz 이상 PWM 스위칭 설계를 통해 인간 공존형 저소음 휴머노이드 관절 양산 규격을 수립하는 핵심 기준 제공."}}, {"id": 4, "date": "2026-11-04", "batch": "2026-11-04 (2호 브리핑)", "categories": ["그리퍼·핸드구동계"], "title_en": "Design and Validation of an Antagonistic Tendon-Driven Dexterous Robotic Hand with Bidirectional Operation", "title_ko": "양방향 대항(대항근) 텐던 구동 17-DOF 드렉스터러스 로봇 핸드 설계 및 검증", "journal": "arXiv:2609.36241 / IEEE 투고 심사 중 (2026)", "authors": "Chunghyeon Lee, Hyukjun Kwon, Sungeon Kim, Saehyun Moon, Seokhwan Jeong (Texas A&M University / 서강대학교)", "link": "https://arxiv.org/abs/2609.36241", "doi": "10.48550/arXiv.2609.36241", "summary": "인간 실측 크기(200 mm, 220 g) 17-자유도 3D프린팅 의수형 핸드에 수동 복원 스프링 없는 양방향 대항 텐던 라우팅(BATM)을 적용해 손바닥·손등 양면 파지를 실현하고, 모터-관절 전달오차 3.0%, 관절 전달 대역폭 13.2 Hz, 최대 악력 29 N, 반복정밀도 0.15 mm를 실증.", "details": {"background": "기존 의수형 핸드는 손바닥 한쪽으로만 굽는 인체의 비대칭을 그대로 계승해 반대편 파지 시 손목·팔 재배향이 필요하다. 관절마다 고감속 기어를 내장하면 말단 질량·반사 관성·마찰이 커져 충격 순응성이 떨어지고, 수동 스프링 복원 텐던 방식은 대역폭 한계, 완전 대항 구동은 모터 수 급증이라는 트레이드오프를 갖는다.", "method": "관절 중립 위치에 대해 대칭인 가동 범위 설계와, 중립을 경계로 커플링이 사라지는 텐던 라우팅 경로(BATM)를 결합해 굴곡/신전·외전/내전을 모두 능동 구동. FE 관절에 미니어처 풀리-베어링 조립체를 넣어 관절-텐던 슬라이딩 마찰을 구름 마찰로 대체하고, 2중 홈 풀리로 굴곡/신전 텐던을 독립 라우팅. 엄지 대향(OP)과 수지 대칭 구조로 양면 파지 확장.", "data": "평균 모터-관절 전달오차 3.0%, 평균 관절 전달 대역폭 13.2 Hz, 최대 악력(팁 접촉력) 29 N, 위치 반복정밀도 0.15 mm. Kapandji 점수 8/8, GRASP Taxonomy 33종 전체 파지 수행, 손바닥·손등 양면 파지 과업 실증.", "implications": "고감속 감속기의 백래시·마찰 대신 대항 텐던 전달과 저마찰 라우팅(구름 접촉화)으로 말단 핸드의 역구동성과 대역폭을 확보하는 설계 기준을 제공. 1호의 차동 직접구동(DDD) 그리퍼와 함께 인체 크기 말단 구동계의 저마찰·양방향 아키텍처 비교 검토의 기준점이 될 수 있다."}}, {"id": 5, "date": "2026-11-04", "batch": "2026-11-04 (2호 브리핑)", "categories": ["NVH·전달오차·소음진동", "정밀감속기·관절기구학"], "title_en": "Modeling Load-, Velocity-, and Temperature-Dependent Transmission Errors of Cycloidal Drives for Industrial Robots Using Fourier Series", "title_ko": "사이클로이드 감속기의 부하·속도·온도 의존 전달오차 푸리에 급수 모델링 및 피드포워드 보정", "journal": "arXiv:2609.29112 / ISW, University of Stuttgart (2026)", "authors": "Christian J. E. Bauer, Valentin Kamm, Marcel Dzubba, Lukas Steinle, Armin Lechler, Alexander Verl", "link": "https://arxiv.org/abs/2609.29112", "doi": "10.48550/arXiv.2609.29112", "summary": "단일 로봇 관절 리그에서 사이클로이드 감속기(Nabtesco RH380-N, 정격 3,724 N·m)의 전달오차를 부하 토크·속도·윤활유 온도를 다항식 인자로 하는 진폭·위상의 푸리에 급수로 모델링해 검증 대비 평균 RMSE 0.026 mrad를 달성하고, 입력측 인코더만 사용하는 피드포워드 TE 보정을 제안.", "details": {"background": "산업로봇의 경로 정확도는 공작기계 대비 100~1,000배 낮은 수준이며 주원인은 관절 감속기의 컴플라이언스와 전달오차(TE)다. 하모닉 드라이브에 비해 사이클로이드 TE 연구는 빈약하고, 부하측 엔코더 기반 보정은 비용·시스템 복잡도를 높인다.", "method": "Nabtesco RH380-N 사이클로이드를 탑재한 단일 관절 시험 리그(입력측 모터, 토크 센서, 윤활 온도 센서, 부하측 모터)에서 TE를 계측하고, 측정 스펙트럼의 조화 주파수를 감속기의 기계적 특성(기하학적 주파수 성분)과 대응시켜 파라미터를 동정. 진폭·위상을 부하 토크·속도·온도의 다항식으로 표현하는 푸리에 급수 모델을 수립하고, 엔드오브라인 계측 후 입력측 인코더만으로 운용하는 옵저버 기반 보정 로드맵을 제시.", "data": "검증 측정 대비 모델 평균 RMSE 0.026 mrad. 부하 1,000 N·m, 속도 −2.5°/s, 윤활유 온도 27°C 조건의 TE 신호에서 조화 성분 식별. 연구 데이터셋 공개(DARUS-4454). 선행 컴플라이언스 보상 연구와 결합 시 경로 오차 81% 저감 가능성(문헌 근거).", "implications": "휴머노이드 하체 중부하 관절(사이클로이드/RV)의 상태(부하·속도·온도) 의존 TE를 모델 기반 피드포워드로 보정하는 실무 절차를 제공. 1호의 양방향 동적 TE·로스트모션 계측 프레임워크와 결합하면 부하·온도별 TE 지도 기반 관절 품질 승인 기준과 소프트웨어 보정 사양을 수립할 수 있다."}}, {"id": 6, "date": "2026-11-04", "batch": "2026-11-04 (2호 브리핑)", "categories": ["NVH·전달오차·소음진동", "정밀감속기·관절기구학"], "title_en": "Research on Gear Modification Optimization of High-Speed Heavy-Load Reducer Based on Romax", "title_ko": "Romax 강성-유연 연성 다물체 모델 기반 고속중부하 감속기 치형수정 최적화와 와인 소음 저감", "journal": "Machines (MDPI), Vol. 14, Issue 8, Article 910 (2026-08-09)", "authors": "Xiao Yang, Xiaoping Xie, Nanquan Jiang (후난대학교), Pengchuan Wang, Xuan Zhao (Shaanxi Fast Gear)", "link": "https://doi.org/10.3390/machines14080910", "doi": "10.3390/machines14080910", "summary": "고속중부하 2단 감속기의 기어 와인(whine)을 잡기 위해 Romax 강성-유연 연성 MBD 모델과 유전알고리즘으로 리드·인볼루트 크라우닝/슬로프 복합 치형수정을 최적화하여 2단 전달오차 p-p 64.0% 저감, 방사소음 평균 약 10 dB 저감을 실증.", "details": {"background": "고속중부하 감속기의 와인 소음은 치맞물림 고조파 기인이며, 준정적 TE만으로는 하우징 방사소음을 재현하기 어렵다. 오더 분석 기여도(1단 23차, 2단 12.38차)를 규명해 주요 소음원인 2단 기어쌍을 타깃으로 선정했다.", "method": "Romax로 강성-유연 연성 다물체 동역학 모델을 구축하고, 반무향실 NVH 시험(5개 읍향 센서 + 6개 3축 가속도 센서, LMS SCADAS/Test.Lab, 2,000~7,500 rpm 오더 분석)과 상관. 리드 크라우닝·리드 슬로프·인볼루트 크라우닝·인볼루트 슬로프 4요소 복합 치형수정을 TE, 단위부하, 치근 응력, 접촉 응력을 목적으로 하는 유전알고리즘으로 최적화.", "data": "1단 TE p-p 0.27→0.19 μm(−29.6%), 2단 2.67→0.96 μm(−64.0%). 최대 접촉 응력 507→488 MPa(1단, −3.75%), 627→618 MPa(2단, −1.44%). 기어박스 방사소음 평균 약 −10 dB.", "implications": "시험-해석 상관(오더 기여도 분석)으로 주요 소음원 차수를 가려낸 뒤 치형수정 최적화로 와인을 저감하는 표준 워크플로를 제공. 모비스 e-Axle에서 검증된 마이크로지오메트리 노하우를 로봇 관절 감속기 저소음 설계로 이식할 때 그대로 참조할 수 있는 절차이며, 1호의 휴머노이드 와인 기전 분석(1단 헬리컬화·PWM 고주파화)과 상호 보완적이다."}}];
+  let currentSortDesc = true;
+  let currentCategory = 'all';
+  let searchQuery = '';
+  let allExpanded = false;
+
+  const searchInput = document.getElementById('search-input');
+  const btnToggleAll = document.getElementById('btn-toggle-all');
+  const btnSort = document.getElementById('btn-sort');
+  const categoryChips = document.querySelectorAll('.chip');
+  const emptyState = document.getElementById('empty-state');
+
+  // Search input handler
+  searchInput.addEventListener('input', (e) => {
+    searchQuery = e.target.value.trim().toLowerCase();
+    filterAndRender();
+  });
+
+  // Category filter handler
+  categoryChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      categoryChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      currentCategory = chip.dataset.cat;
+      filterAndRender();
+    });
+  });
+
+  // Sort handler
+  btnSort.addEventListener('click', () => {
+    currentSortDesc = !currentSortDesc;
+    btnSort.innerHTML = currentSortDesc ? '⏱️ 최신순 정렬' : '⏱️ 과거순 정렬';
+    filterAndRender();
+  });
+
+  // Toggle All handler
+  btnToggleAll.addEventListener('click', () => {
+    allExpanded = !allExpanded;
+    btnToggleAll.innerHTML = allExpanded ? '📁 전체 접기' : '📂 전체 상세 펼치기';
+    document.querySelectorAll('.details-content').forEach(el => {
+      if (allExpanded) {
+        el.classList.add('open');
+      } else {
+        el.classList.remove('open');
+      }
+    });
+    document.querySelectorAll('.details-toggle span.arrow').forEach(el => {
+      el.textContent = allExpanded ? '▲ 접기' : '▼ 5단계 심층 분석 펼치기';
+    });
+  });
+
+  // Accordion toggle on individual card
+  function toggleDetails(id) {
+    const content = document.getElementById(`details-${id}`);
+    const arrow = document.getElementById(`arrow-${id}`);
+    if (content.classList.contains('open')) {
+      content.classList.remove('open');
+      arrow.textContent = '▼ 5단계 심층 분석 펼치기';
+    } else {
+      content.classList.add('open');
+      arrow.textContent = '▲ 접기';
     }
+  }
 
-    function setCategory(cat) {
-      activeCategory = cat;
-      initFilters();
-      filterPapers();
-    }
+  function filterAndRender() {
+    let visibleCount = 0;
+    const cards = document.querySelectorAll('.paper-card');
 
-    function filterPapers() {
-      const query = document.getElementById("searchInput").value.toLowerCase().trim();
-      const filtered = papersData.filter(paper => {
-        const matchesCategory = (activeCategory === "전체") || (paper.categories && paper.categories.includes(activeCategory));
-        const matchesQuery = !query || 
-          paper.title_ko.toLowerCase().includes(query) ||
-          paper.title_en.toLowerCase().includes(query) ||
-          (paper.authors && paper.authors.toLowerCase().includes(query)) ||
-          (paper.journal && paper.journal.toLowerCase().includes(query)) ||
-          (paper.summary && paper.summary.toLowerCase().includes(query)) ||
-          (paper.details && (
-            (paper.details.background && paper.details.background.toLowerCase().includes(query)) ||
-            (paper.details.method && paper.details.method.toLowerCase().includes(query)) ||
-            (paper.details.data && paper.details.data.toLowerCase().includes(query)) ||
-            (paper.details.implications && paper.details.implications.toLowerCase().includes(query))
-          ));
-        return matchesCategory && matchesQuery;
-      });
+    cards.forEach(card => {
+      const cardId = parseInt(card.dataset.id, 10);
+      const paper = papersData.find(p => p.id === cardId);
+      if (!paper) return;
 
-      renderGrid(filtered);
-    }
-
-    function renderGrid(papers) {
-      const grid = document.getElementById("paperGrid");
-      const empty = document.getElementById("emptyState");
-
-      if (papers.length === 0) {
-        grid.innerHTML = "";
-        empty.style.display = "block";
-        return;
+      // Category match
+      let catMatch = (currentCategory === 'all');
+      if (!catMatch && paper.categories) {
+        catMatch = paper.categories.some(c => c.toLowerCase() === currentCategory.toLowerCase());
       }
 
-      empty.style.display = "none";
-      grid.innerHTML = papers.map(paper => `
-        <article class="paper-card">
-          <div class="card-header">
-            <div class="meta-tags">
-              <span class="tag batch">${paper.batch || paper.date}</span>
-              ${(paper.categories || []).map(c => `<span class="tag category">${c}</span>`).join('')}
-            </div>
-            <span class="paper-id">#${String(paper.id).padStart(2, '0')}</span>
-          </div>
+      // Search match
+      let searchMatch = true;
+      if (searchQuery) {
+        const fullText = [
+          paper.title_ko,
+          paper.title_en,
+          paper.journal,
+          paper.authors,
+          paper.summary,
+          paper.details.background,
+          paper.details.method,
+          paper.details.data,
+          paper.details.implications,
+          (paper.categories || []).join(' ')
+        ].join(' ').toLowerCase();
 
-          <h2 class="card-title-ko">${paper.title_ko}</h2>
-          <div class="card-title-en">${paper.title_en}</div>
+        searchMatch = fullText.includes(searchQuery);
+      }
 
-          <div class="card-biblio">
-            <span>📚 ${paper.journal || ''}</span>
-            <span>✍️ ${paper.authors || ''}</span>
-            <span>📅 ${paper.date || ''}</span>
-          </div>
+      if (catMatch && searchMatch) {
+        card.style.display = 'block';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
 
-          <div class="card-summary">
-            <strong>핵심 요약:</strong> ${paper.summary || ''}
-          </div>
+    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
 
-          <button class="details-toggle" onclick="toggleDetails(this)">
-            <span>심층 분석 데이터 보기</span> ▼
-          </button>
+    // Handle sort order by reordering DOM
+    const list = document.getElementById('papers-list');
+    const sortedCards = Array.from(cards).sort((a, b) => {
+      const idA = parseInt(a.dataset.id, 10);
+      const idB = parseInt(b.dataset.id, 10);
+      return currentSortDesc ? (idB - idA) : (idA - idB);
+    });
+    sortedCards.forEach(card => list.appendChild(card));
+  }
 
-          <div class="details-content" style="display: none;">
-            <div class="detail-section">
-              <h4>🎯 연구 배경 및 해결 과제</h4>
-              <p>${paper.details?.background || '-'}</p>
-            </div>
-            <div class="detail-section">
-              <h4>⚙️ 제안 메커니즘 및 연구 방법론</h4>
-              <p>${paper.details?.method || '-'}</p>
-            </div>
-            <div class="detail-section">
-              <h4>📊 핵심 정량 데이터 및 실험 결과</h4>
-              <p>${paper.details?.data || '-'}</p>
-            </div>
-            <div class="detail-section">
-              <h4>💡 휴머노이드 구동계 실무 시사점</h4>
-              <p>${paper.details?.implications || '-'}</p>
-            </div>
-          </div>
+  // Patch notes modal functions
+  const patchNotesModal = document.getElementById('patch-notes-modal');
+  const btnPatchNotes = document.getElementById('btn-patch-notes');
 
-          <div class="card-footer">
-            ${paper.link ? `<a href="${paper.link}" target="_blank" rel="noopener noreferrer" class="doi-btn">원문 링크 / DOI ↗</a>` : ''}
-          </div>
-        </article>
-      `).join('');
+  function openPatchNotesModal() {
+    patchNotesModal.style.display = 'flex';
+  }
+
+  function closePatchNotesModal() {
+    patchNotesModal.style.display = 'none';
+  }
+
+  if (btnPatchNotes) {
+    btnPatchNotes.addEventListener('click', openPatchNotesModal);
+  }
+
+  // Feedback modal functions
+  const feedbackModal = document.getElementById('feedback-modal');
+  const btnOpenFeedback = document.getElementById('btn-open-feedback');
+  const feedbackTargetText = document.getElementById('feedback-target-text');
+  const feedbackInput = document.getElementById('feedback-input');
+  const btnSendFeedback = document.getElementById('btn-send-feedback');
+  const btnCopyFeedback = document.getElementById('btn-copy-feedback');
+
+  let currentFeedbackPaper = null;
+
+  function openFeedbackModal(paperId) {
+    feedbackInput.value = '';
+    if (paperId) {
+      const paper = papersData.find(p => p.id === paperId);
+      currentFeedbackPaper = paper;
+      feedbackTargetText.innerHTML = `<strong>대상 논문 #${paper.id}:</strong> ${paper.title_ko}`;
+    } else {
+      currentFeedbackPaper = null;
+      feedbackTargetText.innerHTML = `<strong>구분:</strong> 전체 로보틱스 아카이브 일반 건의 / 관심 연구 주제 제안`;
+    }
+    feedbackModal.style.display = 'flex';
+    setTimeout(() => feedbackInput.focus(), 50);
+  }
+
+  function closeFeedbackModal() {
+    feedbackModal.style.display = 'none';
+  }
+
+  if (btnOpenFeedback) {
+    btnOpenFeedback.addEventListener('click', () => openFeedbackModal(null));
+  }
+
+  // Delegate click for card feedback buttons
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.card-feedback-btn');
+    if (btn) {
+      const pid = parseInt(btn.dataset.id, 10);
+      openFeedbackModal(pid);
+    }
+  });
+
+  // Close modals on backdrop click or ESC
+  window.addEventListener('click', (e) => {
+    if (e.target === patchNotesModal) closePatchNotesModal();
+    if (e.target === feedbackModal) closeFeedbackModal();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closePatchNotesModal();
+      closeFeedbackModal();
+    }
+  });
+
+  function showToast(text) {
+    const toast = document.createElement('div');
+    toast.className = 'toast-msg';
+    toast.textContent = text;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2600);
+  }
+
+  // Send via Mailto
+  btnSendFeedback.addEventListener('click', () => {
+    const content = feedbackInput.value.trim();
+    if (!content) {
+      alert('의견이나 건의 내용을 입력해 주세요.');
+      feedbackInput.focus();
+      return;
     }
 
-    function toggleDetails(btn) {
-      const content = btn.nextElementSibling;
-      const isOpen = content.style.display !== "none";
-      content.style.display = isOpen ? "none" : "flex";
-      btn.innerHTML = isOpen ? "<span>심층 분석 데이터 보기</span> ▼" : "<span>접기</span> ▲";
+    const recipient = 'yoohokil@mobis.com';
+    let subject = '';
+    let body = '';
+
+    if (currentFeedbackPaper) {
+      subject = `[로보틱스 논문 아카이브 피드백] #${currentFeedbackPaper.id} 논문 관련 건의`;
+      body = `안녕하세요 호길 책임님,
+
+로보틱스 아카이브 논문 #${currentFeedbackPaper.id} (${currentFeedbackPaper.title_ko}) 관련하여 아래와 같이 의견/건의를 전달드립니다.
+
+[의견 내용]
+${content}
+
+---
+웹 아카이브: https://gncs-yoo.github.io/gear-research-archive/robotics.html`;
+    } else {
+      subject = `[로보틱스 논문 아카이브 건의함] 연구 아카이브 및 큐레이션 관련 제안`;
+      body = `안녕하세요 호길 책임님,
+
+휴머노이드 로보틱스 연구 아카이브와 관련하여 아래와 같이 건의/의견을 전달드립니다.
+
+[건의 내용]
+${content}
+
+---
+웹 아카이브: https://gncs-yoo.github.io/gear-research-archive/robotics.html`;
     }
 
-    initFilters();
-    filterPapers();
-  </script>
+    const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+    showToast('메일 작성 창을 열었습니다.');
+    closeFeedbackModal();
+  });
+
+  // Copy to clipboard
+  btnCopyFeedback.addEventListener('click', () => {
+    const content = feedbackInput.value.trim();
+    if (!content) {
+      alert('복사할 의견 내용을 입력해 주세요.');
+      feedbackInput.focus();
+      return;
+    }
+
+    let textToCopy = '';
+    if (currentFeedbackPaper) {
+      textToCopy = `[로보틱스 아카이브 논문 #${currentFeedbackPaper.id} 피드백]
+논문: ${currentFeedbackPaper.title_ko}
+
+${content}`;
+    } else {
+      textToCopy = `[로보틱스 아카이브 건의함]
+${content}`;
+    }
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      showToast('클립보드에 복사되었습니다! (메신저나 사내 메일에 붙여넣기 가능)');
+    }).catch(() => {
+      alert('클립보드 복사 권한이 제한되어 있습니다.');
+    });
+  });
+</script>
+
 </body>
 </html>
