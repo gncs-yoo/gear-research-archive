@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "date": "2026-11-03",
+    "batch": "2026-11-03 (1호 브리핑)",
+    "categories": [
+      "정밀감속기·관절기구학",
+      "임바디먼트·동적계측",
+      "NVH·전달오차·소음진동"
+    ],
+    "title_en": "Precision Reducers as Embodiment Enablers for Physical AI–Driven Humanoid Manufacturing Robots",
+    "title_ko": "피지컬 AI 휴머노이드 로봇을 위한 정밀 감속기 특성 및 동적 계측 프레임워크",
+    "journal": "International Journal of Precision Engineering and Manufacturing (IJPEM, Springer, 2026)",
+    "authors": "Hyeong-Joon Ahn",
+    "link": "https://doi.org/10.1007/s12541-026-01504-w",
+    "doi": "10.1007/s12541-026-01504-w",
+    "summary": "휴머노이드 로봇 관절의 하모닉·사이클로이드/RV·유성 감속기를 대상으로 정적 백래시 지표의 한계를 규명하고, 양방향 미소 반전 및 접촉 충격 하에서 동적 전달오차(Dynamic TE), 로스트 모션, 토크 리플을 평가하는 원샷(One-shot) 계측 프레임워크 수립.",
+    "details": {
+      "background": "기존 감속기 평가는 강성, 정적 백래시 등 단편 지표(ISO 9283)에 의존했으나, 접촉과 양방향 토크 역전이 빈번한 휴머노이드 환경에서는 제어/학습 불안정성의 원인이 감속기 비선형성(마찰, 히스테리시스, 전달오차)에서 비롯됨.",
+      "method": "토크 밀도, 역구동성, 순응성, 열/에너지 효율, 양방향 정밀도의 5대 임바디먼트 프레임워크를 수립하고, 부하 작동 중 입출력 토크·속도·온도를 동기 측정하여 로스트 모션, 동적 전달오차(TE), 주기 효율을 일체로 계측하는 'One-shot Metrology' 제안.",
+      "data": "하모닉 드라이브의 정적 백래시(1 arcmin 미만)와 달리 부하 반전(-20↔+20 N·m) 시 동적 로스트 모션은 평균 7.74~8.10 arcmin으로 급증함을 실증(예측 모델 정확도 95.56%). 사이클로이드/RV의 편심 질량 기인 1차 회전 불평형 진동 및 하모닉 유연륜(Flexspline) 피로 특성 규명.",
+      "implications": "하체 보행 관절(사이클로이드/RV/롤러 스크루)과 상체 정밀 조작 관절(하모닉/QDD)의 이종 감속기 전략(Heterogeneous reducer strategy) 필요성을 확립하고, 카탈로그 정적 백래시가 아닌 양방향 동적 전달오차 기반의 모비스 로봇 관절 품질 검증 표준 수립에 기여."
+    }
+  },
+  {
+    "id": 2,
+    "date": "2026-11-03",
+    "batch": "2026-11-03 (1호 브리핑)",
+    "categories": [
+      "그리퍼·핸드구동계",
+      "임바디먼트·동적계측"
+    ],
+    "title_en": "Ultra-Low-Impedance Robotic Gripper for High-Bandwidth and Transparent Physical Interaction",
+    "title_ko": "고대역폭 및 물리적 투명성 확보를 위한 차동 직접구동(DDD) 기반 초저임피던스 로봇 그리퍼",
+    "journal": "arXiv:2608.09198 / IEEE (2026)",
+    "authors": "Joon Lee, Ari Choi, Seokhwan Jeong",
+    "link": "https://arxiv.org/abs/2608.09198",
+    "doi": "10.48550/arXiv.2608.09198",
+    "summary": "고감속 기어열의 마찰·백래시·반사관성을 제거하기 위해 3지 9-자유도 그리퍼에 베이스 모터 집중 배치와 1:2 차동 기어를 결합하여, 수동 임피던스 50.1 N/m 달성 및 외장 센서리스 고유수용성 고대역 힘 제어 실증.",
+    "details": {
+      "background": "기존 로봇 핸드는 파지력 확보를 위해 고감속비 기어를 채택했으나, 이로 인해 높은 마찰과 반사 관성(J_m*n^2)이 발생하여 미세 접촉력 감지 및 충격 순응 제어가 어렵고 외장 F/T 센서 의존도가 높아짐.",
+      "method": "핑거 베이스에 DD 모터를 집중 배치하여 가동 링크 관성을 극소화하고, MCP 관절 굴곡 시 2개 모터를 병렬 구동하여 토크를 2배 증폭하는 1:2 저감속비 차동 기어 전달계(Differential Direct-Drive) 설계. IP 관절은 4절 링크로 1:1 선형 매핑 구현.",
+      "data": "공칭 악력 약 18 N, 팁 접촉력 4.7 N 달성. 모터의 시스템 반사 관성 기여도를 0.236%로 극소화하고 모터 비통전 시 수동 기계 임피던스를 최대 50.1 N/m로 억제. 외장 센서 없이 모터 전류만으로 고대역 접촉력 추정 및 순응성 실증.",
+      "implications": "로봇 말단 덱스터러스 핸드에서 고감속 감속기의 백래시와 비선형 마찰 문제를 탈피하여, 1:2 저감속 차동 기어와 다이렉트 드라이브 결합을 통해 정밀 힘 제어와 충격 흡수 능력을 양립하는 실용적 구동 메커니즘을 제시."
+    }
+  },
+  {
+    "id": 3,
+    "date": "2026-11-03",
+    "batch": "2026-11-03 (1호 브리핑)",
+    "categories": [
+      "NVH·전달오차·소음진동",
+      "정밀감속기·관절기구학"
+    ],
+    "title_en": "Analysis and Suppression of Tonal Whine and High-Frequency Dynamic Excitations in Humanoid Actuation Modules",
+    "title_ko": "휴머노이드 관절 액추에이터의 치맞물림 톤 와인(Whine) 및 고주파 진동소음 기전 분석과 저감 기술",
+    "journal": "Applied Sciences (MDPI, Vol. 16, 2026) & Humanoid.guide Research (2026)",
+    "authors": "Hepeng Ni, Mengchen Du, Yuhui Hou 외 / Humanoid Engineering Analysis",
+    "link": "https://doi.org/10.3390/app16178826",
+    "doi": "10.3390/app16178826",
+    "summary": "다관절(20~40축) 휴머노이드 집적 시 발생하는 1 kHz 대역 감속기 치맞물림(Mesh) 톤 와인과 조립 편차에 따른 하모닉 고조파 전달오차 전파 모델링(잔차 65% 저감) 및 소음 저감 설계 레버 분석.",
+    "details": {
+      "background": "가정·서비스 환경 휴머노이드는 다수 관절이 동시 작동하므로 단일 관절 소음(50 dB(A))이 중첩되어 전체 소음이 63 dB(A) 이상으로 증폭됨. 특히 치맞물림 고주파 와인(1 kHz)과 PWM 스위칭 노이즈, 하모닉 유연륜 조립 편심에 의한 전달오차가 제품 수용성을 저해함.",
+      "method": "Top-hat형 하모닉 감속기의 조립 경사 및 편심에 따른 전달오차 전파 모델을 수립하고 주파수 영역 특성 매칭으로 파라미터 규명. 치맞물림 주파수(f_mesh), 모터 코깅 토크, PWM 스위칭(16~20 kHz 고주파화), 트랙션(무치차) 및 텐던 드라이브 기구학적 소음 레버 비교.",
+      "data": "조립 경사를 반영한 전달오차 통합 모델 적용 시 최대 잔차 65%, MSE 95% 감소. 1단 헬리컬화 및 치형 프로파일 수정(Microgeometry) 적용 시 와인 음압 8~10 dB(A) 저감. 트랙션 기반 감속기는 37~50 dB(A) 이하, 텐던 복합 구동계는 로봇 전체 22 dB 수준 달성.",
+      "implications": "현대모비스 e-Axle에서 검증된 치형수정(마이크로지오메트리) 기법과 공차 제어 노하우를 소형 로봇 관절 감속기에 적용하여, 1단 헬리컬 최적화 및 20 kHz 이상 PWM 스위칭 설계를 통해 인간 공존형 저소음 휴머노이드 관절 양산 규격을 수립하는 핵심 기준 제공."
+    }
+  }
+]

@@ -4,9 +4,10 @@
 
 ## 🔗 라이브 웹사이트
 
-**https://gncs-yoo.github.io/gear-research-archive/**
+- **⚙️ 기어·구동계 아카이브**: **https://gncs-yoo.github.io/gear-research-archive/**
+- **🤖 휴머노이드 로보틱스 아카이브**: **https://gncs-yoo.github.io/gear-research-archive/robotics.html**
 
-매일 아침 수집된 기어·구동계(드라이브트레인) 최신 연구 논문이 5단계 엔지니어링 분석 리포트와 함께 자동으로 게시됩니다.
+매일 아침 수집된 기어·구동계 및 휴머노이드 액추에이터·NVH 최신 연구 논문이 5단계 엔지니어링 분석 리포트와 함께 자동으로 게시됩니다.
 
 ## 📖 아카이브 소개
 
@@ -33,9 +34,11 @@
 
 | 파일 | 설명 |
 |---|---|
-| `index.html` | 웹 아카이브 페이지 (GitHub Pages 메인 페이지) |
+| `index.html` | 기어·구동계 웹 아카이브 페이지 (GitHub Pages 메인 페이지) |
 | `gear-papers-archive.html` | 동일 아카이브의 원본 파일명 사본 |
-| `papers.json` | 수집·분석된 논문 데이터 (구조화된 JSON) |
+| `papers.json` | 기어·구동계 논문 데이터 (구조화된 JSON) |
+| `robotics.html` | 휴머노이드 로봇 액추에이터·그리퍼 구동계 & NVH 아카이브 |
+| `robotics-papers.json` | 휴머노이드 로보틱스 논문 데이터 (구조화된 JSON) |
 
 ## 🔄 자동 업데이트
 
