@@ -818,10 +818,10 @@
         </div>
         <div class="meta-pills">
           <div class="meta-pill">총 누적 논문: <strong id="total-count">34편</strong></div>
-          <div class="meta-pill">최근 갱신: <strong id="last-updated">2026-11-04 08:10 KST</strong></div>
+          <div class="meta-pill">최근 갱신: <strong id="last-updated">2026-11-04 08:29 KST</strong></div>
           <div class="meta-pill">자동 수집: <strong>매일 07:30 KST</strong></div>
           <button id="btn-patch-notes" class="pill-btn" title="아카이브 개편 및 업데이트 이력 보기">📋 패치 노트</button>
-          <button id="btn-open-feedback" class="pill-btn pill-btn-primary" title="연구 관심 주제나 아카이브 개선 의견을 남깁니다">📬 아카이브 건의함</button>
+          <button id="btn-open-feedback" class="pill-btn pill-btn-primary" title="연구 관심 주제나 아카이브 개선 의견을 남깁니다">📬 아카이브 건의함 (MS Forms)</button>
         </div>
       </div>
     </div>
@@ -2854,7 +2854,7 @@
         <ul class="patch-list">
           <li><strong>3대 축 쿼터제 정식 적용:</strong> 구동계 구조 설계(1편) + 시스템 레벨 NVH(1편) + 요소 기술/효율/신뢰성(1편) 균형 선별 체계 가동 (치형수정 단일 테마 최대 1편 이하 엄격 제한).</li>
           <li><strong>누적 34편 등록:</strong> 듀얼 모터 복합 유성기어 e-Axle 토크 벡터링, TNR 기반 e-Drive 와인 소음 조기 진단 및 폐루프 제어, 혼합 EHL 헬리컬 기어 마모 전동 손실 신규 반영.</li>
-          <li><strong>패치 노트 & 건의함 기능 신설:</strong> 아카이브 업데이트 이력 조회 모달 및 논문별/전체 연구 의견·건의 접수 창구(메일 자동 연동 및 클립보드 복사) 구축.</li>
+          <li><strong>패치 노트 & 건의함 기능 신설:</strong> 아카이브 업데이트 이력 조회 모달 및 사내 MS Forms 설문지·논문별 메일 피드백 창구 연동.</li>
         </ul>
       </div>
 
@@ -2906,6 +2906,24 @@
       <button class="modal-close-btn" onclick="closeFeedbackModal()">&times;</button>
     </div>
     <div class="modal-body">
+      <div class="forms-banner" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.12) 100%); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 0.95rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px;">
+          <span>📋</span> <span>사내 MS Forms 건의함 (익명/간편 설문)</span>
+        </div>
+        <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">
+          호길 책임님이 개설한 사내 MS Forms 전용 설문지입니다. 아카이브 운영 개선 및 희망 연구 주제를 자유롭게 남기실 수 있습니다.
+        </div>
+        <a href="https://forms.cloud.microsoft/r/nT3YbMgzwH" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; padding: 10px 16px; font-size: 0.88rem; margin-top: 4px;">
+          📝 MS Forms 설문지 작성하러 가기 ↗
+        </a>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px; margin: 4px 0;">
+        <div style="flex: 1; height: 1px; background: var(--surface-border);"></div>
+        <span style="font-size: 0.78rem; color: var(--text-dim); text-transform: uppercase;">또는 메일로 바로 의견 보내기</span>
+        <div style="flex: 1; height: 1px; background: var(--surface-border);"></div>
+      </div>
+
       <div id="feedback-target-desc" class="feedback-target-box">
         <strong>수신처:</strong> 유호길 책임 (yoohokil@mobis.com)<br>
         <span id="feedback-target-text">전체 아카이브 운영 및 희망 연구 주제 건의</span>
