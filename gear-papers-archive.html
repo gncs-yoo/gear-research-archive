@@ -375,18 +375,35 @@
       gap: 8px;
     }
 
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(51, 65, 85, 0.45);
+      flex-wrap: wrap;
+    }
+
+    .card-footer-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .card-like-btn {
       background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.28);
+      border: 1px solid rgba(56, 189, 248, 0.32);
       color: #94a3b8;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 600;
-      padding: 4px 10px;
+      padding: 6px 14px;
       border-radius: 6px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -579,16 +596,6 @@
 
     .mobis-implication .section-header {
       color: var(--accent);
-    }
-
-    .card-footer {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 12px;
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px solid rgba(51, 65, 85, 0.4);
     }
 
     /* Table in paper details */
@@ -963,7 +970,7 @@
         </div>
         <div class="meta-pills">
           <div class="meta-pill">총 누적 논문: <strong id="total-count">34편</strong></div>
-          <div class="meta-pill">최근 갱신: <strong id="last-updated">2026-11-04 10:21 KST</strong></div>
+          <div class="meta-pill">최근 갱신: <strong id="last-updated">2026-11-04 10:38 KST</strong></div>
           <div class="meta-pill">자동 수집: <strong>매일 07:30 KST</strong></div>
           <button id="btn-patch-notes" class="pill-btn" title="아카이브 개편 및 업데이트 이력 보기">📋 패치 노트</button>
           <button id="btn-open-feedback" class="pill-btn pill-btn-primary" title="연구 관심 주제나 아카이브 개선 의견을 남깁니다">📬 아카이브 건의함 (MS Forms)</button>
@@ -1014,9 +1021,6 @@
           <span class="category-badge">윤활·효율·마찰</span><span class="category-badge">하중분배·구동계기구학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="34" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-34">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="34" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1016/j.triboint.2026.112351" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1078,6 +1082,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="34" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-34">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="34" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-04 (아침 브리핑)</span>
       </div>
     </article>
@@ -1092,9 +1102,6 @@
           <span class="category-badge">NVH·소음진동</span><span class="category-badge">e-Axle·전동화구동계</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="33" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-33">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="33" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.4271/2026-01-0686" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1156,6 +1163,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="33" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-33">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="33" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-04 (아침 브리핑)</span>
       </div>
     </article>
@@ -1170,9 +1183,6 @@
           <span class="category-badge">e-Axle·전동화구동계</span><span class="category-badge">하중분배·구동계기구학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="32" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-32">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="32" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/act15050268" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1243,6 +1253,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="32" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-32">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="32" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-04 (아침 브리핑)</span>
       </div>
     </article>
@@ -1257,9 +1273,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span><span class="category-badge">하중분배·구동계기구학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="31" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-31">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="31" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1016/j.measurement.2025.119163" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1306,6 +1319,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="31" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-31">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="31" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-03 (아침 브리핑)</span>
       </div>
     </article>
@@ -1320,9 +1339,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span><span class="category-badge">e-Axle·전동화구동계</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="30" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-30">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="30" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.4271/2026-26-0315" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1369,6 +1385,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="30" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-30">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="30" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-03 (아침 브리핑)</span>
       </div>
     </article>
@@ -1383,9 +1405,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span><span class="category-badge">피로·강도·파손역학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="29" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-29">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="29" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.14775/ksmpe.2026.25.5.133" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1432,6 +1451,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="29" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-29">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="29" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-03 (아침 브리핑)</span>
       </div>
     </article>
@@ -1446,9 +1471,6 @@
           <span class="category-badge">하중분배·구동계기구학</span><span class="category-badge">NVH·소음진동</span><span class="category-badge">피로·강도·파손역학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="28" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-28">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="28" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1371/journal.pone.0354177" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1495,6 +1517,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="28" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-28">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="28" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-02 (아침 브리핑)</span>
       </div>
     </article>
@@ -1509,9 +1537,6 @@
           <span class="category-badge">NVH·소음진동</span><span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">피로·강도·파손역학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="27" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-27">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="27" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1177/14644193261428374" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1558,6 +1583,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="27" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-27">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="27" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-02 (아침 브리핑)</span>
       </div>
     </article>
@@ -1572,9 +1603,6 @@
           <span class="category-badge">NVH·소음진동</span><span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">하중분배·구동계기구학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="26" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-26">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="26" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/machines14080910" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1621,6 +1649,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="26" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-26">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="26" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-02 (아침 브리핑)</span>
       </div>
     </article>
@@ -1635,9 +1669,6 @@
           <span class="category-badge">AI·설계자동화·진단</span><span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">하중분배·구동계기구학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="25" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-25">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="25" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1016/j.jestch.2025.102274" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1684,6 +1715,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="25" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-25">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="25" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-01 (아침 브리핑)</span>
       </div>
     </article>
@@ -1698,9 +1735,6 @@
           <span class="category-badge">NVH·소음진동</span><span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">하중분배·구동계기구학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="24" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-24">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="24" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.13224/j.cnki.jasp.20240365" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1747,6 +1781,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="24" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-24">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="24" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-01 (아침 브리핑)</span>
       </div>
     </article>
@@ -1761,9 +1801,6 @@
           <span class="category-badge">NVH·소음진동</span><span class="category-badge">치형수정·마이크로지오메트리</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="23" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-23">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="23" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.4271/2026-01-0001" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1810,6 +1847,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="23" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-23">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="23" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-11-01 (아침 브리핑)</span>
       </div>
     </article>
@@ -1824,9 +1867,6 @@
           <span class="category-badge">윤활·효율·마찰</span><span class="category-badge">치형수정·마이크로지오메트리</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="22" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-22">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="22" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1016/j.triboint.2026.112647" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1873,6 +1913,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="22" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-22">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="22" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-31 (아침 브리핑)</span>
       </div>
     </article>
@@ -1887,9 +1933,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="21" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-21">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="21" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1016/j.rineng.2026.113075" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1936,6 +1979,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="21" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-21">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="21" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-31 (아침 브리핑)</span>
       </div>
     </article>
@@ -1950,9 +1999,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="20" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-20">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="20" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1016/j.rineng.2026.109647" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1999,6 +2045,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="20" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-20">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="20" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-31 (아침 브리핑)</span>
       </div>
     </article>
@@ -2013,9 +2065,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="19" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-19">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="19" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1177/09544070261444794" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2062,6 +2111,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="19" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-19">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="19" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-30 (아침 브리핑)</span>
       </div>
     </article>
@@ -2076,9 +2131,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span><span class="category-badge">하중분배·구동계기구학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="18" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-18">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="18" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1177/09544062261416598" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2125,6 +2177,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="18" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-18">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="18" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-30 (아침 브리핑)</span>
       </div>
     </article>
@@ -2139,9 +2197,6 @@
           <span class="category-badge">하중분배·구동계기구학</span><span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="17" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-17">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="17" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/machines14060651" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2188,6 +2243,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="17" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-17">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="17" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-30 (아침 브리핑)</span>
       </div>
     </article>
@@ -2202,9 +2263,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="16" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-16">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="16" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.4271/2026-26-0340" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2251,6 +2309,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="16" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-16">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="16" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-29 (아침 브리핑)</span>
       </div>
     </article>
@@ -2265,9 +2329,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">하중분배·구동계기구학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="15" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-15">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="15" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1177/09544062261449296" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2314,6 +2375,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="15" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-15">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="15" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-29 (아침 브리핑)</span>
       </div>
     </article>
@@ -2328,9 +2395,6 @@
           <span class="category-badge">NVH·소음진동</span><span class="category-badge">치형수정·마이크로지오메트리</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="14" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-14">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="14" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/machines14091025" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2377,6 +2441,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="14" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-14">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="14" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-29 (아침 브리핑)</span>
       </div>
     </article>
@@ -2391,9 +2461,6 @@
           <span class="category-badge">제조·표면강화·피로수명</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="13" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-13">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="13" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1111/ffe.70504" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2440,6 +2507,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="13" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-13">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="13" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-28 (아침 브리핑)</span>
       </div>
     </article>
@@ -2454,9 +2527,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="12" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-12">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="12" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/machines14101210" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2503,6 +2573,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="12" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-12">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="12" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-28 (아침 브리핑)</span>
       </div>
     </article>
@@ -2517,9 +2593,6 @@
           <span class="category-badge">NVH·소음진동</span><span class="category-badge">AI·설계자동화·진단</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="11" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-11">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="11" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/wevj17110551" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2566,6 +2639,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="11" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-11">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="11" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-28 (아침 브리핑)</span>
       </div>
     </article>
@@ -2580,9 +2659,6 @@
           <span class="category-badge">NVH·소음진동</span><span class="category-badge">AI·설계자동화·진단</span><span class="category-badge">치형수정·마이크로지오메트리</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="10" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-10">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="10" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://arxiv.org/abs/2610.32310" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2629,6 +2705,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="10" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-10">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="10" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-27 (오늘 아침 브리핑)</span>
       </div>
     </article>
@@ -2643,9 +2725,6 @@
           <span class="category-badge">제조·표면강화·피로수명</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="9" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-9">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="9" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/ma19214453" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2692,6 +2771,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="9" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-9">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="9" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-27 (오늘 아침 브리핑)</span>
       </div>
     </article>
@@ -2706,9 +2791,6 @@
           <span class="category-badge">윤활·효율·마찰</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="8" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-8">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="8" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/lubricants14100386" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2755,6 +2837,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="8" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-8">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="8" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-26 (2차 심층 브리핑)</span>
       </div>
     </article>
@@ -2769,9 +2857,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">하중분배·구동계기구학</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="7" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-7">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="7" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1016/j.mechmachtheory.2026.106660" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2818,6 +2903,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="7" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-7">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="7" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-26 (2차 심층 브리핑)</span>
       </div>
     </article>
@@ -2832,9 +2923,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">AI·설계자동화·진단</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="6" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-6">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="6" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://www.geartechnology.com" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2881,6 +2969,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="6" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-6">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="6" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-26 (2차 심층 브리핑)</span>
       </div>
     </article>
@@ -2895,9 +2989,6 @@
           <span class="category-badge">치형수정·마이크로지오메트리</span><span class="category-badge">NVH·소음진동</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="5" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-5">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="5" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1177/09544070261493265" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -2944,6 +3035,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="5" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-5">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="5" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-26 (2차 심층 브리핑)</span>
       </div>
     </article>
@@ -2958,9 +3055,6 @@
           <span class="category-badge">AI·설계자동화·진단</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="4" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-4">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="4" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1016/j.ymssp.2026.111892" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -3007,6 +3101,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="4" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-4">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="4" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-26 (1차 브리핑)</span>
       </div>
     </article>
@@ -3021,9 +3121,6 @@
           <span class="category-badge">AI·설계자동화·진단</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="3" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-3">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="3" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1186/s10033-026-01045-8" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -3070,6 +3167,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="3" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-3">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="3" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-26 (1차 브리핑)</span>
       </div>
     </article>
@@ -3084,9 +3187,6 @@
           <span class="category-badge">하중분배·구동계기구학</span><span class="category-badge">NVH·소음진동</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="2" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-2">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="2" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1142/S175882512650045X" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -3133,6 +3233,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="2" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-2">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="2" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-26 (1차 브리핑)</span>
       </div>
     </article>
@@ -3147,9 +3253,6 @@
           <span class="category-badge">하중분배·구동계기구학</span><span class="category-badge">윤활·효율·마찰</span>
         </div>
         <div class="card-top-actions">
-          <button class="card-like-btn" data-id="1" title="이 논문 추천하기 (따봉)">
-            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-1">0</span>
-          </button>
           <button class="card-feedback-btn" data-id="1" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1016/j.mechatronics.2026.103001" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -3196,6 +3299,12 @@
       </div>
 
       <div class="card-footer">
+        <div class="card-footer-actions">
+          <button class="card-like-btn" data-id="1" title="이 논문 추천하기 (따봉 토글)">
+            <span class="like-icon">👍</span> <span class="like-text">이 논문 추천하기</span> <span class="like-count" id="like-count-1">0</span>
+          </button>
+          <button class="card-feedback-btn" data-id="1" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견 남기기</button>
+        </div>
         <span style="font-size: 0.8rem; color: var(--text-dim);">수집 회차: 2026-10-26 (1차 브리핑)</span>
       </div>
     </article>
@@ -3634,24 +3743,29 @@ ${content}`;
     }
   }
 
-  function setLikedStatus(pid) {
+  function setLikedStatus(pid, status = true) {
     try {
-      localStorage.setItem(`${LIKE_NAMESPACE}_liked_${pid}`, 'true');
+      if (status) {
+        localStorage.setItem(`${LIKE_NAMESPACE}_liked_${pid}`, 'true');
+      } else {
+        localStorage.removeItem(`${LIKE_NAMESPACE}_liked_${pid}`);
+      }
     } catch (e) {}
   }
 
   async function fetchLiveLikeCount(pid) {
     try {
-      const res = await fetch(`${LIKE_API_BASE}/get/${LIKE_NAMESPACE}/paper-${pid}`);
-      if (res.ok) {
-        const data = await res.json();
-        if (data && typeof data.value === 'number') {
-          const countEl = document.getElementById(`like-count-${pid}`);
-          if (countEl) countEl.textContent = data.value;
-          const paper = papersData.find(p => p.id === pid);
-          if (paper) paper.likes = data.value;
-        }
-      }
+      const [resUp, resDown] = await Promise.all([
+        fetch(`${LIKE_API_BASE}/get/${LIKE_NAMESPACE}/paper-${pid}-up`),
+        fetch(`${LIKE_API_BASE}/get/${LIKE_NAMESPACE}/paper-${pid}-down`)
+      ]);
+      const upData = resUp.ok ? await resUp.json() : { value: 0 };
+      const downData = resDown.ok ? await resDown.json() : { value: 0 };
+      const netCount = Math.max(0, (upData.value || 0) - (downData.value || 0));
+      const countEl = document.getElementById(`like-count-${pid}`);
+      if (countEl) countEl.textContent = netCount;
+      const paper = papersData.find(p => p.id === pid);
+      if (paper) paper.likes = netCount;
     } catch (e) {}
   }
 
@@ -3664,16 +3778,24 @@ ${content}`;
     const isAlreadyLiked = getLikedStatus(pid);
 
     if (isAlreadyLiked) {
-      if (source === 'mail') {
-        showToast(`ℹ️ [논문 #${pid}] 이미 추천하신 논문입니다.`);
-      } else {
-        showToast(`ℹ️ [논문 #${pid}] 이미 추천(따봉)을 누르셨습니다.`);
-      }
-      if (btn) btn.classList.add('liked');
+      // Toggle OFF (취소)
+      setLikedStatus(pid, false);
+      if (btn) btn.classList.remove('liked');
+      const currentCount = parseInt(countEl ? countEl.textContent : '0', 10) || 0;
+      const newCount = Math.max(0, currentCount - 1);
+      if (countEl) countEl.textContent = newCount;
+      paper.likes = newCount;
+
+      showToast(`↩️ [논문 #${pid}] 추천(따봉)을 취소했습니다.`);
+
+      try {
+        await fetch(`${LIKE_API_BASE}/hit/${LIKE_NAMESPACE}/paper-${pid}-down`);
+      } catch (e) {}
       return;
     }
 
-    setLikedStatus(pid);
+    // Toggle ON (추천)
+    setLikedStatus(pid, true);
     if (btn) btn.classList.add('liked');
     const currentCount = parseInt(countEl ? countEl.textContent : '0', 10) || 0;
     const newCount = currentCount + 1;
@@ -3683,18 +3805,11 @@ ${content}`;
     if (source === 'mail') {
       showToast(`🎉 메일에서 추천해 주신 [논문 #${pid}] 따봉이 반영되었습니다!`);
     } else {
-      showToast(`🎉 [논문 #${pid}] 추천(따봉)이 반영되었습니다!`);
+      showToast(`🎉 [논문 #${pid}] 이 논문 추천(따봉)이 반영되었습니다!`);
     }
 
     try {
-      const res = await fetch(`${LIKE_API_BASE}/hit/${LIKE_NAMESPACE}/paper-${pid}`);
-      if (res.ok) {
-        const data = await res.json();
-        if (data && typeof data.value === 'number' && countEl) {
-          countEl.textContent = data.value;
-          paper.likes = data.value;
-        }
-      }
+      await fetch(`${LIKE_API_BASE}/hit/${LIKE_NAMESPACE}/paper-${pid}-up`);
     } catch (e) {}
   }
 
