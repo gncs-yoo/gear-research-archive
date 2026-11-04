@@ -375,6 +375,62 @@
       gap: 8px;
     }
 
+    .card-like-btn {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      color: #94a3b8;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-like-btn:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: #38bdf8;
+      color: #38bdf8;
+      transform: translateY(-1px);
+    }
+
+    .card-like-btn:active {
+      transform: scale(0.96);
+    }
+
+    .card-like-btn.liked {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: #38bdf8;
+      color: #38bdf8;
+      font-weight: 700;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+    }
+
+    .card-like-btn.liked .like-icon {
+      display: inline-block;
+      animation: likeBounce 0.4s ease-out;
+    }
+
+    @keyframes likeBounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.4) rotate(-12deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+
+    @keyframes cardPulse {
+      0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.8); }
+      50% { box-shadow: 0 0 20px 4px rgba(56, 189, 248, 0.4); border-color: #38bdf8; }
+      100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+    }
+
+    .paper-card.highlight-pulse {
+      animation: cardPulse 1.5s ease-out 2;
+      border-color: #38bdf8 !important;
+    }
+
     .card-feedback-btn {
       background: transparent;
       border: 1px solid rgba(148, 163, 184, 0.25);
@@ -818,7 +874,7 @@
         </div>
         <div class="meta-pills">
           <div class="meta-pill">총 누적 논문: <strong id="total-count">6편</strong></div>
-          <div class="meta-pill">최근 갱신: <strong id="last-updated">2026-11-04 08:34 KST</strong></div>
+          <div class="meta-pill">최근 갱신: <strong id="last-updated">2026-11-04 10:24 KST</strong></div>
           <div class="meta-pill">자동 수집: <strong>매일 08:00 KST</strong></div>
           <button id="btn-patch-notes" class="pill-btn" title="아카이브 개편 및 업데이트 이력 보기">📋 패치 노트</button>
           <button id="btn-open-feedback" class="pill-btn pill-btn-primary" title="연구 관심 주제나 아카이브 개선 의견을 남깁니다">📬 아카이브 건의함 (MS Forms)</button>
@@ -839,6 +895,7 @@
       <div class="action-buttons">
         <button id="btn-toggle-all" class="btn" title="모든 카드의 5단계 상세 분석을 펼치거나 접습니다">📂 전체 상세 펼치기</button>
         <button id="btn-sort" class="btn" title="최신 등록순 또는 과거순으로 정렬합니다">⏱️ 최신순 정렬</button>
+        <button id="btn-sort-likes" class="btn" title="팀원들의 추천(따봉)이 많은 순서대로 정렬합니다">🔥 추천순 정렬</button>
       </div>
     </div>
 
@@ -864,6 +921,9 @@
           <span class="category-badge">NVH·전달오차·소음진동</span><span class="category-badge">정밀감속기·관절기구학</span>
         </div>
         <div class="card-top-actions">
+          <button class="card-like-btn" data-id="6" title="이 논문 추천하기 (따봉)">
+            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-6">0</span>
+          </button>
           <button class="card-feedback-btn" data-id="6" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/machines14080910" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -922,6 +982,9 @@
           <span class="category-badge">NVH·전달오차·소음진동</span><span class="category-badge">정밀감속기·관절기구학</span>
         </div>
         <div class="card-top-actions">
+          <button class="card-like-btn" data-id="5" title="이 논문 추천하기 (따봉)">
+            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-5">0</span>
+          </button>
           <button class="card-feedback-btn" data-id="5" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://arxiv.org/abs/2609.29112" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -980,6 +1043,9 @@
           <span class="category-badge">그리퍼·핸드구동계</span>
         </div>
         <div class="card-top-actions">
+          <button class="card-like-btn" data-id="4" title="이 논문 추천하기 (따봉)">
+            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-4">0</span>
+          </button>
           <button class="card-feedback-btn" data-id="4" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://arxiv.org/abs/2609.36241" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1038,6 +1104,9 @@
           <span class="category-badge">NVH·전달오차·소음진동</span><span class="category-badge">정밀감속기·관절기구학</span>
         </div>
         <div class="card-top-actions">
+          <button class="card-like-btn" data-id="3" title="이 논문 추천하기 (따봉)">
+            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-3">0</span>
+          </button>
           <button class="card-feedback-btn" data-id="3" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.3390/app16178826" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1096,6 +1165,9 @@
           <span class="category-badge">그리퍼·핸드구동계</span><span class="category-badge">임바디먼트·동적계측</span>
         </div>
         <div class="card-top-actions">
+          <button class="card-like-btn" data-id="2" title="이 논문 추천하기 (따봉)">
+            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-2">0</span>
+          </button>
           <button class="card-feedback-btn" data-id="2" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://arxiv.org/abs/2608.09198" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1154,6 +1226,9 @@
           <span class="category-badge">정밀감속기·관절기구학</span><span class="category-badge">임바디먼트·동적계측</span><span class="category-badge">NVH·전달오차·소음진동</span>
         </div>
         <div class="card-top-actions">
+          <button class="card-like-btn" data-id="1" title="이 논문 추천하기 (따봉)">
+            <span class="like-icon">👍</span> <span class="like-text">추천</span> <span class="like-count" id="like-count-1">0</span>
+          </button>
           <button class="card-feedback-btn" data-id="1" title="이 논문에 대한 의견이나 질문을 남깁니다">💬 의견·건의</button>
           <a href="https://doi.org/10.1007/s12541-026-01504-w" target="_blank" rel="noopener noreferrer" class="paper-link-btn" title="논문 원문/저널 페이지 열기">
             🔗 원문/DOI 링크 ↗
@@ -1301,6 +1376,8 @@
   const searchInput = document.getElementById('search-input');
   const btnToggleAll = document.getElementById('btn-toggle-all');
   const btnSort = document.getElementById('btn-sort');
+  const btnSortLikes = document.getElementById('btn-sort-likes');
+  let currentSortMode = 'newest'; // 'newest' | 'oldest' | 'likes'
   const categoryChips = document.querySelectorAll('.chip');
   const emptyState = document.getElementById('empty-state');
 
@@ -1322,10 +1399,32 @@
 
   // Sort handler
   btnSort.addEventListener('click', () => {
+    if (currentSortMode === 'likes') {
+      currentSortMode = 'newest';
+      if (btnSortLikes) {
+        btnSortLikes.classList.remove('active');
+        btnSortLikes.innerHTML = '🔥 추천순 정렬';
+      }
+    }
     currentSortDesc = !currentSortDesc;
     btnSort.innerHTML = currentSortDesc ? '⏱️ 최신순 정렬' : '⏱️ 과거순 정렬';
     filterAndRender();
   });
+
+  // Sort handler (Likes)
+  if (btnSortLikes) {
+    btnSortLikes.addEventListener('click', () => {
+      currentSortMode = (currentSortMode === 'likes') ? 'newest' : 'likes';
+      btnSortLikes.classList.toggle('active', currentSortMode === 'likes');
+      if (currentSortMode === 'likes') {
+        btnSortLikes.innerHTML = '🔥 추천순 (적용중)';
+        btnSort.innerHTML = '⏱️ 최신순 정렬';
+      } else {
+        btnSortLikes.innerHTML = '🔥 추천순 정렬';
+      }
+      filterAndRender();
+    });
+  }
 
   // Toggle All handler
   btnToggleAll.addEventListener('click', () => {
@@ -1403,6 +1502,14 @@
     // Handle sort order by reordering DOM
     const list = document.getElementById('papers-list');
     const sortedCards = Array.from(cards).sort((a, b) => {
+      if (currentSortMode === 'likes') {
+        const idA = parseInt(a.dataset.id, 10);
+        const idB = parseInt(b.dataset.id, 10);
+        const countA = parseInt(a.querySelector('.like-count')?.textContent || '0', 10);
+        const countB = parseInt(b.querySelector('.like-count')?.textContent || '0', 10);
+        if (countB !== countA) return countB - countA;
+        return idB - idA;
+      }
       const idA = parseInt(a.dataset.id, 10);
       const idB = parseInt(b.dataset.id, 10);
       return currentSortDesc ? (idB - idA) : (idA - idB);
@@ -1557,6 +1664,123 @@ ${content}`;
       alert('클립보드 복사 권한이 제한되어 있습니다.');
     });
   });
+
+  // Likes (따봉) System
+  const LIKE_API_BASE = 'https://abacus.jasoncameron.dev';
+  const LIKE_NAMESPACE = 'gncs-mobis-robotics';
+
+  function getLikedStatus(pid) {
+    try {
+      return localStorage.getItem(`${LIKE_NAMESPACE}_liked_${pid}`) === 'true';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function setLikedStatus(pid) {
+    try {
+      localStorage.setItem(`${LIKE_NAMESPACE}_liked_${pid}`, 'true');
+    } catch (e) {}
+  }
+
+  async function fetchLiveLikeCount(pid) {
+    try {
+      const res = await fetch(`${LIKE_API_BASE}/get/${LIKE_NAMESPACE}/paper-${pid}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && typeof data.value === 'number') {
+          const countEl = document.getElementById(`like-count-${pid}`);
+          if (countEl) countEl.textContent = data.value;
+          const paper = papersData.find(p => p.id === pid);
+          if (paper) paper.likes = data.value;
+        }
+      }
+    } catch (e) {}
+  }
+
+  async function triggerLike(pid, source = 'web') {
+    const paper = papersData.find(p => p.id === pid);
+    if (!paper) return;
+
+    const countEl = document.getElementById(`like-count-${pid}`);
+    const btn = document.querySelector(`.card-like-btn[data-id="${pid}"]`);
+    const isAlreadyLiked = getLikedStatus(pid);
+
+    if (isAlreadyLiked) {
+      if (source === 'mail') {
+        showToast(`ℹ️ [로보틱스 논문 #${pid}] 이미 추천하신 논문입니다.`);
+      } else {
+        showToast(`ℹ️ [로보틱스 논문 #${pid}] 이미 추천(따봉)을 누르셨습니다.`);
+      }
+      if (btn) btn.classList.add('liked');
+      return;
+    }
+
+    setLikedStatus(pid);
+    if (btn) btn.classList.add('liked');
+    const currentCount = parseInt(countEl ? countEl.textContent : '0', 10) || 0;
+    const newCount = currentCount + 1;
+    if (countEl) countEl.textContent = newCount;
+    paper.likes = newCount;
+
+    if (source === 'mail') {
+      showToast(`🎉 메일에서 추천해 주신 [로보틱스 논문 #${pid}] 따봉이 반영되었습니다!`);
+    } else {
+      showToast(`🎉 [로보틱스 논문 #${pid}] 추천(따봉)이 반영되었습니다!`);
+    }
+
+    try {
+      const res = await fetch(`${LIKE_API_BASE}/hit/${LIKE_NAMESPACE}/paper-${pid}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && typeof data.value === 'number' && countEl) {
+          countEl.textContent = data.value;
+          paper.likes = data.value;
+        }
+      }
+    } catch (e) {}
+  }
+
+  // Delegate click for card like buttons
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.card-like-btn');
+    if (btn) {
+      const pid = parseInt(btn.dataset.id, 10);
+      triggerLike(pid, 'web');
+    }
+  });
+
+  // Initialize liked states & live counts
+  document.querySelectorAll('.card-like-btn').forEach(btn => {
+    const pid = parseInt(btn.dataset.id, 10);
+    if (getLikedStatus(pid)) {
+      btn.classList.add('liked');
+    }
+    fetchLiveLikeCount(pid);
+  });
+
+  // Handle URL query parameters for mail links: ?like=32&src=mail
+  const urlParams = new URLSearchParams(window.location.search);
+  const likeParam = urlParams.get('like');
+  const srcParam = urlParams.get('src') || 'mail';
+  if (likeParam) {
+    const targetPid = parseInt(likeParam, 10);
+    if (!isNaN(targetPid)) {
+      setTimeout(() => {
+        const targetCard = document.querySelector(`.paper-card[data-id="${targetPid}"]`);
+        if (targetCard) {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetCard.classList.add('highlight-pulse');
+          setTimeout(() => targetCard.classList.remove('highlight-pulse'), 3500);
+        }
+        triggerLike(targetPid, srcParam);
+        try {
+          const cleanUrl = window.location.pathname + window.location.hash;
+          window.history.replaceState(null, '', cleanUrl);
+        } catch (e) {}
+      }, 300);
+    }
+  }
 </script>
 
 </body>
