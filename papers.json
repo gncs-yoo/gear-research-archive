@@ -709,8 +709,8 @@
       "implications": "현대모비스의 고성능 전동화 e-Axle 및 차세대 e-LSD/단속 기구 개발 관점에서, 모터 추가 탑재 없이 복합 유성기어와 소형 마찰 클러치 조합만으로 토크 벡터링 한계와 험로 탈출 능력을 동시에 극대화할 수 있는 기구학적 아키텍처 방향성을 제시함. 특히 슬립 결합 모드 전환 시 스틱-슬립 비틀림 진동(Stick-slip torsional vibration) 억제 및 클러치 열부하 관리가 실차 양산 적용의 핵심 선행 과제임."
     },
     "figure": {
-      "url": "assets/figures/paper_32_eaxle_topology.svg",
-      "caption": "그림 1. 고정 캐리어 복합 유성기어열 및 2개 크로스 액슬 클러치 기반 재구성 가능 e-Axle 구조도 (MDPI Actuators 2026)"
+      "url": "assets/figures/paper_32_fig1.png",
+      "caption": "Figure 1. Layout of the proposed reconfigurable dual-motor e-axle (원문 수록 Figure 1 원본)"
     },
     "table": {
       "title": "재구성 가능 듀얼 모터 e-Axle 모드별 성능 비교",
