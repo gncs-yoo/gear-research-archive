@@ -1023,7 +1023,7 @@
         </div>
         <div class="meta-pills">
           <div class="meta-pill">총 누적 논문: <strong id="total-count">34편</strong></div>
-          <div class="meta-pill">최근 갱신: <strong id="last-updated">2026-11-04 11:08 KST</strong></div>
+          <div class="meta-pill">최근 갱신: <strong id="last-updated">2026-11-04 11:14 KST</strong></div>
           <div class="meta-pill">자동 수집: <strong>매일 07:30 KST</strong></div>
           <button id="btn-patch-notes" class="pill-btn" title="아카이브 개편 및 업데이트 이력 보기">📋 패치 노트</button>
           <button id="btn-open-feedback" class="pill-btn pill-btn-primary" title="연구 관심 주제나 아카이브 개선 의견을 남깁니다">📬 아카이브 건의함 (MS Forms)</button>
@@ -3681,6 +3681,14 @@
 
   function escapeHtml(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function showToast(text) {
+    const toast = document.createElement('div');
+    toast.className = 'toast-msg';
+    toast.textContent = text;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2600);
   }
 
   function openFeedbackModal(paperId) {
