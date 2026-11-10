@@ -536,7 +536,7 @@
     "title_en": "PACT: Pose-Robust Actuation Co-Design for Tendon-Driven Robotic Hands",
     "title_ko": "자세 강건성 및 대역폭 제약을 만족하는 인간형 텐던 구동 핸드의 라우팅·모멘트암·준직접구동(QDD) 구동계 동시 최적화 프레임워크 (PACT)",
     "journal": "arXiv:2611.05302 [cs.RO] (2026-11-03 게재)",
-    "authors": "Benjamin Katz, Jared Di Carlo, Sangbae Kim (MIT 기계공학부 생체모방로봇연구실 Biomimetic Robotics Lab)",
+    "authors": "Prashant Kumar, Rachael Granberry, Taylor Niehues, Andrew A. Stanley, Gabe Pirie (Meta Reality Labs Research)",
     "link": "https://doi.org/10.48550/arXiv.2611.05302",
     "doi": "10.48550/arXiv.2611.05302",
     "summary": "인간형 로봇 핸드에서 파지력 확보와 관절 속도/역구동성(대역폭) 간의 트레이드오프를 극복하기 위해, 텐던 라우팅 경로, 관절 모멘트암, 캡스턴 직경 및 모터 구동계를 결합 설계하는 자세 강건 구동 동시 최적화(PACT) 프레임워크 개발. 70분위 성인 손 크기 공간 내에서 4-DOF 손가락 대상 비대칭 N+1 텐던 토폴로지와 고토크/저토크 준직접구동(QDD) 모터를 동시 배치. 최악 자세에서의 작업력 커버리지(Task-force coverage)를 목적함수로 삼아 기준 설계 0.24 대비 0.88로 대폭 향상(최대 1.00 달성)하고, 8개 전 작업 자세에서 최소 5 Hz의 단일 관절 굴곡/신전 대역폭을 보장. 실물 프로토타입 계측을 통해 텐던 경로 누적 마찰 손실(MCP 14%, PIP 24%, DIP 32%) 메커니즘을 규명하고 강건성을 입증.",
