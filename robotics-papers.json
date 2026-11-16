@@ -844,7 +844,7 @@
     "title_en": "Research on back driving performance of robot reducers based on hysteresis characteristics",
     "title_ko": "히스테리시스 곡선 특성(로스트 모션·에너지 흡수 면적) 기반 로봇 관절 감속기의 역구동 성능 정량 평가 모델 및 실험",
     "journal": "Measurement and Control (SAGE, 2026-04-19 게재)",
-    "authors": "Da Fu Cao (Da Cao), Huiming Cheng, Zhaoyao Shi (베이징공업대학교 Beijing University of Technology)",
+    "authors": "Da Cao, Huiming Cheng, Zhaoyao Shi (베이징공업대학교 Beijing University of Technology)",
     "link": "https://doi.org/10.1177/00202940261442382",
     "doi": "10.1177/00202940261442382",
     "summary": "로봇 관절 감속기의 안전·충돌 순응성과 외력 추정을 좌우하는 핵심 지표인 역구동성(Backdrivability)을 정적 마찰 토크 수준이 아닌 비선형 히스테리시스(Hysteresis) 거동으로 정식화한 연구. 역구동의 물리적 본질을 '회전각 거동(로스트 모션 기반)'과 '에너지 흡수 용량(히스테리시스 폐곡선 면적 기반)'으로 이원화하여 일반화 다항식 및 해석적 상관 모델을 수립하고, 통계적 분석과 토크-에너지 곡선으로 전체·순간 에너지 소산 성능을 동시 평가함. 이종 재질 감속기 2종 비교 실험을 통해 기하 오차, 탄성 변형, 재료 물성이 역구동 거동을 지배함을 실증함.",
