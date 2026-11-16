@@ -788,5 +788,71 @@
       "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">치형수정 전략 및 평가 지표</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">정량적 개선 수치 (vs 비수정 기준)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">물리적 개선 메커니즘</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">1단 인벌류트 치형수정</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>최대 맞물림 강성 17.3% 저감</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">단일-이중 치 접촉 천이부 강성 맥동 억제</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">2단 사이클로이드 압력각 수정</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>피크 접촉응력 ~1,600 → 1,100 MPa (-31.3%)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">다치 동시 하중 분배 균일화</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">인벌류트 + 사이클로이드 압력각 복합 수정</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>지배 음향 피크 ~11 dB(A) 저감 / 방사 파워 ~60% 감소</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">1·2단 가진 연성 차단 및 하우징 진동-음향 동시 억제</td></tr></table>",
       "implications": "현대모비스가 휴머노이드 고하중 허리·고관절·어깨용 RV/사이클로이드 감속기의 저소음화(NVH)를 추진할 때, Romax 기반 시변 강성 데이터를 동역학 모델에 연동하여 1단 인벌류트와 2단 사이클로이드 압력각 수정을 동시 튜닝하면 전달오차 변동폭이 크지 않더라도 방사 음향 파워를 60%까지 극적으로 낮출 수 있음을 보여주는 핵심 해석 레퍼런스임."
     }
+  },
+  {
+    "id": 37,
+    "date": "2026-11-17",
+    "batch": "2026-11-17 (13호 브리핑)",
+    "categories": [
+      "선형구동계·일체형액추에이터",
+      "IPM모터·롤러스크루"
+    ],
+    "title_en": "Design and Performance Evaluation of an Interior Permanent-Magnet Linear Actuator for High-Dynamic Robotic Joint Applications",
+    "title_ko": "고동적 로봇 관절용 매입형 영구자석(IPM) 로터-행성 롤러 스크루 일체형 선형 액추에이터 설계 및 성능 평가",
+    "journal": "IEEE Transactions on Industrial Electronics (pp. 1–12, 2026 게재)",
+    "authors": "An Li, Zeyuan Yang, Yitong Qin, Qinmiao Zhu, Bo Tao, I-Ming Chen, Han Ding (난양공과대학교 NTU / 화중과기대학교 HUST / 중국국가디지털설계제조혁신센터)",
+    "link": "https://doi.org/10.1109/tie.2026.3720685",
+    "doi": "10.1109/tie.2026.3720685",
+    "summary": "휴머노이드 로봇 고동적 관절의 체적·추력 밀도·속도 범위 제약을 돌파하기 위해, 행성 롤러 스크루(PRS)와 매입형 영구자석(IPM) 로터를 직접 결합한 전자기-기계 일체형 선형 액추에이터를 설계하고 동일 외경 체적의 표면부착형(SPM) 액추에이터와 정량 비교. 일체형 스크루 구조로 인해 로터 반경 방향 공간이 극도로 제한된 조건에서도 IPM 토폴로지가 자속 이용률을 높이고 철손을 억제함을 입증하여, 최대 선형 추력 2 kN 및 최대 회전수 6,000 rpm을 달성하고 SPM 대비 유효 속도 제어 범위를 약 40% 확장, 고효율(>80%) 운전 영역을 약 65% 확대함.",
+    "details": {
+      "background": "로봇 무릎·고관절 등 고부하 선형 관절에서는 모터와 행성 롤러 스크루(PRS)를 동축 일체화하여 체적을 줄여야 하나, 스크루 기구부가 중심 공간을 점유하면서 로터 요크 두께가 극도로 얇아져 기존 표면부착형(SPM) 로터에서는 자기 포화와 고속 철손이 급증하고 약계자 속도 확장성이 떨어지는 한계가 있었음.",
+      "method": "행성 롤러 스크루를 로터 내부에 직접 통합한 전자기-기계 강결합 토폴로지에 매입형 영구자석(IPM) 로터 구조를 도입하고 기하 형상을 최적화함. 동일 외경 및 운전 조건 하에서 기존 SPM 기반 선형 액추에이터와 유한요소해석(FEA) 및 실물 다이나모 시험으로 전자기 손실, 추력, 속도-토크 맵, 효율 영역을 체계적으로 대조 검증함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">성능 비교 항목 (동일 외경 체적 기준)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">제안 IPM-롤러스크루 일체형</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">기존 SPM-롤러스크루 일체형</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">최대 선형 추력 / 최고 회전수</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>2 kN / 6,000 rpm</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">고속 영역 약계자·철손 제약</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">유효 속도 제어 범위</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>약 40% 확장</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">기준 (Base)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">고효율 운전 영역 (효율 &gt; 80%)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>약 65% 확대</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">기준 (로터 공간 제약으로 철손 증가)</td></tr></table>",
+      "implications": "현대모비스가 차량용 구동모터(IPM 설계·양산 노하우)와 롤러 스크루 기구학을 결합해 휴머노이드 하체 선형 액추에이터를 내재화할 때, 단순 SPM 중공 모터 대신 얇은 로터 환형 공간에서도 자속 활용도와 고속 효율(>80% 영역 +65%)을 극대화할 수 있는 IPM 일체형 아키텍처의 정량적 우위를 입증한 핵심 근거임."
+    }
+  },
+  {
+    "id": 38,
+    "date": "2026-11-17",
+    "batch": "2026-11-17 (13호 브리핑)",
+    "categories": [
+      "NVH·정밀가공",
+      "치맞물림충격·MBD·무향실시험"
+    ],
+    "title_en": "Enhancing gear shaping precision and reducing noise via DRL",
+    "title_ko": "휴머노이드 관절 감속기 저소음화(30–45 dB)를 위한 CDDQN 기반 기어 셰이핑 다축 오차 협조 보정 및 치맞물림 충격 저감",
+    "journal": "Scientific Reports (Nature Portfolio, Vol. 16, No. 1, Article 34877, 2026-07-29 게재)",
+    "authors": "Fucong Liu, Luyang Zou, Zhi Liu, Xiubing Jing, Houjun Qi, Kan Xing",
+    "link": "https://doi.org/10.1038/s41598-026-64344-8",
+    "doi": "10.1038/s41598-026-64344-8",
+    "summary": "휴머노이드 로봇 관절 감속기의 '무감각 저소음 전동(30–45 dB)' 목표 달성을 가로막는 기어 셰이핑(Shaping) 가공 정밀도 한계(기존 GB 6–7급, 60–70 dB)를 해결하기 위해, 합성곱 심층 이중 Q-네트워크(CDDQN) 기반 X·C1·C2 3축 다오차 협조 보정 프레임워크를 제안. 공정 파라미터와 진동 스펙트럼을 융합한 듀얼 브랜치 모델로 누적 피치 편차(Fp) 46.7%(24.6→13.1 μm) 및 반경 방향 런아웃(Fr) 52.3% 저감(GB 4급 달성)을 이뤘고, ADAMS MBD 해석 및 무향실 시험(1.2 N·m, 30 rpm)에서 치맞물림 충격력 83.6% 감소 및 총 소음 20–30 dB 저감(30–45 dB 달성)을 실증함.",
+    "details": {
+      "background": "휴머노이드 로봇 관절 감속기 소음의 70% 이상은 누적 피치 편차(Fp)와 반경 방향 런아웃(Fr)에서 기인하나, 내접 기어 및 소형 모듈 기어 가공에 필수적인 기어 셰이핑 공정은 단속 절삭 특성상 다축 오차가 연성되어 기존 방식으로는 GB/T 10095.1-2022 6–7급(구동 소음 60–70 dB)에 머물러 가정·협동 환경의 정숙성 요구(30–45 dB)를 충족하지 못했음.",
+      "method": "CNC 기어 셰이핑기(YK5115B/K2)의 공구 반경 이송축(X) 및 공구·공작물 회전축(C1, C2) 오차와 Fp·Fr 간 기구학적 매핑 모델을 수립하고, 수치 공정 변수와 가공 중 진동 스펙트럼 특징을 CNN 듀얼 브랜치로 융합하는 CDDQN 모델을 구축해 치별 선행 보정 지령을 생성함. 이어 역공학 디지털 치면 모델을 ADAMS MBD에 탑재해 치맞물림 순간 각가속도·충격력을 해석하고, 배경소음 <20 dB 무향실 다이나모(1.2 N·m 부하, 30 rpm, 44.1 kHz 계측)에서 8개 시편을 실측 검증함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">가공 정밀도 및 NVH 지표</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">CDDQN 다축 보정 후</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">보정 전 기준 (기존 셰이핑)</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">누적 피치 편차 (Fp) / 런아웃 (Fr)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>Fp 13.1 μm (-46.7%) / Fr -52.3% (GB 4급)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">Fp 24.6 μm (GB 6–7급)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">치맞물림 충격 지속시간 / 피크 각가속도</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>0.00378 s (1.8배 완화) / 2,370 deg/s²</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">0.00210 s / 4,280 deg/s²</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">추정 치맞물림 충격력 (F_impact)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>83.6% 저감 (기존의 16.4% 수준, ~15.7 dB 기여)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">기준 (높은 충격 가진)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">무향실 실측 방사 음압 (SPL, 1 m)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>30–45 dB (총 20–30 dB 저감, 진동-소음 상관 0.662)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">60–70 dB</td></tr></table>",
+      "implications": "기어 치맞물림 충격력이 전달오차(Δθ) 크기 자체보다 진입 순간의 2차 미분(Δθ/Δt²)에 비례한다는 물리 기전을 통해, 셰이핑 공정에서 Fp를 절반 수준으로 낮추기만 해도 유효 충격 시간 Δt가 1.8배 늘어나 충격력이 83.6% 급감하고 무향실 소음이 30–45 dB까지 떨어짐을 입증함. 휴머노이드 내접/소형 감속기 양산 공정-NVH 통합 품질 게이트 수립에 직결되는 결과임."
+    }
+  },
+  {
+    "id": 39,
+    "date": "2026-11-17",
+    "batch": "2026-11-17 (13호 브리핑)",
+    "categories": [
+      "시험·계측평가",
+      "역구동성·히스테리시스·로스트모션"
+    ],
+    "title_en": "Research on back driving performance of robot reducers based on hysteresis characteristics",
+    "title_ko": "히스테리시스 곡선 특성(로스트 모션·에너지 흡수 면적) 기반 로봇 관절 감속기의 역구동 성능 정량 평가 모델 및 실험",
+    "journal": "Measurement and Control (SAGE, 2026-04-19 게재)",
+    "authors": "Da Fu Cao (Da Cao), Huiming Cheng, Zhaoyao Shi (베이징공업대학교 Beijing University of Technology)",
+    "link": "https://doi.org/10.1177/00202940261442382",
+    "doi": "10.1177/00202940261442382",
+    "summary": "로봇 관절 감속기의 안전·충돌 순응성과 외력 추정을 좌우하는 핵심 지표인 역구동성(Backdrivability)을 정적 마찰 토크 수준이 아닌 비선형 히스테리시스(Hysteresis) 거동으로 정식화한 연구. 역구동의 물리적 본질을 '회전각 거동(로스트 모션 기반)'과 '에너지 흡수 용량(히스테리시스 폐곡선 면적 기반)'으로 이원화하여 일반화 다항식 및 해석적 상관 모델을 수립하고, 통계적 분석과 토크-에너지 곡선으로 전체·순간 에너지 소산 성능을 동시 평가함. 이종 재질 감속기 2종 비교 실험을 통해 기하 오차, 탄성 변형, 재료 물성이 역구동 거동을 지배함을 실증함.",
+    "details": {
+      "background": "휴머노이드·협동로봇 관절에서 외력 순응 제어와 충돌 안전을 위해 감속기 역구동성(Backdrivability)이 필수적이지만, 기존 연구는 단순 기동 역구동 토크나 단방향 효율에만 의존하여 양방향 토크 역전 시 나타나는 기구학적 틈새, 탄성 비틀림, 내부 마찰 손실의 동시 상호작용을 정량화하는 이론·평가 체계가 부족했음.",
+      "method": "감속기의 고유 비선형 특성인 토크-각변위 히스테리시스 곡선과 역구동성 간의 상관 모델을 수립하고 일반화 다항식 및 해석적 표현식을 유도함. 회전각 측면에서는 히스테리시스 곡선 수치 변화로부터 도출한 로스트 모션(Lost motion)을 핵심 지표로 도입하고, 에너지 측면에서는 히스테리시스 루프 내부 면적을 역구동 중 에너지 흡수 용량으로 정의해 통계 분석(전체 소비)과 토크-에너지 곡선(순간 소비)으로 분해 평가한 뒤 이종 재질 감속기 2종에 대한 비교 시험을 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">역구동성 평가 차원</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">제안 히스테리시스 기반 지표·방법</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">공학적 해석 및 지배 인자</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">회전각 추종·지연 거동</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>히스테리시스 곡선 내 로스트 모션(Lost Motion)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">토크 반전 시 각도 지연 및 데드존 정량화</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">전체·순간 에너지 흡수</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>히스테리시스 폐곡선 면적 + 토크-에너지 곡선</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">충격 에너지 소산 및 순간 역구동 저항 분리</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">이종 재질 비교 실험 결론</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>기하 오차 · 탄성 변형 · 재료 물성 3대 지배 인자 규명</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">경량 합금/폴리머 등 재질 변경 시 탄성-감쇠 트레이드오프 예측</td></tr></table>",
+      "implications": "현대모비스가 휴머노이드 관절 감속기 단품 시험 벤치(히스테리시스 및 로스트모션 계측 리그)를 구축할 때, 기존 히스테리시스 측정 데이터에 루프 면적(에너지 흡수량)과 토크-에너지 미분 곡선을 추가하는 것만으로 별도 장비 없이 역구동성(Backdrivability)을 정량 인증할 수 있는 실무 평가 표준을 제시함."
+    }
   }
 ]
