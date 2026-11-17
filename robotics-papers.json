@@ -854,5 +854,71 @@
       "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">역구동성 평가 차원</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">제안 히스테리시스 기반 지표·방법</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">공학적 해석 및 지배 인자</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">회전각 추종·지연 거동</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>히스테리시스 곡선 내 로스트 모션(Lost Motion)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">토크 반전 시 각도 지연 및 데드존 정량화</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">전체·순간 에너지 흡수</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>히스테리시스 폐곡선 면적 + 토크-에너지 곡선</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">충격 에너지 소산 및 순간 역구동 저항 분리</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">이종 재질 비교 실험 결론</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>기하 오차 · 탄성 변형 · 재료 물성 3대 지배 인자 규명</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">경량 합금/폴리머 등 재질 변경 시 탄성-감쇠 트레이드오프 예측</td></tr></table>",
       "implications": "현대모비스가 휴머노이드 관절 감속기 단품 시험 벤치(히스테리시스 및 로스트모션 계측 리그)를 구축할 때, 기존 히스테리시스 측정 데이터에 루프 면적(에너지 흡수량)과 토크-에너지 미분 곡선을 추가하는 것만으로 별도 장비 없이 역구동성(Backdrivability)을 정량 인증할 수 있는 실무 평가 표준을 제시함."
     }
+  },
+  {
+    "id": 40,
+    "date": "2026-11-18",
+    "batch": "2026-11-18 (14호 브리핑)",
+    "categories": [
+      "구동계구조·그리퍼",
+      "텐던·링크하이브리드"
+    ],
+    "title_en": "Design and evaluation of a tendon-and-linkage hybrid-driven humanoid dexterous hand",
+    "title_ko": "텐던-링크 하이브리드 구동 및 손끝 예압 메커니즘 기반 모듈형 휴머노이드 덱스터러스 핸드(REL Hand) 설계 및 평가",
+    "journal": "Scientific Reports (Nature Portfolio, 2026-08-04 게재)",
+    "authors": "Ke Li, Fanlin Meng, Linjie Liu, Raviraj Nataraj, Ning Sun, Na Wei (산둥대학교 / 스티븐스공과대학교 / 산둥사범대학교)",
+    "link": "https://doi.org/10.1038/s41598-026-63917-x",
+    "doi": "10.1038/s41598-026-63917-x",
+    "summary": "기존 덱스터러스 핸드의 구조적·기능적 생체모방 한계와 관절 간 운동 연성 문제를 해결하기 위해 5지·1손바닥 모듈 구조의 20자유도(능동 15-DOF + 수동 5-DOF) 'REL Hand'를 개발한 연구. 텐던과 링크를 결합한 하이브리드 구동계를 적용해 소형 공간 내 고집적 배선과 관절 운동 디커플링을 동시에 달성하고, 손끝 예압(Preload) 기구와 박막 압력 센서 5개·커스텀 IMU 10개를 통합함. 실험 결과 평균 손끝 파지력 약 4.9 N을 발휘하고 Cutkosky 파지 분류 16종을 전수 재현했으며, 상용 OHand 대비 인체 손 궤적 상관도 +8%·형태 유사도 +17.7% 향상과 예압 기구를 통한 일상 물품 파지 성능 1.7~4.7배 개선을 실증함.",
+    "details": {
+      "background": "휴머노이드 로봇용 다지 핸드는 컴팩트한 손바닥·손가락 체적 내에 고자유도 구동계와 다중 센서를 집적해야 하나, 순수 텐던 구동은 관절 간 마찰·연성으로 궤적 추종성이 떨어지고, 순수 링크 구동은 손가락 내 공간 점유와 충격 순응성 부족이 한계로 지적되어 왔음.",
+      "method": "5개 손가락과 1개 손바닥의 모듈형 아키텍처 위에 능동 15-DOF·수동 5-DOF(총 20-DOF) 텐던-링크 하이브리드 전동계를 설계하여 기구학적 모션 디커플링과 소형 집적을 구현함. 아울러 손끝 예압 메커니즘, 5개 박막 압력 센서, 10개 커스텀 IMU 및 임베디드 제어 보드를 통합한 뒤 Cutkosky 16종 파지 분류, 상용 OHand 대비 궤적·형태 유사도, YCB(Yale-CMU-Berkeley) 일상 물품 파지 성공률 시험을 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">구동 및 파지 성능 지표</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">REL Hand 실측 결과</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">비교 기준 및 비고</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">자유도 및 구동 구조</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>능동 15-DOF + 수동 5-DOF (모듈형 5지)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">텐던-링크 하이브리드 디커플링</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">평균 손끝 파지력 / 분류 커버리지</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>약 4.9 N / Cutkosky 16종 100% 재현</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">압력 센서 5개·IMU 10개 통합</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">인체 모션 유사도 (vs 상용 OHand)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>궤적 상관도 +8% / 형태 유사도 +17.7%</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">상용 전동 의수 OHand 대비</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">손끝 예압 기구 적용 파지 개선 배율</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>식품 1.9배 · 주방용품 1.7배 · 공구 4.7배</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">YCB 객체셋 파지 실험 기준</td></tr></table>",
+      "implications": "현대모비스가 휴머노이드 다지 핸드 구동계를 설계할 때, 순수 텐던이나 순수 링크의 양자택일 대신 근위부-원위부를 하이브리드로 결합하고 손끝 예압 메커니즘을 추가하는 것만으로 공구류(4.7배) 같은 고접촉 안정성 요구 작업의 파지 성공률을 획기적으로 끌어올릴 수 있음을 보여주는 실무 레퍼런스임."
+    }
+  },
+  {
+    "id": 41,
+    "date": "2026-11-18",
+    "batch": "2026-11-18 (14호 브리핑)",
+    "categories": [
+      "관절액추에이터·QDD",
+      "외전형PM모터·내장유성감속기"
+    ],
+    "title_en": "Comparative Analysis of High-Torque-Density Permanent Magnet Motors Having Similar Slot and Pole Numbers for Humanoid Robot Applications",
+    "title_ko": "휴머노이드 로봇 손목 QDD 관절용 내장형 유성감속기 일체화 외전형 영구자석 모터의 슬롯/극수 조합 비교 최적화 및 열-전자기 실증",
+    "journal": "Biomimetics (MDPI, Vol. 11, Issue 6, Article 412, 2026-06-11 게재)",
+    "authors": "Kun Bi, Zhuoyi Chen, Tianran He (창저우공업직업기술대학교 / 닝보공과대학교 / 동지대학교)",
+    "link": "https://doi.org/10.3390/biomimetics11060412",
+    "doi": "10.3390/biomimetics11060412",
+    "summary": "힘 제어 기반 휴머노이드 로봇 관절(손목 등 협소 공간)에 쓰이는 준직접구동(QDD) 액추에이터의 토크 밀도와 공간 활용도를 극대화하기 위해, 스테이터 내부 공간에 10:1 유성감속기를 내장한 외전형 표면부착 영구자석 모터(ERSPM)의 근접 슬롯/극수 조합(24슬롯 기준 20·22·26·28극)을 FEA 및 실물 다이나모 시험으로 비교 최적화한 연구. 최대 코어 자속밀도 1.51 T 제약 하에서 24슬롯/28극 조합이 출력 토크 0.488 N·m, 토크 리플 3.86%, 전류밀도 17.90 A/mm²(동일 동손 17 W 기준 20극 대비 토크 +12.7%)로 최적 성능을 보였고, 11노드 집중매개변수 열회로망(LPTN)과 10:1 유성감속기 통합 시제품(정격 3.5 N·m@70 rpm 연속 운전 시 100 °C 안착, 시스템 최고 효율 68.3%)으로 타당성을 검증함.",
+    "details": {
+      "background": "휴머노이드 로봇 손목 등 말단 관절은 외경과 축장 제약이 극심하면서도 별도 토크 센서 없는 전류 기반 역구동 힘 제어를 위해 저감속비(<20:1) 유성감속기와 고토크밀도 모터의 일체화가 필수적임. 외전형(Outer-rotor) 구조는 공극 직경 확대와 스테이터 내부 감속기 수납에 유리하나, 유사 슬롯/극수 조합에 따른 토크 리플·열부하·과부하 내력 트레이드오프에 대한 체계적 비교가 부족했음.",
+      "method": "Leju KUAVO 휴머노이드 손목 요구 사양을 기준으로 24슬롯 외전형 ERSPM의 20·22·26·28극 조합을 유한요소해석(FEA)으로 최적화해 출력 토크, 토크 리플, 전류밀도 및 3.5~5배 과부하 영역 특성을 대조함. 이어 감속기 노드를 포함한 11노드 2D 집중매개변수 열회로망(LPTN)으로 정격·2배 과부하 온도 상승을 예측하고, 10:1 유성감속기와 14-bit 엔코더·FOC 3루프 드라이버를 통합한 시제품을 제작해 다이나모 시험을 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">설계 및 시험 평가 항목</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">최적 24슬롯/28극 (10:1 유성감속기)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">비교군 및 시험 조건</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">모터 단품 출력 토크 / 토크 리플</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>0.488 N·m / 3.86% (자속밀도 ≤ 1.51 T)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">동일 동손(17 W) 기준 20극 대비 토크 <strong>+12.7%</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">권선 전류밀도 / 과부하 특성</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>17.90 A/mm²</strong> (3.5배 이하 대등)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">5배 이상 극한 과부하(&gt;10 A)에선 22극 우위</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">열안정성 (LPTN 및 실측 검증)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>정격(3.5 N·m@70 rpm) 30분 후 ~100 °C 안착</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">2배 과부하(7.1 N·m@10 rpm) 시 16 s 만에 100 °C 도달</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">액추에이터 통합 시스템 최고 효율</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>68.3% (10:1 감속기·드라이버 손실 포함)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">FEA 예측치 대비 기계·계측 손실 계수 0.9 정합</td></tr></table>",
+      "implications": "휴머노이드 상지(손목·팔꿈치)용 QDD 모듈 설계 시, 스테이터 내경 안에 유성감속기를 매립하는 외전형 토폴로지에서는 극수 증가(24슬롯/28극)가 정격 열안정성과 토크 밀도를 높이는 반면 5배 이상 순시 과부하에서는 22극이 유리하다는 설계 분기점을 제시하며, LPTN에 감속기 열노드를 결합해야 연속 정격 한계를 정확히 예측할 수 있음을 보여줌."
+    }
+  },
+  {
+    "id": 42,
+    "date": "2026-11-18",
+    "batch": "2026-11-18 (14호 브리핑)",
+    "categories": [
+      "NVH·진동제어",
+      "하모닉ATE·반력관측기"
+    ],
+    "title_en": "Dynamic Angular Transmission Error Compensation by Adaptive Estimation of Angular Transmission Error Characteristics Based on Reaction Force Observer for Strain Wave Gearing",
+    "title_ko": "반력 관측기(RFOB) 기반 각도 전달오차(ATE) 특성 적응 추정을 통한 파동치차 감속기(하모닉 드라이브)의 동적 진동 보상",
+    "journal": "Journal of the Japan Society for Precision Engineering (Vol. 92, No. 7, pp. 576–584, 2026-07-05 게재)",
+    "authors": "Masafumi Yamamoto, Ren Sasaki, Makoto Iwasaki (하모닉 드라이브 시스템즈 / 나고야공업대학교)",
+    "link": "https://doi.org/10.2493/jjspe.92.576",
+    "doi": "10.2493/jjspe.92.576",
+    "summary": "하모닉 드라이브 제조사(Harmonic Drive Systems)와 나고야공대가 공동으로 제안한 세미클로즈드 루프(모터 엔코더 단독) 환경에서의 동적 각도 전달오차(ATE) 적응 보상 기법. 감속기 조립 시 결정되는 회전 방향별(정전/역전) 및 제품 개체별 ATE 2차 성분의 진폭·위상 편차를 부하측 추가 센서(부하 엔코더·레이저 트래커) 없이 반력 관측기(RFOB)로 운전 중 실시간 추정하고 피드포워드 보상기를 자동 갱신함. 공진 속도(1,050 rpm) 정속 및 0↔2,000 rpm 가감속 실기 검증에서 부하측 2차 진동 성분을 무보상 63.5 arc-sec에서 DATEC 1.9 arc-sec(약 97% 저감), 적응형 ADATEC 0.5 arc-sec 이하로 억제함을 실증함.",
+    "details": {
+      "background": "파동치차 감속기(하모닉 드라이브)는 치형 가공 오차와 조립 편심·변형 오차로 인해 회전 2차 성분이 지배적인 각도 전달오차(ATE)를 유발하며, 입력축 회전 주파수가 기계 공진 주파수와 일치할 때 심각한 진동과 위치 정밀도 저하를 일으킴. 특히 ATE의 위상은 정전(107.4°)과 역전(162.0°) 및 제품 개체마다 달라져 출하 전 고정 튜닝만으로는 한계가 있었음.",
+      "method": "실크햇(Top-Hat)형 하모닉 감속기(OC = 50/51 = 0.98)를 대상으로 부하측 센서 없이 모터측 신호만으로 동작하는 3단계 제어 구조를 수립함: (1) 제어계 구조·파라미터·ATE 특성 기반 동적 ATE 피드포워드 보상기 설계, (2) 반력 관측기(RFOB, 제어주기 500 μs)를 이용한 외란/ATE 성분 분리 추정, (3) 망각계수(λ₂=0.99) 기반 적응 알고리즘으로 진폭·위상을 운전 중 실시간 자동 갱신(ADATEC)하고 시제품 위치결정 장치에서 정속(1,050 rpm) 및 가감속(0→2,000→0 rpm) 실측 검증함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">진동 억제 평가 조건</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">제안 적응 보상 (ADATEC)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">고정 보상(DATEC) / 무보상</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">대상 감속기 ATE 2차 특성 (정/역전)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>운전 중 약 2 s 내 진폭·위상 수렴 추정</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">진폭 7.7″, 위상 정전 107.4° / 역전 162.0°</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">정속 공진(1,050 rpm) 부하 위치 2차 성분</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>~0.5 arc-sec 수준 (약 99% 억제)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">DATEC 1.9″ (-97%) / 무보상 63.5″</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">가감속 공진 통과 (0↔2,000 rpm, 5 Hz HPF)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>공진 구간(5 s·15 s) 진동 0 수준 억제</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">무보상 시 공진 속도 통과 순간 진동 급증</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">필요 센서 구성 및 제어 주기</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>세미클로즈드 루프 (추가 부하 센서 불필요)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">서보 125 μs / RFOB·적응 갱신 500 μs</td></tr></table>",
+      "implications": "휴머노이드 관절에 하모닉 감속기를 대량 적용할 때 조립 공차 산포와 정/역전 위상차로 인해 발생하는 2차 공진 진동을, 고가의 부하측 듀얼 엔코더나 개체별 수동 캘리브레이션 없이 모터 제어기 내 RFOB 기반 적응 보상(500 μs 루프)만으로 97~99% 억제할 수 있어 양산 원가 절감과 NVH 품질 균일화에 즉시 적용 가능한 솔루션임."
+    }
   }
 ]
