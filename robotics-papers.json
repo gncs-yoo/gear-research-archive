@@ -920,5 +920,71 @@
       "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">진동 억제 평가 조건</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">제안 적응 보상 (ADATEC)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">고정 보상(DATEC) / 무보상</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">대상 감속기 ATE 2차 특성 (정/역전)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>시뮬레이션 약 2 s·실기 약 15 s 내 수렴 추정</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">진폭 7.7″, 위상 정전 107.4° / 역전 162.0°</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">정속 공진(1,050 rpm) 부하 위치 2차 성분</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>0.7 arc-sec (약 99% 저감)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">DATEC 1.9″ (-97%) / 무보상 63.5″</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">가감속 공진 통과 (0↔2,000 rpm, 5 Hz HPF)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>감속 구간(15 s) 진동 0 수준, 가속 구간도 저감</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">무보상 시 공진 속도 통과 순간 진동 급증</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">필요 센서 구성 및 제어 주기</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>세미클로즈드 루프 (추가 부하 센서 불필요)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">서보 125 μs / RFOB·적응 갱신 500 μs</td></tr></table>",
       "implications": "휴머노이드 관절에 하모닉 감속기를 대량 적용할 때 조립 공차 산포와 정/역전 위상차로 인해 발생하는 2차 공진 진동을, 고가의 부하측 듀얼 엔코더나 개체별 수동 캘리브레이션 없이 모터 제어기 내 RFOB 기반 적응 보상(500 μs 루프)만으로 97~99% 억제할 수 있어 양산 원가 절감과 NVH 품질 균일화에 즉시 적용 가능한 솔루션임."
     }
+  },
+  {
+    "id": 43,
+    "date": "2026-11-19",
+    "batch": "2026-11-19 (15호 브리핑)",
+    "categories": [
+      "구동계구조·그리퍼",
+      "직접구동·초저역구동토크"
+    ],
+    "title_en": "MIDAS Hand: Modular low-Impedance Directly-driven Anthropomorphic Sensing Hand",
+    "title_ko": "초저역구동 토크(0.02 N·m) 및 3축 촉각 센서 통합 모듈형 직접구동 인체척도 덱스터러스 핸드(MIDAS Hand)",
+    "journal": "arXiv:2607.14487 [cs.RO] (2026-07-16 게재)",
+    "authors": "Alvin Zhu, Mingzhang Zhu, Quanyou Wang, Beom Jun Kim, Jose Victor S. H. Ramos, Dennis Hong (UCLA)",
+    "link": "https://doi.org/10.48550/arXiv.2607.14487",
+    "doi": "10.48550/arXiv.2607.14487",
+    "summary": "UCLA 데니스 홍 교수팀(RoMeLa)이 개발한 16자유도(능동 13-DOF + 수동 3-DOF) 직접구동 강체 링크 방식의 인체척도 덱스터러스 핸드 'MIDAS Hand'. 전 관절에 동일 액추에이터(Dynamixel XM335-T323-T)와 저마찰 강체 링크를 적용해 수동 기계적 역구동 토크를 전 관절 균일 ~0.02 N·m로 낮췄으며(상용 직접구동 핸드 Sharpa Wave 0.03~0.62 N·m 대비 3.5~30배 높은 역구동성, 비역구동성 Wuji Hand와 대비), 283개 3축 촉각 택셀을 700 g·BOM 3,000달러 미만 패키지에 통합함. 실험에서 손끝 하중 1.2 kg·전수 파지 9.5 kg 이상, 5,143회 연속 파지(2시간) 열평형 49 °C 안착, 반복정밀도 0.051 mm(표준편차 0.016 mm), GRASP 분류 33종 중 32종 재현을 실증함.",
+    "details": {
+      "background": "휴머노이드용 다지 핸드는 인간 손 크기와 엄지 대립 작업공간, 고밀도 촉각 센싱, 접촉 충격 내구성을 동시에 갖춰야 하나, 텐던 구동계는 전완부 액추에이터 모듈로 인한 팔 길이 증가·배선 복잡성·마찰/신장 보정 부담이 크고, 기존 직접구동 상용 핸드는 고가·폐쇄형이며 근위 관절 역구동 토크(0.32~0.62 N·m)가 높아 외부 충격에 취약했음.",
+      "method": "엄지 4-DOF(CMC Roll/Side, MP, IP)와 검지·중지·약지 각 4-DOF(MCP Ab/Ad·Pitch, PIP, 4절 링크 수동 연동 DIP)의 4지 16-DOF(능동 13-DOF) 모듈형 구조를 3D 프린팅으로 구성하고, 손바닥 전원/TTL 분배 보드와 Paxini 283택셀 3축 촉각 보드를 분리 배치해 3시간 이내 조립·단일 손가락 교체가 가능하게 설계함. 이후 토크 오프 상태 디지털 포스게이지 단일 관절 역구동 토크 시험, 엄지-손가락 대립 작업공간 교차율, 손끝/전수 하중 시험, 2시간(5,143사이클) 연속 내구·열평형 시험 및 100회 다이얼 게이지 반복정밀도 평가를 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">구동·기구 성능 지표</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">MIDAS Hand 실측치</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">비교 기준 및 비고</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">단일 관절 역구동 토크 (토크 오프)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>전 관절 균일 ~0.02 N·m</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">Sharpa Wave 0.03~0.62 N·m 대비 <strong>3.5~30배 우위</strong> / Wuji 비역구동</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">가반 하중 (손끝 / 전수 파지)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>검지 끝 1.2 kg / 전수 9.5 kg 이상</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">기구 파손 없이 액추에이터 열한계로 제한</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">연속 내구 및 닫힘 반복정밀도</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>5,143사이클(2h) 49 °C 안착 / 0.051 mm</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">100회 평균 0.207 mm, 표준편차 0.016 mm</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">파지 커버리지 / 패키지 사양</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>GRASP 32/33종 / 700 g·283택셀</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">엄지 대립 교차율: 검지 49.52%·중지 40.03%·약지 24.54%</td></tr></table>",
+      "implications": "전완부 텐던 라우팅 없이 손바닥·손가락 내 직접구동 강체 링크만으로도 관절당 ~0.02 N·m 수준의 기계적 역구동성을 확보하면 외부 충돌 시 기어·링크 파손을 물리적으로 회피할 수 있으며, 4지 모듈화·DIP 4절 연동으로 원가와 정비성을 대폭 낮추면서 GRASP 32/33종을 커버할 수 있음을 입증한 실용적 기준점임."
+    }
+  },
+  {
+    "id": 44,
+    "date": "2026-11-19",
+    "batch": "2026-11-19 (15호 브리핑)",
+    "categories": [
+      "시험·계측평가",
+      "사이클로이드·TSA진동진단"
+    ],
+    "title_en": "Analysis of 3D-Printed Cycloidal Gear Degradation in a Run-to-Failure Test",
+    "title_ko": "사이클로이드 감속기의 Run-to-Failure(RTF) 내구 시험 기반 열-기계 피로 열화 및 시간동기평균(TSA) 진동 진단 분석",
+    "journal": "Applied Sciences (MDPI, Vol. 16, Issue 6, Article 2866, 2026-03-16 게재)",
+    "authors": "Krzysztof Olejarczyk, Marcin Wikło, Miroslaw Rucki (카지미에시 푸와스키 라돔대학교 / 빌뉴스 게디미나스 공과대학교)",
+    "link": "https://doi.org/10.3390/app16062866",
+    "doi": "10.3390/app16062866",
+    "summary": "탄소섬유 강화 폴리아미드12(PA12) 적층제조 사이클로이드 기어를 대상으로 FEM·단품 피로 시험과 실물 감속기 Run-to-Failure(RTF) 파손 시험을 병행해 열-기계 연성 열화 메커니즘과 시간동기평균(TSA) 기반 진동 조기 진단 지표의 유효성을 검증한 연구. 단품 FEM 및 상온 피로 시험에서는 충분한 내구성을 보였으나, 실제 감속기 10⁵ 사이클 RTF 시험에서는 핀과 마찰하는 치면이 아닌 편심 베어링 인접부에서 주기 하중 발열에 따른 급격한 소성 변형 및 파손이 발생함. 온도별 비교 시험에서 0.2 mm 변위 도달 수명이 27 °C(10⁵ 사이클 초과 무발생) → 70 °C(30,000사이클) → 90 °C(5,000사이클) → 140 °C(즉시 도달)로 급감함을 규명하고, 가속도 TSA 분석으로 파손 말기 강성 저하를 포착함.",
+    "details": {
+      "background": "로봇 경량 관절·저비용 시제 감속기에서 탄소섬유 강화 폴리머(PA12 등) 기반 적층제조 사이클로이드 디스크 적용이 시도되고 있으나, 기존 FEM 정적 응력 해석이나 단품 상온 피로 시험만으로는 실제 폐쇄 하우징 내부 운전 시 발생하는 축적 발열과 베어링 계면 피로 파손을 예측하지 못하는 공백이 있었음.",
+      "method": "PA12-CF 적층제조 사이클로이드 기어를 대상으로 정적 FEM 응력 해석과 단품 피로 시험을 선행한 뒤, 실물 사이클로이드 감속기 리그에서 10⁵ 사이클 Run-to-Failure(RTF) 내구 시험을 수행함. 운전 중 하우징 가속도 신호에 시간동기평균(TSA) 처리를 적용해 파손 진전 구간의 진동 에너지 변화를 추적하고, 27·70·90·140 °C 제어 온도 조건에서 0.2 mm 소성 변형 도달 사이클 수를 정량 비교함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">열화 및 진동 평가 항목</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">RTF 및 온도 가속 시험 결과</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">설계·진단 시사점</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">실물 RTF 시험 파손 위치 및 시점</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>10⁵ 사이클 후 편심 베어링 인접부 손상</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">예상된 치면-핀 마찰부가 아닌 베어링 보스부 열피로</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">0.2 mm 변형 도달 수명 (온도 민감도)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>27 °C: &gt;10⁵ / 70 °C: 30,000 / 90 °C: 5,000사이클</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">140 °C 도달 시 <strong>즉시 0.2 mm 변형</strong> 발생</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">진동 기반 예지 보전 유효성</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>시간동기평균(TSA) 가속도 지표로 말기 급락 포착</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">온도 센서+TSA 진동 연계 예지보전 기준 제시</td></tr></table>",
+      "implications": "경량 로봇 관절에 복합재·폴리머 사이클로이드 감속기를 적용할 경우, 치면 접촉 응력뿐 아니라 편심 베어링 하중 집중부(보스부)의 자기 발열에 따른 열가속 크리프·피로를 반드시 연성 평가해야 하며, 운전 중 온도 모니터링과 TSA 진동 신호를 결합하면 돌발 백래시 증대·파손 전 예지 정비가 가능함을 시사함."
+    }
+  },
+  {
+    "id": 45,
+    "date": "2026-11-19",
+    "batch": "2026-11-19 (15호 브리핑)",
+    "categories": [
+      "선형구동계·계측평가",
+      "PRSM이송오차·동적계측"
+    ],
+    "title_en": "A Review of Research on Travel Error in Planetary Roller Screw Mechanisms",
+    "title_ko": "휴머노이드 선형 관절용 유성 롤러 스크루(PRSM)의 이송오차(Travel Error) 발생 메커니즘 및 정·동적 계측 평가 체계 종합 분석",
+    "journal": "Machines (MDPI, Vol. 14, Issue 9, Article 1035, 2026-09-11 게재)",
+    "authors": "Xiaoman Li, Li Zu, Yang Xu, Haonan Cai, Qizhi Wang, Haoran Jin, Huangkai He (난징이공대학교)",
+    "link": "https://doi.org/10.3390/machines14091035",
+    "doi": "10.3390/machines14091035",
+    "summary": "휴머노이드 로봇 하지·관절 선형 액추에이터의 핵심 요소인 유성 롤러 스크루(PRSM)의 이송오차(Travel Error)에 대해 오차원 분류, 해석 모델, 정·동적 계측 기법의 현주소와 한계를 체계적으로 정리한 최신 리뷰 논문. 볼 스크루와 달리 다수의 롤러가 스크루·너트와 동시에 나사면 접촉을 이루는 PRSM에서는 단일 리드 오차가 아닌 다접촉쌍 오차의 집합적 등가 이송오차가 형성됨을 규명함. 나사산·동기 기어 가공오차, 편심/조립 오차, 하중-열 변형 연성에 따른 민감도 모델과 함께 정적 측정, 리니어 엔코더/레이저 간섭계 기반 동적 측정, 머신비전 계측의 정확도·적용 한계를 비교하고, 롤러 외측 궤도면·너트 내측 궤도면 단품 계측 및 다접촉 부하 조건 전용 표준 시험 리그 구축 과제를 도출함.",
+    "details": {
+      "background": "휴머노이드 무릎·발목 선형 액추에이터에 PRSM 적용이 확대되고 있으나, 현장 이송오차 계측은 여전히 단일 나선쌍을 가정한 볼 스크루용 표준·장비에 의존하고 있어 다중 롤러·동기 기어·나사산 다접촉쌍 간의 오차 전파와 치수 부적합으로 계측 오차가 빈번히 발생하고 있음.",
+      "method": "PRSM 이송오차의 4대 근원(① 나사산 피치/플랭크각/유효경·동기 기어 치형/피치·가공 편심 오차, ② 설치 정렬 오차, ③ 하중 및 마찰 발열에 따른 열-탄성 변형 연성, ④ 윤활·마모·환경 요인)별 모델링 및 지배 오차 인자 식별 문헌을 분류하고, 정적 계측·리니어 엔코더/레이저 간섭계 동적 계측·머신비전 계측 기법의 정밀도와 공학적 제약을 비교 평가함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">PRSM 오차·계측 영역</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">핵심 메커니즘 및 현황</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">향후 시험·표준화 과제</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">가공·기하 오차 전파</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">나사산(피치·플랭크각·유효경) + 동기 기어 + 편심 결합</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">다접촉쌍 등가 이송오차 분리 모델 고도화</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">단품 궤도면 계측 공백</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">볼 스크루 장비 전용으로 치수·접촉 부적합 발생</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">롤러 외측 및 너트 내측 궤도면 전용 계측기 개발</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">동적 부하 이송오차 평가</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">리니어 엔코더·레이저 간섭계·머신비전 병용</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">대표 축방향 부하·백래시 제거·열변형 반영 시험 리그</td></tr></table>",
+      "implications": "현대모비스가 휴머노이드용 PRSM/IPRSM 선형 액추에이터를 내재화하거나 협력사 부품을 입고 검사할 때, 기존 볼 스크루 기준의 무부하 리드 오차 검사만으로는 조립 후 다접촉 이송오차와 백래시·발열 드리프트를 걸러낼 수 없으므로, 부하 인가 상태의 동적 레이저/엔코더 이송오차 리그와 너트·롤러 궤도면 단품 계측 기준을 별도로 수립해야 함을 뒷받침함."
+    }
   }
 ]
