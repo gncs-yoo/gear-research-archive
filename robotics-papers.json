@@ -986,5 +986,71 @@
       "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">PRSM 오차·계측 영역</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">핵심 메커니즘 및 현황</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">향후 시험·표준화 과제</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">가공·기하 오차 전파</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">나사산(피치·플랭크각·유효경) + 동기 기어 + 편심 결합</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">다접촉쌍 등가 이송오차 분리 모델 고도화</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">단품 궤도면 계측 공백</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">볼 스크루 장비 전용으로 치수·접촉 부적합 발생</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">롤러 외측 및 너트 내측 궤도면 전용 계측기 개발</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">동적 부하 이송오차 평가</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">리니어 엔코더·레이저 간섭계·머신비전 병용</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">대표 축방향 부하·백래시 제거·열변형 반영 시험 리그</td></tr></table>",
       "implications": "현대모비스가 휴머노이드용 PRSM/IPRSM 선형 액추에이터를 내재화하거나 협력사 부품을 입고 검사할 때, 기존 볼 스크루 기준의 무부하 리드 오차 검사만으로는 조립 후 다접촉 이송오차와 백래시·발열 드리프트를 걸러낼 수 없으므로, 부하 인가 상태의 동적 레이저/엔코더 이송오차 리그와 너트·롤러 궤도면 단품 계측 기준을 별도로 수립해야 함을 뒷받침함."
     }
+  },
+  {
+    "id": 46,
+    "date": "2026-11-20",
+    "batch": "2026-11-20 (16호 브리핑)",
+    "categories": [
+      "구동계구조·하체관절",
+      "차동·병렬전동"
+    ],
+    "title_en": "ADAPT: Advanced Differential and Agile Parallel Transmission Mechanism for High-Performance Humanoid Robots",
+    "title_ko": "고관절-무릎 차동 기구 및 무릎-발목 병렬 전동 결합형 휴머노이드 다리 구동 아키텍처(ADAPT)",
+    "journal": "IEEE Robotics and Automation Letters (Vol. 11, No. 6, pp. 7452–7459, 2026-04-22 온라인 게재)",
+    "authors": "Yun-Ho Han, Min-Ho Park, Baek-Kyu Cho (국민대학교)",
+    "link": "https://doi.org/10.1109/lra.2026.3686707",
+    "doi": "10.1109/lra.2026.3686707",
+    "summary": "국민대학교 연구진이 직렬 QDD(대형·고중량)와 고감속 직렬 구동(최고속도·역구동성·토크 투명성 저하)의 한계를 극복하기 위해 제안한 휴머노이드 다리 구동 아키텍처 'ADAPT'. Hip Pitch–Knee 차동 기구(Differential Mechanism)와 Knee–Ankle 병렬 전동(Parallel Transmission)을 통합해 다수 상용 액추에이터의 출력을 기계적으로 결합함으로써 단일 액추에이터 정격을 상회하는 관절 토크·속도를 구현하고, 다리 질량을 고관절 부근으로 집중시켜 말단 관성을 최소화함. 자체 제작 단각(Single-leg) 플랫폼과 비선형 기구-동역학(Kino-dynamic) 궤적 최적화를 적용한 축구 킥·수직 점프 실험에서 단일 액추에이터 한계를 크게 넘는 고토크 동적 거동을 실증함.",
+    "details": {
+      "background": "휴머노이드의 달리기·점프·킥 같은 고동적 보행·조작에서는 고관절 피치와 무릎 관절에 고토크와 고속이 동시에 요구되나, 기존 직렬 QDD는 대형·고중량화 문제가 크고, 상용 액추에이터에 고감속비를 적용한 직렬 구동은 최고 속도 저하 및 반사 관성·마찰 증가로 역구동성과 토크 투명성이 훼손되는 딜레마가 있었음.",
+      "method": "고관절 피치-무릎 간 차동 기구와 무릎-발목 간 병렬 전동 메커니즘을 결합한 ADAPT 토폴로지를 설계해 다수 상용 액추에이터가 단일 관절 부하를 협동 분담하도록 구성하고, 중량 부품인 액추에이터를 고관절 상단으로 집중 배치함. 이어 비선형 기구-동역학 궤적 최적화 프레임워크를 통합해 자체 구축 단각(Single-leg) 테스트베드에서 축구 킥 및 수직 점프 실물 검증을 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">아키텍처 비교 항목</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">기존 직렬 구동 (QDD / 고감속)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">ADAPT 차동·병렬 결합 아키텍처</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">토크·속도 출력 확장성</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">관절당 단일 액추에이터 정격에 종속</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>다수 상용 액추에이터 출력 기계적 합산</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">질량 분포 및 관성</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">원위 관절 액추에이터 배치로 말단 관성 증대</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>고관절 근위 집중 배치로 말단 관성 최소화</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">실물 동적 검증</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">고출력 시 대형 모듈 또는 역구동성 저하</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>단각 플랫폼 축구 킥·수직 점프 고토크 실증</strong></td></tr></table>",
+      "implications": "맞춤형 초대형 QDD를 신규 개발하지 않고도 표준화된 상용 액추에이터와 차동·병렬 기구학적 결합만으로 고토크·저관성 휴머노이드 하체 관절을 구현할 수 있음을 보여준 사례로, 공용 액추에이터 플랫폼화 및 다리 원가·중량 절감 설계에 직접 참고할 가치가 높음."
+    }
+  },
+  {
+    "id": 47,
+    "date": "2026-11-20",
+    "batch": "2026-11-20 (16호 브리핑)",
+    "categories": [
+      "정밀감속기·QDD",
+      "내접·외접유성기어"
+    ],
+    "title_en": "Comparison between External and Internal Single Stage Planetary gearbox actuators for legged robots",
+    "title_ko": "보행·휴머노이드 로봇용 QDD 액추에이터의 내접(ISSPG) vs 외접(ESSPG) 단일단 유성감속기 감속비 구간별 최적 설계 비교",
+    "journal": "Proceedings of the 2025 7th International Conference on Advances in Robotics (AIR '25, Article 29, pp. 1–6, 2026-07-01 온라인 출판)",
+    "authors": "Aman Singh, Deepak Kapa, Prasham S Chheda, Shishir Kolathaya (IISc Bengaluru / IIT Roorkee / NIT Tiruchirappalli)",
+    "link": "https://doi.org/10.1145/3787370.3787403",
+    "doi": "10.1145/3787370.3787403",
+    "summary": "휴머노이드 및 사족보행 로봇용 QDD 액추에이터에서 스테이터 내장형 내접 단일단 유성감속기(ISSPG)와 외장형 외접 단일단 유성감속기(ESSPG)의 아키텍처 우위를 감속비 구간(5~15:1)별로 정량 비교한 연구. 동일 모터(T-Motor U12)와 요구 사양을 입력으로 하는 자동 설계 최적화 프레임워크를 구축한 결과, 두 구조의 기어 효율은 동일하나 5~7:1 저감속비 구간에서는 ISSPG가 스테이터 내부 공간을 활용해 더 가볍고 콤팩트한 최적해를 제공함. 반면 7:1 초과 구간(7~15:1)에서는 스테이터 내경 제약으로 ISSPG 구현이 불가능해지며, 7~11:1 구간은 ESSPG가 유일하고 유효한 해법임을 규명함(11~15:1은 모터 외경 제약으로 양쪽 모두 불가). 제조용 상세 CAD 검증에서 ISSPG 6.0:1(1.345 kg)과 ESSPG 7.2:1(1.663 kg)의 모델 정합성을 확인함.",
+    "details": {
+      "background": "보행 로봇용 QDD 액추에이터는 낮은 반사 관성과 높은 토크 투명성을 위해 단일단 유성감속기를 주로 채택하나, 스테이터 내장형(ISSPG)과 외장형(ESSPG) 선택이 감속비·모터 내경 제약·질량에 미치는 영향을 객관적으로 비교한 체계적 설계 기준 없이 경험적 휴리스틱에 의존해 왔음.",
+      "method": "모터 사양(T-Motor U12 기준)과 목표 성능 요구조건으로부터 기어 모듈·치수·베어링 파라미터를 동시에 결정하는 파라메트릭 최적화 프레임워크를 구축하고, 감속비 5:1~15:1(1단위 스텝)에 대해 ISSPG와 ESSPG의 실현 가능 영역 및 최소 질량 해를 탐색함. 이어 6.0:1 ISSPG와 7.2:1 ESSPG의 제조용 상세 CAD 모델을 생성해 질량 예측 오차를 검증함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">감속비 / 설계 검증 항목</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">내접형 ISSPG (스테이터 내장)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">외접형 ESSPG (스테이터 외장)</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">5:1 ~ 7:1 구간 우위</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>경량성·패키징 우위 (효율 동등)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">동일 감속비 대비 상대적 중량 증가</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">7:1 ~ 11:1 구간 실현성</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>스테이터 내경 제약으로 설계 불가</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>유일·최적 아키텍처 (11~15:1은 불가)</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">제조용 상세 CAD 질량 정합성</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>6.0:1: 모델 1.386 kg / CAD 1.345 kg</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>7.2:1: 모델 1.657 kg / CAD 1.663 kg</strong></td></tr></table>",
+      "implications": "휴머노이드 관절별 요구 감속비에 따라 7:1 이하 중·저감속 QDD는 스테이터 내장형 ISSPG로 축방향 길이와 중량을 절감하고, 7~11:1 중고감속 구간은 내경 한계로 ESSPG 또는 다단 구조로 전환해야 하는 명확한 아키텍처 분기 기준(7:1 경계)을 제공함."
+    }
+  },
+  {
+    "id": 48,
+    "date": "2026-11-20",
+    "batch": "2026-11-20 (16호 브리핑)",
+    "categories": [
+      "정밀감속기·접촉해석",
+      "사이클로이드·분할치형수정"
+    ],
+    "title_en": "Tooth Contact Analysis of Cycloid Mechanism with Segmented Profile Modification Using Numerical Method",
+    "title_ko": "변곡점 국부 C1 분할 치형수정을 적용한 사이클로이드 감속기의 하중 치면 접촉 해석(LTCA) 및 백래시-접촉력 트레이드오프 최적화",
+    "journal": "Lubricants (MDPI, Vol. 14, Issue 11, Article 427, 2026-11-10 게재)",
+    "authors": "Zanhui Shu, Hui Wang, Chengrui Wei, Jian Wen (Shenzhen KOMO Innovation Robot Technology / 옌청공과대학)",
+    "link": "https://doi.org/10.3390/lubricants14110427",
+    "doi": "10.3390/lubricants14110427",
+    "summary": "사이클로이드 감속기의 치형수정(TPM)에 따른 시변 법선 접촉력, 압축 깊이, 상대 미끄럼 속도, 마찰력 및 하중 정적 전달오차(LSTE)의 연성 메커니즘을 규명하고 3D 비선형 유한요소 접촉 해석(FEA)으로 검증한 최신 연구. 기존 전역 등거리/전위 수정은 유효 접촉 구간을 축소시켜 Δr_rp=0.75 mm 조건에서 피크 접촉력을 9,000 N에서 14,000 N으로 급증시키는 부작용이 있고, 양의 복합 수정(8,852 N→8,201 N)은 백래시 제어가 제한적임을 확인함. 이를 해결하기 위해 어덴덤·디덴덤 치형을 보존하고 최대 법선 접촉력이 집중되는 변곡점 영역에만 엄밀한 C¹ 접선 연속성을 갖는 국부 분할 치형수정(Segmented Profile Modification)을 적용한 결과, 정량 다목적 평가 지수(CEI) 최저치 0.88을 기록하며 피크 접촉력 8.2% 저감과 백래시 증가 1.2 arcmin 이내 억제를 동시에 달성함.",
+    "details": {
+      "background": "로봇 관절용 사이클로이드/RV 감속기는 가공 오차 흡수·윤활유막 확보·열팽창 보상을 위해 치형수정(TPM)이 필수적이나, 수정량이 과도하면 이론적 동시 물림 치수가 급감해 접촉 응력 집중, 백래시 증대, LSTE 변동성 악화를 초래하므로 접촉력 저감과 정밀도 유지 간의 정량적 절충 설계 모델이 요구되어 왔음.",
+      "method": "접촉 동역학·탄성정역학·미분기하학을 결합한 사이클로이드 LTCA 해석-수치 모델을 수립하고 다중 하중 조건 3D 비선형 FEA로 정합성을 검증함. 이어 등거리, 전위, 양의 복합 수정 및 변곡점 영역 C¹ 접선 연속 국부 분할 수정을 비교하고, 피크 접촉력(w₁=0.40)·LSTE 변동폭(w₂=0.35)·운전 백래시(w₃=0.25)를 정규화한 종합 평가 지수(CEI)로 최적 치형을 도출함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">치형수정 방식</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">피크 법선 접촉력 변화</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">백래시·전달오차 트레이드오프</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">전역 등거리·전위 수정</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">Δr_rp=0.75 mm 시 <strong>9,000 N → 14,000 N 급증</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">유효 접촉 구간 축소로 백래시·LSTE 악화</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">양의 복합 수정 (Compound)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>8,852 N → 8,201 N 완화</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">단일 수정 대비 하중 분배 우위</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">변곡점 국부 C¹ 분할 수정 (제안)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>피크 접촉력 8.2% 저감</strong> (CEI 최저 0.88)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">어덴덤·디덴덤 보존, <strong>백래시 증가 &lt; 1.2 arcmin</strong></td></tr></table>",
+      "implications": "사이클로이드/RV 감속기에서 백래시는 어덴덤·디덴덤 치형이 지배하고 피크 접촉력과 LSTE는 변곡점 치형이 지배한다는 역할 분리를 규명한 결과로, CNC 연삭 시 언더컷과 전이 응력 특이점 없이 내구 수명과 전달 정밀도를 동시에 확보하는 국부 치형수정 설계 기준으로 활용 가능함."
+    }
   }
 ]
