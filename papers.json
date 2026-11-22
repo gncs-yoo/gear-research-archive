@@ -3317,7 +3317,7 @@
     "title_en": "Transmission ratio-efficiency coupled modeling and high-efficiency zone design for multi-row planetary gear transmission of hybrid electric vehicles",
     "title_ko": "HEV 다단 유성기어 변속기의 기어비-효율 연성 모델링 및 고효율 운전 영역(Efficiency Island) 통합 최적화",
     "journal": "Scientific Reports (2026-01-28 게재)",
-    "authors": "Qiong Zhang, Cuifeng Ren, Haixia Niu (산시공업대 / 시안과학기술대)",
+    "authors": "Qiong Zhang, Cuifeng Ren, Haixia Niu (안후이싼롄대학, 허페이)",
     "link": "https://doi.org/10.1038/s41598-026-37023-x",
     "doi": "10.1038/s41598-026-37023-x",
     "summary": "하이브리드 전기차(HEV)용 복열 유성기어 변속기(라비뇨+단순 유성기어열, 전진 6단·후진 1단)에서 기어비 설계와 손실 평가를 분리해 수행할 때 발생하는 효율 저하 문제를 해결하기 위해, 위상 그래프 기반 기구학 모델과 맞물림·베어링·차닝·풍손 다중 손실 모델을 적응형 Newton-Raphson법으로 직접 연성함. 개선된 다목적 입자군집 최적화(MOPSO)로 기어 특성 계수·모듈·오일 레벨을 동시 최적화한 결과 고효율 영역 비중 68.5%→78.6%, 종합 효율 92.8%→95.6% 향상을 도출했으며, AVL PUMA Open 400 백투백 다이나모 실측 검증에서 평균 효율 예측 오차(MAPE) 1.38%(R²=0.989)를 입증함.",
