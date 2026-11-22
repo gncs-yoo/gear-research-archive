@@ -1052,5 +1052,71 @@
       "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">치형수정 방식</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">피크 법선 접촉력 변화</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">백래시·전달오차 트레이드오프</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">전역 등거리·전위 수정</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">Δr_rp=0.75 mm 시 <strong>9,000 N → 14,000 N 급증</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">유효 접촉 구간 축소로 백래시·LSTE 악화</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">양의 복합 수정 (Compound)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>8,852 N → 8,201 N 완화</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">단일 수정 대비 하중 분배 우위</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">변곡점 국부 C¹ 분할 수정 (제안)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>피크 접촉력 8.2% 저감</strong> (CEI 최저 0.88)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">어덴덤·디덴덤 보존, <strong>백래시 증가 &lt; 1.2 arcmin</strong></td></tr></table>",
       "implications": "사이클로이드/RV 감속기에서 백래시는 어덴덤·디덴덤 치형이 지배하고 피크 접촉력과 LSTE는 변곡점 치형이 지배한다는 역할 분리를 규명한 결과로, CNC 연삭 시 언더컷과 전이 응력 특이점 없이 내구 수명과 전달 정밀도를 동시에 확보하는 국부 치형수정 설계 기준으로 활용 가능함."
     }
+  },
+  {
+    "id": 49,
+    "date": "2026-11-23",
+    "batch": "2026-11-23 (17호 브리핑)",
+    "categories": [
+      "구동계구조·휴머노이드팔",
+      "3K복합유성·자세가변엘보"
+    ],
+    "title_en": "RAIPAL: A Powerful and Agile Humanoid Arm for Human Tasks",
+    "title_ko": "인간 작업 데이터 기반 3K 복합 유성감속 상완·고속 전완·자세가변 4절 링크 팔꿈치 결합 휴머노이드 팔(RAIPAL)",
+    "journal": "arXiv:2611.04334 [cs.RO] (2026-11-03 게재)",
+    "authors": "Donggeon Kim, Hyungho Chris Choi, Donghyuk Choi, Jeongsoo Park, Choongin Lee, Chan Park, Jemin Hwangbo (KAIST Robotics and Artificial Intelligence Lab)",
+    "link": "https://doi.org/10.48550/arXiv.2611.04334",
+    "doi": "10.48550/arXiv.2611.04334",
+    "summary": "KAIST 연구진이 '고토크·저속' 또는 '고속·저가반하중'으로 양분되던 기존 휴머노이드 팔의 한계를 넘기 위해 인간 상지 작업 측정 데이터(μ+σ 기준)로부터 부위별 목표를 도출해 설계한 7-DoF 휴머노이드 팔 'RAIPAL'(총중량 8.9 kg). 상완 4개 축에는 22:1 3K(Wolfrom) 복합 유성감속 액추에이터(1.50 kg, 정격 56 N·m·피크 180 N·m)를, 전완 3개 축에는 7.33:1 단일단 유성감속 고속 액추에이터(0.36 kg, 무부하 89.7 rad/s)를 배치하고, 팔꿈치에는 자세에 따라 유효 감속비 r_eff가 0.531(신전)에서 0.875(굴곡)로 변하는 교차 4절 링크를 적용해 어깨 유효 관성을 15% 저감함. 3K 감속기 길들이기 시험에서 예압-백래시-정지마찰 역상관 및 정방향 88~93%(평균 ~90%)·역방향 ~84% 양방향 효율을 계측했으며, 단일 팔로 최대 20 kg 가반하중(자중의 2.25배, 60초), 5 kg 연속 작업(25분), 말단 속도 20.6 m/s 및 망치질 70회(타격당 팔 운동에너지 31.9 J 소산)를 무고장으로 실증함.",
+    "details": {
+      "background": "기존 휴머노이드 팔은 전 관절을 최악 조건 기준으로 일괄 사이징해, 하모닉 등 고감속 구동계를 쓰면 속도·반사관성·토크 투명성이 떨어지고, QDD 저감속 구동계를 쓰면 상완 고부하 작업 시 액추에이터가 과도하게 비대·고중량화되는 딜레마가 있었음.",
+      "method": "인간 상지 작업 데이터로부터 상완(고토크)·전완(고속·저관성)·팔꿈치(굴곡 시 고토크, 신전 시 고속) 역할을 분리 도출하고, 상완 4축에 22:1 3K 복합 유성감속기(이중 링기어+일체형 복합 유성기어), 전완 3축에 7.33:1 단일단 유성감속기, 팔꿈치에 교차 4절 링크를 통합함. 이어 모멘텀 휠 길들이기 시험과 백투백 다이나모로 3K 감속기의 백래시-정지마찰 트레이드오프 및 양방향 효율을 계측하고, 섀시 전도 냉각 열모델(RC+준단열)과 4종 고부하·고속·충격 실증 시험을 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">구분 / 핵심 사양</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">상완 액추에이터 (Axes 1–4)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">전완 액추에이터 (Axes 5–7)</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">감속기 형식·감속비</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>22:1 3K(Wolfrom) 복합 유성</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>7.33:1 단일단 유성감속기</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">질량·외경×길이</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">1.50 kg · φ100×83 mm</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">0.36 kg · φ77×60 mm</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">정격 / 피크 토크</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>56 N·m (30분) / 180 N·m (26초)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">3.88 N·m (45분) / 12.61 N·m (15초)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">무부하 속도 / 효율</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">12.8 rad/s · <strong>정방향 88~93% / 역방향 ~84%</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>89.7 rad/s</strong> (80 V 기준)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">통합 팔 실증 성과</td><td colspan=\"2\" style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">팔꿈치 r_eff 0.531~0.875(어깨 관성 -15%) · <strong>피크 20 kg(60초) · 5 kg(25분) · 20.6 m/s · 70회 타격(31.9 J)</strong></td></tr></table>",
+      "implications": "휴머노이드 상완·하체 관절에서 QDD(≤10:1)와 하모닉(≥50:1)의 중간 영역인 20:1급 감속비를 3K 복합 유성감속기로 콤팩트하게 구현할 때의 양방향 효율(정 90%/역 84%)과 예압-백래시-마찰 실측 트레이드오프, 그리고 기구학적 자세가변 링크 결합의 실무 설계 근거를 제공함."
+    }
+  },
+  {
+    "id": 50,
+    "date": "2026-11-23",
+    "batch": "2026-11-23 (17호 브리핑)",
+    "categories": [
+      "NVH·진동제어",
+      "하모닉드라이브·토크리플필터"
+    ],
+    "title_en": "Filtering Torque Ripples in Multi-Joint Systems: A Graph-Based Model Approach",
+    "title_ko": "다관절 하모닉 드라이브 로봇의 관성행렬 연성 토크 리플 전파 규명 및 그래프 기반 실시간 대역통과 필터링",
+    "journal": "Robotics (MDPI, Vol. 15, Issue 11, Article 223, 2026-10-31 게재)",
+    "authors": "João Paulo Oliveira, Niels Dehio, Rui Moura Coelho, Miguel Ayala Botto, Jorge Martins (IDMEC/IST 리스본대 / 본-라인-지크 응용과학대)",
+    "link": "https://doi.org/10.3390/robotics15110223",
+    "doi": "10.3390/robotics15110223",
+    "summary": "하모닉 드라이브와 토크 센서를 결합한 다관절 로봇에서 모터 회전주파수 2배(2f)로 발생하는 토크 리플이 단일 관절에 머물지 않고 질량 행렬 연성을 통해 기구학 체인 전체 관절로 전파·증폭됨을 규명하고, 이를 실시간 억제하는 그래프 기반 시변 대역통과 필터를 제안한 연구. 10,000개 무작위 자세 동역학 시뮬레이션에서 전 관절 조합의 인접 관절 리플 전파율 중앙값이 0.5를 상회함을 입증했으며, 순간 관성 증폭 크기로 타 관절 유입 주파수를 가중 평균('Color Mixing')해 위상 지연을 90° 이내로 억제하면서 1 kHz 루프 내 관절당 50 μs 미만으로 연산함. 7축 KUKA LBR Med 7 실기 검증에서 기존 관절별 독립 필터가 1축 안전정지(Category 1 Safety Stop)를 유발하는 고게인 영역에서도 안정성을 유지하며, 등가 로터 관성을 절반으로 낮추거나(역구동성 향상) 5배까지 높여(외력 변형 50% 저감) 임피던스 제어기 극점 위치 변화 없이 외란 억제를 극대화함.",
+    "details": {
+      "background": "하모닉 드라이브 기반 경량·협동·휴머노이드 관절은 높은 감속비로 인한 반사 관성을 낮추기 위해 토크 피드백 기반 관성 성형(Inertia Shaping)을 사용하나, 게인을 높일수록 모터 2배 주파수(2f)의 치맞물림·센싱 토크 리플이 증폭되어 발진과 안전정지를 유발함. 기존 필터는 각 관절이 자기 모터의 2f 리플만 가진다고 가정해 정지 관절이나 타 관절에서 전파된 리플을 놓치는 한계가 있었음.",
+      "method": "KUKA LBR IIWA 14 정지-단독구동 실험과 10,000 자세 시뮬레이션으로 기구학 체인 내 리플 전파를 검증하고, 각 관절을 노드로 두어 순간 질량 행렬과 폐루프 전달함수의 공진 증폭 크기에 비례해 모든 이동 관절의 리플 주파수를 가중 합성하는 그래프 기반 시변 공간 대역통과 필터(관절당 28개 산술 연산, C++ <50 μs)를 구현함. 이어 KUKA LBR Med 7에서 0.5 kg 외란 부하 협동 조작 및 30회 반복 임피던스 외란 시험으로 검증함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">성능 및 검증 지표</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">기존 관절별 독립 필터</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">제안 그래프 기반 필터 (KUKA 7축)</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">다관절 리플 전파 반영</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">자기 축 2f만 추적 (정지 축 필터=0 Hz)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>10,000자세 전파율 중앙값 &gt;0.5 반영</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">연산 부하 및 위상 지연</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">직렬 필터 구성 시 다관절 지연 누적</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>관절당 &lt;50 μs (28 ops) · 위상지연 ≤90°</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">등가 로터 관성 성형 범위</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">고게인 영역 Category 1 안전정지 유발</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>관성 0.5배(역구동) ~ 5배(외력 영향 50%↓) 안정</strong></td></tr></table>",
+      "implications": "하모닉 드라이브 기반 다관절 로봇 팔·휴머노이드 상체에서 관절별 토크 리플 필터링만으로는 전신 동역학 연성 진동을 잡을 수 없음을 입증한 연구로, 제어기 대역폭 확장과 역구동성·외란 강건성 동시 확보를 위한 실시간 NVH·진동 억제 소프트웨어 아키텍처로 바로 적용 가능함."
+    }
+  },
+  {
+    "id": 51,
+    "date": "2026-11-23",
+    "batch": "2026-11-23 (17호 브리핑)",
+    "categories": [
+      "구동계구조·중력보상",
+      "캠·압축스프링기구"
+    ],
+    "title_en": "Passive Gravity Compensation for Robot Manipulator Joints Using a Compression Spring–Cam Mechanism: Modeling, Design, and Experimental Validation",
+    "title_ko": "오프셋 핀 조인트-압축 스프링·푸리에 캠 기반 수동 중력보상 관절의 법선 오프셋 곡률 설계 및 마찰 히스테리시스 분리 실측",
+    "journal": "Mathematics (MDPI, Vol. 14, Issue 21, Article 3998, 2026-11-02 게재)",
+    "authors": "Seung-Min Lee, Seong-yeol Yoo (계명대학교 로봇시스템공학과·로봇공학과)",
+    "link": "https://doi.org/10.3390/math14213998",
+    "doi": "10.3390/math14213998",
+    "summary": "로봇 관절 정지 상태에서도 연속 토크 정격을 지배하는 중력 토크를 상쇄하기 위해, 오프셋 핀 조인트로 연결된 압축 스프링 링크와 푸리에 급수 매개변수화 캠 플레이트를 결합한 수동 중력보상 관절을 제안·실증한 연구. 오프셋 자체가 예압 없이 절반 이상의 보상 토크를 담당해 캠은 파형 보정에만 집중하도록 분담시켰으며, 유한 반경 팔로워용 법선 오프셋(Normal-offset) 표면 보정과 푸리에 차수 n 증가에 따른 곡률 반경 n² 비례 감소(수렴 차수에서 최소 곡률 반경 20~34% 감소 vs 잔차 4.5~6.9배 감소) 및 스프링 허용 스트로크 내 에너지 저장 한계를 정량화함. 5 kg 가반하중 1자유도 시제품 시험에서 히스테리시스 제거 기준 피크 관절 토크를 26.8 N·m에서 7.2 N·m로 73.2% 저감했고, 미끄럼 마찰을 포함한 실제 액추에이터 요구 토크도 20.8% 저감했으며, 실측 스프링 토크가 모델과 5% 이내로 일치함을 검증함.",
+    "details": {
+      "background": "매니퓰레이터·휴머노이드 근위 관절은 정지 유지 시에도 중력 토크가 지속되어 모터 연속 토크 정격과 감속기 크기를 키우는 주원인이 됨. 기존 캠-스프링 수동 보상기는 중심선 배치로 예압·커스프 문제가 크고, 점접촉 가정으로 가공 시 언더컷이 발생하며, 실험에서 기구 보상 한계와 마찰 손실을 분리 보고하지 않아 개선 지점이 불분명했음.",
+      "method": "조인트 중심에서 오프셋 s만큼 떨어진 고정 핀 조인트와 압축 스프링 링크, 푸리에 급수로 표현된 임의 캠 프로파일의 가상일 기반 토크 모델을 수립하고, 유한 반경 팔로워의 법선 오프셋 가공 표면 및 무언더컷 곡률 제약을 통합 최적화함. 5 kg 부하 시제품에서 스프링 실측 토크, 기구학적 오차 예산(0.3% 이내), 히스테리시스 제거 토크 vs 실제 액추에이터 요구 토크를 분리 계측함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">해석·실측 평가 항목</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">설계 모델 / 이론치</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">5 kg 시제품 실측 결과</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">피크 관절 토크 (히스테리시스 제거)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">캠 차수 증가 시 잔차 4.5~6.9배 감소</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>26.8 N·m → 7.2 N·m (73.2% 저감)</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">실제 액추에이터 요구 토크 (마찰 포함)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">미끄럼 마찰 손실에 따른 괴리 발생</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>20.8% 실저감</strong> (스프링 토크 오차 &lt;5%)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">곡률·에너지·하중 정합성</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">차수 n² 가중으로 곡률반경 20~34% 감소</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>기하학적 하중 예산 0.3% 이내 일치</strong></td></tr></table>",
+      "implications": "어깨·고관절 등 고중력 부하 축에 수동 중력보상기를 병렬 탑재해 액추에이터 연속 정격과 발열을 낮추려는 설계에서, 기구 자체 보상률(73.2%)과 슬라이딩 마찰 손실 후 실효 저감률(20.8%) 간의 간극을 줄이기 위해 팔로워·가이드 구름 접촉화가 필수임을 정량적으로 입증함."
+    }
   }
 ]
