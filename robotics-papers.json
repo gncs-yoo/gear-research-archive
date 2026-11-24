@@ -1184,5 +1184,71 @@
       "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">운전 조건 / 결함 유형 (대표 차수)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">포락선 오더 / CEEMDAN</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">제안 ICA 프레임워크 SNR</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">단일 관절 · 전동체 결함 (2×)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">15.09 dB / 11.83 dB</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>20.30 dB (+5.2~8.5 dB↑)</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">다관절 · 전동체 결함 (2×)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">5.75 dB / 6.19 dB</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>16.75 dB (+10.6~11.0 dB↑)</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">다관절 · 외륜 결함 (1×, 10.44)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">10.08 dB / 10.92 dB</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>16.10 dB</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">다관절 · 내륜 결함 (1×, 12.85)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">22.51 dB / 17.48 dB</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>26.82 dB</strong></td></tr></table>",
       "implications": "휴머노이드·협동로봇 전신 가동 환경에서는 인접 관절 진동과 서보 전자기 고조파가 타겟 감속기의 결함 및 NVH 톤을 가리므로, 다이나모/실기 시험 시 인접 축 참조 센서를 포함한 다채널 계측과 포락선-ICA 분리를 적용하면 물리 해석성이 유지된 고정밀 PHM·NVH 원인 분리가 가능함."
     }
+  },
+  {
+    "id": 55,
+    "date": "2026-11-25",
+    "batch": "2026-11-25 (19호 브리핑)",
+    "categories": [
+      "구동계구조·그리퍼",
+      "하이브리드텐던·링크핑거"
+    ],
+    "title_en": "Design of a hybrid tendon-linkage finger with coupled and adaptive motion",
+    "title_ko": "원격 양방향 텐던-볼스크루 구동과 스토퍼 구속 4절 링크를 결합한 4자유도 커플링·자율적응형 로봇 핑거",
+    "journal": "arXiv:2611.11885 [cs.RO] (2026-11-09 공개, 저널 심사 투고본)",
+    "authors": "Hyojae Kang, Giuo Seo, Jaeyoung Lee, Yeong Jae Park, Jongwoo Park, Hyunmin Do, So-Hee Park, Dongil Park, Jeongdo Ahn (한국기계연구원(KIMM) 첨단로봇연구센터 · 과학기술연합대학원대학교(UST))",
+    "link": "https://arxiv.org/abs/2611.11885",
+    "doi": "10.48550/arXiv.2611.11885",
+    "summary": "다지 로봇 핸드에서 손가락 링크 내부에 액추에이터를 내장하지 않으면서도 4자유도(MCP 내전·외전, MCP·PIP·DIP 굴곡·신전)를 3개 액추에이터로 구현하기 위해, 손바닥 하우징의 모터-기어열-볼스크루 기반 양방향 원격 텐던 구동과 원위부(PIP–DIP) 비틀림 스프링·기계적 스토퍼 4절 링크를 결합한 하이브리드 핑거(193.6 g)를 제안·검증한 연구. MCP 내전·외전(±30°)은 베벨기어로, MCP·PIP 굴곡·신전(0~90°)은 0.45 mm 7×19 SUS304 와이어 양방향 대항 텐던으로 구동하며, 무접촉 시 스토퍼(α=120°)가 등가 4절 링크(L24^C≈12.00 mm)로 PIP–DIP 커플링(0~27°)을 유지하고, 중위지골 접촉 구속 시에는 비틀림 스프링(k_s=0.10 N·mm/deg, 예압 60°)이 열리며 DIP가 추가 자율적응 굴곡을 수행함. ArUco 마커 계측 결과 커플링 궤적은 이론 예측 대비 MAE 2.54°·RMSE 3.60°로 일치했고, 최대 적응 궤적은 MAE 3.63°·RMSE 5.60°(PIP 70° 이상 구간 내부 링크 간섭으로 최대 편차 18.95°)를 보였으며, 핑거팁 수직 반력은 평균 피크 4.56 N(표준편차 0.045 N, CV 0.98%)으로 높은 반복성을 확인함.",
+    "details": {
+      "background": "로봇 손가락을 소형·경량화하려면 액추에이터를 손바닥 외부로 빼야 하지만, 원위부(DIP)까지 독립 텐던으로 구동하면 근위 관절을 지나는 배선 수와 마찰 손실이 급증하고, 반대로 고정 링크 커플링만 쓰면 물체 접촉 후 추가 적응 파지가 불가능함.",
+      "method": "손바닥 하우징(66.00×23.00×45.60 mm)에 Maxon DCX08M 12V 모터와 GPX08 A 16:1 기어헤드, 볼스크루 너트 기반 양방향 텐던 인장 기구를 배치해 복원 스프링 없이 능동 굴곡·신전을 구현함. ArUco 마커(ID 1~3) 76회 커플링·111회 적응 시험, QLMH-25 1축 로드셀(80 Hz, 5회 반복) 핑거팁 힘 계측, 원통(Ø7.9~90.2 mm)·직육면체·비정형 7종 파지 자세 시험을 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">평가 항목</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">사양 / 실측 결과</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">자유도 / 구동기 / 중량</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>4-DoF / 3-DoA · 193.6 g</strong> (근위~원위 폭 17.96→13.60 mm)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">커플링 모션 오차 (ArUco 71/76)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>MAE 2.54° · RMSE 3.60°</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">최대 적응 모션 오차 (ArUco 110/111)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>MAE 3.63° · RMSE 5.60°</strong> (최대 편차 18.95°, 링크 간섭)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">핑거팁 피크 힘 (5회 평균) / 역구동성</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>4.56 N ± 0.045 N (CV 0.98%)</strong> · MCP 비역구동(PIP만 역구동)</td></tr></table>",
+      "implications": "휴머노이드 덱스터러스 핸드 설계 시 '원격 양방향 볼스크루-텐던(근위) + 스토퍼-스프링 4절 링크(원위)' 하이브리드 토폴로지로 액추에이터 수를 4→3개로 줄이면서도 비접촉 정밀 궤적과 접촉 후 적응 파지를 양립할 수 있는 레퍼런스이며, 고굴곡 구간 내부 링크 간섭 회피와 MCP 역구동성 확보가 후속 양산 설계의 핵심 과제임."
+    }
+  },
+  {
+    "id": 56,
+    "date": "2026-11-25",
+    "batch": "2026-11-25 (19호 브리핑)",
+    "categories": [
+      "정밀감속기·해석평가",
+      "하모닉감속기·비틀림강성모델"
+    ],
+    "title_en": "A physics-based model for harmonic reducer torsional stiffness",
+    "title_ko": "다치 맞물림·유연 베어링·플렉스스플라인 실린더 변형을 연성한 하모닉 감속기 무피팅 물리 기반 비선형 비틀림 강성 모델",
+    "journal": "International Journal of Mechanical Sciences, Vol. 331, Article 112270 (2026-11 온라인 / 2026-12호)",
+    "authors": "Ziyuan Ren, Peter Kinnell, Stephanos Theodossiades, Joseph Elmquist, Nicholas Morris",
+    "link": "https://doi.org/10.1016/j.ijmecsci.2026.112270",
+    "doi": "10.1016/j.ijmecsci.2026.112270",
+    "summary": "하모닉 감속기의 비선형 토크-비틀림각 관계를 경험적 곡선 피팅이나 파라미터 식별 없이 기하 형상·재료 물성·작용 토크만으로 직접 예측하기 위해, 부하 의존 다치 접촉 상태, 반경 방향 하중 전달, 유연 베어링 하중 재분배, 플렉스스플라인(FS) 실린더 탄성 변형을 하중 전달 경로 따라 연성한 물리 기반 비틀림 강성 모델을 제안·검증한 연구. 금속형 HFUS-20-2SH(RMSE 5.81×10⁻⁵ rad, 평균 상대오차 7.29%), 금속형 SHF-25-120-2UH(RMSE 2.78×10⁻⁵ rad, 평균 상대오차 3.49%), 그리고 폴리머 FS를 적용한 하이브리드 HFUS-20-2SH(RMSE 5.56×10⁻⁵ rad, 평균 상대오차 6.06%) 세 기종 모두에서 카탈로그·준정적 실험 곡선 대비 10% 미만의 오차로 일치함을 입증함. 특히 금속형에서는 유연 베어링 컴플라이언스가 지배적인 반면, 폴리머 FS 하이브리드형에서는 16 N·m에서 55.5%, 32.5 N·m에서 60.5%까지 FS 실린더가 전체 컴플라이언스를 지배하는 메커니즘 전환을 정량 규명함.",
+    "details": {
+      "background": "기존 하모닉 감속기 카탈로그 강성은 토크 구간별 상수 근사(3구간 선형화)를 써서 저·중토크 영역의 비선형 강성 진화를 포착하지 못하며, 기존 학술 모델은 실험 피팅 계수에 의존해 신규 기어나 이종 재질(폴리머 FS 등) 설계에 범용 적용이 어려웠음.",
+      "method": "플렉스스플라인 변형과 치간 간극으로부터 토크 평형식을 풀어 부하 증가에 따른 다치 맞물림 영역 확장을 직접 계산하고, 산출된 반경 방향 치하중을 유연 베어링 볼 접촉 강성 분포와 FS 실린더 비틀림 컴플라이언스에 직렬 연성해 전역 비틀림 강성을 도출함. 금속형 2종은 제조사 참조 곡선과, 하이브리드형은 ±40 N·m 준정적 비틀림 시험(시험기 분해능 0.04° = 6.98×10⁻⁴ rad) 평균 곡선과 비교함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">검증 대상 하모닉 감속기</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">비틀림각 RMSE</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">평균 상대오차 (MRE)</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">금속형 HFUS-20-2SH (제조사 곡선 대비)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">5.81×10⁻⁵ rad</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>7.29%</strong> (유연 베어링 지배)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">금속형 SHF-25-120-2UH (제조사 곡선 대비)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">2.78×10⁻⁵ rad</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>3.49%</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">하이브리드 HFUS-20-2SH (폴리머 FS 실측 대비)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">5.56×10⁻⁵ rad</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>6.06%</strong> (FS 실린더 55.5~60.5% 지배)</td></tr></table>",
+      "implications": "휴머노이드 관절용 하모닉 감속기의 초기 설계 단계나 경량 폴리머·복합재 플렉스스플라인 검토 시, 시제품 제작 전에도 토크 구간별 비선형 로스트모션과 강성 기여도(치맞물림 vs 유연 베어링 vs 컵 실린더)를 3.5~7.3% 오차 이내로 분해·예측할 수 있어 치형 및 베어링 강성 배분 최적화에 직접 활용 가능함."
+    }
+  },
+  {
+    "id": 57,
+    "date": "2026-11-25",
+    "batch": "2026-11-25 (19호 브리핑)",
+    "categories": [
+      "전달오차·시험보상",
+      "레이저트래커·푸리에보상"
+    ],
+    "title_en": "Transmission Error Compensation for Industrial Robots Using Fourier Series",
+    "title_ko": "레이저 트래커 기반 다관절 감속기 속도 의존 푸리에 급수 전달오차(TE) 동정 및 CNC 실시간 피드포워드 보상",
+    "journal": "arXiv:2610.23882 [cs.RO] (2026-09-24 공개, 슈투트가르트대 ISW)",
+    "authors": "Christian J. E. Bauer, Simon Nowinski, Valentin Kamm, Lukas Steinle, Armin Lechler, Alexander Verl (슈투트가르트대학교 공작기계·제조단위제어연구소(ISW))",
+    "link": "https://arxiv.org/abs/2610.23882",
+    "doi": "10.48550/arXiv.2610.23882",
+    "summary": "로봇 관절 감속기(J1·J2 JCS 52 M 사이클로이드 감속기 33:1, J3 웜기어 45:1)의 컴플라이언스와 주기적 전달오차(TE)로 인한 오프라인 프로그래밍 경로 오차를 해결하기 위해, FARO 레이저 트래커 3차원 원호 계측과 속도 의존 푸리에 급수 모델(저주파 런아웃은 3차 다항식, 고조파 진폭·위상은 2차 속도 다항식)을 결합해 TwinCAT 3 CNC 지령각을 실시간 피드포워드 보상한 연구. Stäubli TX2-40 로봇 1~3축 대상 13개 대칭 속도 구간에서 동정된 모델의 평균 절대오차(MAE)는 1축 1.22×10⁻⁴ rad, 2축 0.69×10⁻⁴ rad, 3축 1.52×10⁻⁴ rad(전체 평균 0.114 mrad)를 기록함. 이를 EtherCAT·uniVAL 인터페이스(1 kHz 주기)로 실시간 피드포워드 보상한 결과, 2축 TE MAE가 9.20×10⁻³ rad(TCP 환산 4.74 mm)에서 1.54×10⁻³ rad(0.79 mm)으로 83.26% 개선되었고, 3축 역시 1.91×10⁻³ rad(0.55 mm)에서 0.97×10⁻³ rad(0.28 mm)으로 49.21% 개선됨을 실험으로 입증함.",
+    "details": {
+      "background": "표준 산업용·휴머노이드 로봇은 엔코더가 모터축에 있어 감속기 내부 탄성 변형과 주기적 전달오차(TE)를 폐루프 위치 제어기로 보정할 수 없으며, 작업공간 제약과 케이블 드래그 체인 때문에 단품 다이나모처럼 360° 전회전 TE 계측도 어려움.",
+      "method": "FARO Vantage E6 레이저 트래커로 4축 상단 SMR 타겟의 원호 궤적을 계측한 뒤 SVD 평면 투영·원 피팅으로 부하측 각도 q를 복원함. 회전 제한 구간에서도 저주파 런아웃을 안정 분리하도록 3차 다항식 + 감속비 고조파(1~3축 각 14·16·8개 주파수) 푸리에 급수를 결합하고, ISG-virtuos 디지털 트윈 FMU 그림자 모델 연동과 TwinCAT 3 PLC(속도 EMA 필터 λ=0.99, 7상 5초 부드러운 전환) 실시간 셋포인트 보상을 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">대상 축 (감속기)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">보상 전 TE MAE (TCP 환산)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">보상 후 TE MAE (TCP 환산)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">정밀도 개선율</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">2축 (JCS 52 M 사이클로이드 33:1)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">9.20×10⁻³ rad (4.74 mm)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>1.54×10⁻³ rad (0.79 mm)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>83.26% 개선</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">3축 (웜기어 45:1)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">1.91×10⁻³ rad (0.55 mm)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>0.97×10⁻³ rad (0.28 mm)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>49.21% 개선</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">모델 동정 잔차 (1·2·3축 MAE)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\" colspan=\"3\">1.22×10⁻⁴ / 0.69×10⁻⁴ / 1.52×10⁻⁴ rad (평균 0.114 mrad, TCP 0.036~0.063 mm)</td></tr></table>",
+      "implications": "로봇 팔·휴머노이드 관절 조립 후 2차측 엔코더가 없는 양산기에서도 레이저 트래커 원호 스캔만으로 각 관절 감속기의 고조파 전달오차와 강성 편차를 역추정해 제어기 지령 보정·디지털 트윈(FMU) 정밀도를 동시에 50~83% 끌어올릴 수 있는 실용적 캘리브레이션 파이프라인임."
+    }
   }
 ]
