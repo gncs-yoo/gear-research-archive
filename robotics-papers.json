@@ -1250,5 +1250,71 @@
       "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">대상 축 (감속기)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">보상 전 TE MAE (TCP 환산)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">보상 후 TE MAE (TCP 환산)</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">정밀도 개선율</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">2축 (JCS 52 M 사이클로이드 33:1)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">9.20×10⁻³ rad (4.74 mm)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>1.54×10⁻³ rad (0.79 mm)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>83.26% 개선</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">3축 (웜기어 45:1)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">1.91×10⁻³ rad (0.55 mm)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>0.97×10⁻³ rad (0.28 mm)</strong></td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>49.21% 개선</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">모델 동정 잔차 (1·2·3축 MAE)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\" colspan=\"3\">1.22×10⁻⁴ / 0.69×10⁻⁴ / 1.52×10⁻⁴ rad (평균 0.114 mrad, TCP 0.036~0.063 mm)</td></tr></table>",
       "implications": "로봇 팔·휴머노이드 관절 조립 후 2차측 엔코더가 없는 양산기에서도 레이저 트래커 원호 스캔만으로 각 관절 감속기의 고조파 전달오차와 강성 편차를 역추정해 제어기 지령 보정·디지털 트윈(FMU) 정밀도를 동시에 50~83% 끌어올릴 수 있는 실용적 캘리브레이션 파이프라인임."
     }
+  },
+  {
+    "id": 58,
+    "date": "2026-11-26",
+    "batch": "2026-11-26 (20호 브리핑)",
+    "categories": [
+      "구동계구조·그리퍼",
+      "소프트-리지드·텐던핸드"
+    ],
+    "title_en": "Design, Control, and Teleoperation of a Dexterous Robotic Hand with Soft-Rigid Hybrid Fingers",
+    "title_ko": "실리콘 외피-강체 골격 하이브리드 핑거와 보우덴 텐던 구동을 결합한 12구동 5지 덱스터러스 핸드",
+    "journal": "arXiv:2611.32582 (2026-11-24 공개)",
+    "authors": "Chao Liu, Wil J. Norton, Brandon Romero, Daniela Rus (MIT CSAIL · 브리티시컬럼비아대학교(UBC) 기계공학과)",
+    "link": "https://arxiv.org/abs/2611.32582",
+    "doi": "10.48550/arXiv.2611.32582",
+    "summary": "연속체 소프트 핸드의 저강성·고복잡도 제어 한계와 강체 핸드의 접촉 충격 취약성을 동시에 해결하기 위해, Nylon 12 관절 골격 위에 Ecoflex 00-50 실리콘 쉘을 성형한 소프트-리지드 하이브리드 핑거(손가락당 38 g)를 5지 17자유도(12구동) 덱스터러스 핸드(1,592 g, 128×81×260 mm)로 확장한 연구. 손바닥 기저부의 Dynamixel XM430-W350 10기와 손바닥 내부 엄지·검지 힌지용 2기에서 테플론 인서트·보우덴 튜브·Dyneema 텐던으로 구동하며, 손가락마다 MagAlpha MA782 16비트 자기식 각도 센서 3개(STM32H743ZI 250 Hz SPI)를 내장해 40 Hz 선형 속도 모델(구간별 선형 회귀)만으로 관절·작업공간 제어를 구현함. 실험 결과 GRASP 분류 33종 중 28종(84.8%) 파지를 달성했고, 급속 신전 각속도 ~1,432 deg/s(굴곡 ~860 deg/s, 0.15 s 이내 완료)로 인간 MCP 관절(700 deg/s)을 상회했으며, 최대 악력 25.26 N·신전력 2.15 N 및 UR5 원격조작 10종 파지 시험(각 20회) 전 항목 80% 이상 성공률을 입증함.",
+    "details": {
+      "background": "완전 소프트 로봇 핸드는 높은 순응성을 얻는 대신 출력·정밀도가 낮고 FEM·연속체 제어가 느려 동적 조작이 어려우며, 반대로 강체 핸드는 역구동·임피던스 제어기나 외력 센서가 충돌·비대칭 접촉에 취약함.",
+      "method": "실리콘 탄성이 복원력을 제공하고 내부 강체 링크가 운동학을 구속하는 하이브리드 구조 덕분에 관절 각속도가 모터 속도와 구간 선형 관계를 이루어 단순 선형 제어(40 Hz)가 가능함. 모듈형 2분할 스풀로 유지보수를 용이하게 했고, NDI trakSTAR(765 Hz) 자기식 장갑과 UR5 암을 연동해 10개 과제×20회(파지 후 90° 회전 유지) 원격조작 평가를 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">평가 항목</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">사양 / 실측 결과</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">구성 / 중량 / 치수</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">17-DoF (12구동 XM430-W350) · <strong>1,592 g</strong> (핑거 38 g) · 128×81×260 mm</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">동적 속도 (θ2 기준, 0.15 s 이내)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>신전 ~1,432 deg/s · 굴곡 ~860 deg/s</strong> (인간 MCP 700 deg/s 상회)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">파지 범용성 / 원격조작</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>GRASP 28/33종 (84.8%)</strong> · 10종 과제(각 20회) 최소 80% 성공</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">최대 출력 (5회 평균)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">악력 <strong>25.26 N</strong> · 신전력 2.15 N (보우덴 튜브 마찰 손실 영향)</td></tr></table>",
+      "implications": "휴머노이드 말단 그리퍼에서 제어기를 복잡하게 키우지 않고도 구조적 순응성과 1,400 deg/s급 고속 응답, 16비트 관절 자기감지를 동시에 확보하는 실용적 접근법이며, 보우덴 튜브 마찰로 제한된 악력(25.26 N)을 저마찰 내부 라우팅으로 끌어올리는 것이 산업용 적용의 관건임."
+    }
+  },
+  {
+    "id": 59,
+    "date": "2026-11-26",
+    "batch": "2026-11-26 (20호 브리핑)",
+    "categories": [
+      "구동계구조·하체관절",
+      "비선형병렬커플링·저관성다리"
+    ],
+    "title_en": "Design and Analysis of a Nonlinear Parallel Mechanism Coupling for Dynamic Humanoid Legs",
+    "title_ko": "이중 4절 무릎-2RSU+1U 발목 비선형 병렬 메커니즘 커플링을 적용한 저원위관성 휴머노이드 다리",
+    "journal": "arXiv:2610.16604 (2026-10-12 공개)",
+    "authors": "Rohit Kumar, Heiner Peters, Felix Wiebe, Franek Stark, Janne Janzen, Dennis Mronga, Shubham Vyas, Frank Kirchner (독일인공지능연구소(DFKI) 로보틱스혁신센터 · 브레멘대학교)",
+    "link": "https://arxiv.org/abs/2610.16604",
+    "doi": "10.48550/arXiv.2610.16604",
+    "summary": "동적 보행·도약 휴머노이드에서 말단 관성을 극소화하면서도 하중 지지력과 구동 대역폭을 높이기 위해, 모든 액추에이터(6자유도)를 고관절 근위에 집중 배치하고 이중 4절 링크 무릎 PKM(감속비 0.49~2.41)과 1.6:1 타이밍 벨트로 무릎 축을 통과해 2{RSU}+1U 발목 PKM을 구동하는 비선형 커플링 다리(총중량 6.07 kg, 길이 0.722 m)를 제안·실증한 연구. 무릎이 굽혀질 때 발목 배측굴곡(스윙 시 발끝 여유 확보)을, 펴질 때 저측굴곡(푸시오프)을 수동·기구학적으로 보조하며 두 관절이 액추에이터 용량을 동적으로 분담함. 스쿼트 시뮬레이션(수직 150 N·20 N·m)에서 비커플링 시 정격(±53 N·m)을 41.5% 초과(75 N·m)하던 무릎 피크 토크를 50.8 N·m로 32% 저감(허용 하중 108→156 N, +44.5%)했고, 5 Hz 정현파 PD 추종 실기 시험에서 발목 모터 피크 속도를 14.82/14.58 rad/s에서 1.99/2.22 rad/s로 86.6%/84.8% 줄였으며, 발끝 평균 반사질량(MRM) ~0.37 kg(정규화 MRM 0.061±0.008)을 달성함.",
+    "details": {
+      "background": "기존 직렬-병렬 하이브리드 휴머노이드 다리는 발목 액추에이터가 무릎 아래에 남거나, 고관절 쪽으로 올리더라도 선형 벨트·일정 차동 감속만 사용해 자세별 요구 토크·속도 변화에 맞춘 액추에이터 용량 공유가 불가능했음.",
+      "method": "AlSi10Mg 주조 쉘(항복강도 230 MPa, 600 N 수직하중 안전율 2.5) 기반 대퇴(4.073 kg)·하퇴(0.703 kg)·발목/발(0.376 kg) 구조에 Cubemars AK10-9(고관절 피치·무릎)와 AK80-8(발목·고관절 요/롤)을 근위 배치하고, 2.5 kg×0.5 m(12.26 N·m) 정적 토크 분배 실측, 5 Hz 궤적 PD 추종, 5,000자세 랜덤 샘플링 반사질량 비교를 수행함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">성능 지표</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">비교 / 실측 결과</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">발끝 평균 반사질량 (5,000 자세)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\"><strong>~0.37 kg</strong> (정규화 MRM 0.061 vs MIT Humanoid 0.145 · Kangaroo 0.075)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">스쿼트 피크 무릎 토크 / 가반하중</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">75→<strong>50.8 N·m (−32%)</strong> · 허용 하중 108→<strong>156 N (+44.5%)</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">5 Hz 발목 모터 피크 속도 (실기)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">14.82 / 14.58 → <strong>1.99 / 2.22 rad/s (−86.6% / −84.8%)</strong></td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">질량 분포 / CoM</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">총 6.07 kg (대퇴 4.073 · 하퇴 0.703 · 발목/발 0.376 kg), CoM 고관절 0.114 m 하방</td></tr></table>",
+      "implications": "휴머노이드 하체 전동계 설계 시 무릎 4절 링크의 자세 의존 변속비(신전 시 2.41 고토크, 굴곡 시 0.49 고속)와 무릎-발목 벨트 커플링을 결합하면 동일 모터 정격으로 스쿼트 가반하중을 44.5% 키우고 발 충격 반사질량을 0.37 kg 수준으로 낮출 수 있으며, 후속으로 벨트 백래시·마찰 동정이 실차 제어의 핵심임."
+    }
+  },
+  {
+    "id": 60,
+    "date": "2026-11-26",
+    "batch": "2026-11-26 (20호 브리핑)",
+    "categories": [
+      "정밀치면·해석평가",
+      "FPGA·물리직접치면접촉"
+    ],
+    "title_en": "Physics-Direct FPGA Tooth-Contact Computation for Deterministic Gear Digital Twins",
+    "title_ko": "결정론적 기어 디지털 트윈·HIL을 위한 고정소수점 FPGA 물리직접(Physics-Direct) 치면 접촉·LTE 실시간 연산기",
+    "journal": "arXiv:2609.04248 (2026-08-28 공개 / 2026-10-05 원고)",
+    "authors": "Jiacheng Miao",
+    "link": "https://arxiv.org/abs/2609.04248",
+    "doi": "10.48550/arXiv.2609.04248",
+    "summary": "기어 디지털 트윈·HIL 시험기·능동 진동 제어 루프에 필요한 실시간·무지터(deterministic) 치면 접촉 및 부하 전달오차(LTE) 연산을 구현하기 위해, 분기 없는 고정소수점 물리직접(physics-direct) 파이프라인(접촉점 탐색 → 베이크드 의사역행렬 2D Savitzky–Golay 곡률 추출 → 직렬화 Hamrock–Brewe 타원 헤르츠 해)을 오픈소스 openXC7(yosys+nextpnr-xilinx+prjxray, 부동소수점 IP 없음)으로 Xilinx XC7K480T 실리콘에 구현·검증한 연구. 4종 SoC 모두 JTAG 리드백에서 소프트웨어 골든 모델과 비트 단위 100% 일치했고, 전체 파이프라인(tri_core)은 LUT 197,377개(33%)·f_max 75 MHz로 합성되어 806클록(50 MHz 기준 16 μs, σ=0 무지터) 만에 a=0.909 mm·b=0.452 mm·p_max=1,162.5 MPa를 산출해 CPU 프리뷰(277 μs, 지터 7%) 및 전체 LTCA-LCP(2,005 ms)를 대체 가능한 실시간성을 입증함. 하이포이드 기어쌍(7/70치, 19 mm 오프셋) 검증에서 LCP 본체 압력(p90)을 -22% 이내·LTE(p-p)를 -19% 이내로 추종하며 W^(1/3) 법칙을 보존했고, 무학습 상태에서 하중 외삽 오차 18.9%로 학습된 MLP 대리모델(20.3%)보다 높은 외삽 신뢰도를 보임.",
+    "details": {
+      "background": "기준 모델인 LTCA-LCP는 Boussinesq 조밀 행렬과 순차 active-set 반복 때문에 fp64 연산·수초 단위 지연(2,005 ms)과 데이터 의존 분기가 불가피해 실시간 제어·HIL에 부적합하며, 신경망 대리모델은 학습 범위 밖 하중 외삽 보장이 없고 샘플당 1회 LTCA 해석(~2 s) 비용이 발생함.",
+      "method": "순차·ill-conditioned active-set LCP는 오프라인 CPU에 남기고, 정적 스케줄·고정소수점(Q(24,16) 좌표, Q1.19 법선, Q(32,20) 곡률, Q(32,8) 압력) 친화적인 4단계 연산만 FPGA로 분할함. 한 번의 80비트 반복 나눗셈기 시분할(9회 호출)과 2의 거듭제곱 보폭 LUT 2개(POW, CBRT)로 단일 세제곱근만으로 타원 헤르츠 해를 완결함.",
+      "data": "<table style=\"border-collapse:collapse; font-size:12px; color:#cbd5e1; margin-top:8px; width:100%;\"><tr><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">성능 / 검증 항목</th><th style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#93c5fd; font-weight:700; background-color:#0f172a;\">실리콘 실측 / LCP 대조 결과</th></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">실행 지연 (σ=0 무지터)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">A/B 26클록 · C+D 조합 58클록 · <strong>전체 806클록 (16 μs @ 50 MHz)</strong> vs CPU LTCA 2,005 ms</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">LCP 본체 압력 / LTE 정합</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">LCP p90 대비 평균 <strong>−22%</strong> (−13%~−31%) · LTE(p-p) <strong>−19%</strong> (치선단 엣지 스파이크 제외)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">하중 외삽 오차 (무학습 vs MLP)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">Physics-direct <strong>18.9%</strong> vs MLP 20.3% (합성 영역 외삽: 0% vs 27.9%)</td></tr><tr><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">XC7K480T 자원 (tri_core, -nodsp)</td><td style=\"border:1px solid #334155; padding:5px 8px; text-align:left; color:#cbd5e1;\">197,377 LUT (33%) · 4,851 FF · 4,638 CARRY4 · f_max 75 MHz (JTAG 비트단위 일치)</td></tr></table>",
+      "implications": "로봇 관절 감속기 및 e-Axle HIL 다이나모·능동 진동 제어에서 블랙박스 신경망 대신 해석적 접촉 물리를 고정소수점 FPGA에 직접 올려 16 μs 확정 주기로 순간 토크별 LTE와 본체 접촉압력을 추정하는 새로운 디지털 트윈 아키텍처로, 치선단 엣지 응력 피크만 오프라인 LCP로 보완하는 하이브리드 운용에 적합함."
+    }
   }
 ]
